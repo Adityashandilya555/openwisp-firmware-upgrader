@@ -21,6 +21,31 @@
 {% endblock %}
 
 {% block content %}
+  {% if credentialless_count %}
+    <div class="errornote">
+      <p>
+        {% blocktrans count count=credentialless_count %}
+          The following device cannot be upgraded because it has no SSH credentials assigned. Please assign credentials to proceed with the upgrade.
+        {% plural %}
+          The following {{ count }} devices cannot be upgraded because they have no SSH credentials assigned. Please assign credentials to proceed with the upgrade.
+        {% endblocktrans %}
+      </p>
+      <ul>
+        {% for device in credentialless_devices %}
+          <li><a href="{{ device.url }}">{{ device.name }}</a></li>
+        {% endfor %}
+      </ul>
+      {% if credentialless_more %}
+        <p>
+          {% blocktrans count count=credentialless_more %}
+            ... and {{ count }} more device without credentials (not shown).
+          {% plural %}
+            ... and {{ count }} more devices without credentials (not shown).
+          {% endblocktrans %}
+        </p>
+      {% endif %}
+    </div>
+  {% endif %}
   {% if related_count or firmwareless_count %}
     <p class="intro">
       {% blocktrans %}
