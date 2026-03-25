@@ -169,10 +169,21 @@ class AbstractBuild(TimeStampedEditableModel):
         dry_run_result = load_model("BatchUpgradeOperation").dry_run(
             build=self, group=group, location=location
         )
+        # Filter out credentialless devices before checking if any remain
+        DeviceConnection = swapper.load_model("connection", "DeviceConnection")
+        valid_device_ids = DeviceConnection.objects.filter(
+            update_strategy__icontains="ssh", enabled=True
+        ).values("device_id")
+        upgradeable_device_firmwares = dry_run_result["device_firmwares"].filter(
+            device_id__in=valid_device_ids
+        )
+        upgradeable_firmwareless = dry_run_result["devices"].filter(
+            pk__in=valid_device_ids
+        )
         # If no devices match the filters, don't start the upgrade
         if not (
-            dry_run_result["device_firmwares"].exists()
-            or (firmwareless and dry_run_result["devices"].exists())
+            upgradeable_device_firmwares.exists()
+            or (firmwareless and upgradeable_firmwareless.exists())
         ):
             raise ValidationError(
                 _(
@@ -712,7 +723,7 @@ class AbstractBatchUpgradeOperation(UpgradeOptionsMixin, TimeStampedEditableMode
         ).values("device_id")
         if related_device_fw is None:
             related_device_fw = self.build._find_related_device_firmwares(
-                select_devices=True
+                select_devices=True, group=self.group, location=self.location
             )
         if related_device_fw:
             df = (
@@ -723,7 +734,9 @@ class AbstractBatchUpgradeOperation(UpgradeOptionsMixin, TimeStampedEditableMode
             if df:
                 return get_upgrader_class_for_device(df.device)
         if firmwareless_devices is None:
-            firmwareless_devices = self.build._find_firmwareless_devices()
+            firmwareless_devices = self.build._find_firmwareless_devices(
+                group=self.group, location=self.location
+            )
         if firmwareless_devices:
             device = firmwareless_devices.filter(pk__in=valid_device_ids).first()
             if device:
