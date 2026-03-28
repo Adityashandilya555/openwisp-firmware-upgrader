@@ -52,7 +52,9 @@ IMAGE_TYPE_B = "ath79-generic-tplink_tl-wdr4300-v1-il-squashfs-sysupgrade.bin"
 BOARD_A = "TP-Link TL-WDR4300 v1"
 BOARD_B = "TP-LINK TL-WDR4300 v1 (IL)"
 
-SSH_CONNECTOR = "openwisp_controller.connection.connectors.ssh.Ssh"
+# Must match openwisp_controller.connection.settings.CONNECTORS[0][0]
+# and CONFIG_UPDATE_MAPPING["netjsonconfig.OpenWrt"]
+SSH_CONNECTOR = "openwisp_controller.connection.connectors.openwrt.ssh.OpenWrt"
 
 
 class Command(BaseCommand):
@@ -229,12 +231,16 @@ class Command(BaseCommand):
 
     def _ensure_device_connection(self, device, creds):
         if not DeviceConnection.objects.filter(device=device).exists():
-            DeviceConnection.objects.create(
+            dc = DeviceConnection(
                 device=device,
                 credentials=creds,
                 enabled=True,
                 params={},
             )
+            # full_clean() auto-sets update_strategy from the device's
+            # config backend (netjsonconfig.OpenWrt → OpenWrt SSH)
+            dc.full_clean()
+            dc.save()
 
     def _ensure_device_firmware(self, device, image):
         if not DeviceFirmware.objects.filter(device=device).exists():
