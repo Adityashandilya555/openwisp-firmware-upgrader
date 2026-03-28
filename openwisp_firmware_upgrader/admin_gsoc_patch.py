@@ -1,1 +1,398 @@
-IiIiCkdTb0MgMjAyNiBQcm90b3R5cGUg4oCTIEFkbWluIGxheWVyIGFkZGl0aW9ucy4KClBhdGNoIGZpbGUgY29udGFpbmluZzoKICAxLiBFeHRlbmRlZCBCYXRjaFVwZ3JhZGVDb25maXJtYXRpb25Gb3JtICAocGVyc2lzdGVudCBjaGVja2JveCArIGRhdGV0aW1lIHBpY2tlcikKICAyLiBQYXRjaGVkIEJhdGNoVXBncmFkZU9wZXJhdGlvbkFkbWluICAgICAobmV3IGxpc3QgY29sdW1uLCBjYW5jZWwgc2NoZWR1bGVkIGFjdGlvbikKICAzLiBQYXRjaGVkIFVwZ3JhZGVPcGVyYXRpb25BZG1pbiAgICAgICAgICAocmV0cnlfY291bnQsIG5leHRfcmV0cnlfYXQgcmVhZG9ubHkgZmllbGRzKQoKSW4gdGhlIGZ1bGwgaW1wbGVtZW50YXRpb24gdGhlc2UgY2hhbmdlcyB3b3VsZCBiZSBtZXJnZWQgZGlyZWN0bHkgaW50bwpvcGVud2lzcF9maXJtd2FyZV91cGdyYWRlci9hZG1pbi5weS4gIFRoZXkgYXJlIGtlcHQgaGVyZSBmb3IgY2xhcml0eS4KIiIiCgppbXBvcnQgbG9nZ2luZwpmcm9tIGRhdGV0aW1lIGltcG9ydCB0aW1lZGVsdGEKCmZyb20gZGphbmdvIGltcG9ydCBmb3Jtcwpmcm9tIGRqYW5nby5jb250cmliIGltcG9ydCBhZG1pbiwgbWVzc2FnZXMKZnJvbSBkamFuZ28udXRpbHMgaW1wb3J0IHRpbWV6b25lCmZyb20gZGphbmdvLnV0aWxzLmh0bWwgaW1wb3J0IGZvcm1hdF9odG1sCmZyb20gZGphbmdvLnV0aWxzLnNhZmVzdHJpbmcgaW1wb3J0IG1hcmtfc2FmZQpmcm9tIGRqYW5nby51dGlscy50cmFuc2xhdGlvbiBpbXBvcnQgZ2V0dGV4dF9sYXp5IGFzIF8KCmZyb20gLmFkbWluIGltcG9ydCAoCiAgICBCYXRjaFVwZ3JhZGVDb25maXJtYXRpb25Gb3JtIGFzIF9PcmlnaW5hbEJhdGNoVXBncmFkZUNvbmZpcm1hdGlvbkZvcm0sCiAgICBCYXRjaFVwZ3JhZGVPcGVyYXRpb25BZG1pbiBhcyBfT3JpZ2luYWxCYXRjaEFkbWluLAogICAgVXBncmFkZU9wZXJhdGlvbkFkbWluIGFzIF9PcmlnaW5hbFVwZ3JhZGVPcGVyYXRpb25BZG1pbiwKICAgIEJhdGNoVXBncmFkZU9wZXJhdGlvbiwKICAgIFVwZ3JhZGVPcGVyYXRpb24sCikKCmxvZ2dlciA9IGxvZ2dpbmcuZ2V0TG9nZ2VyKF9fbmFtZV9fKQoKCiMg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSACiMgMS4gIEV4dGVuZGVkIGNvbmZpcm1hdGlvbiBmb3JtCiMg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSACgoKY2xhc3MgQmF0Y2hVcGdyYWRlQ29uZmlybWF0aW9uRm9ybShfT3JpZ2luYWxCYXRjaFVwZ3JhZGVDb25maXJtYXRpb25Gb3JtKToKICAgICIiIgogICAgRXh0ZW5kcyB0aGUgc3RvY2sgY29uZmlybWF0aW9uIGZvcm0gd2l0aCB0d28gbmV3IGZpZWxkczoKCiAgICBwZXJzaXN0ZW50CiAgICAtLS0tLS0tLS0tCiAgICBBIEJvb2xlYW5GaWVsZCByZW5kZXJlZCBhcyBhIGNoZWNrYm94LiAgQ2hlY2tlZCBieSBkZWZhdWx0LgogICAgQWZ0ZXIgdGhlIGJhdGNoIGlzIGNyZWF0ZWQgdGhlIHdpZGdldCBpcyByZXBsYWNlZCB3aXRoIGEgcmVhZC1vbmx5CiAgICBpbmRpY2F0b3IgKGRvbmUgaW4gdGhlIHRlbXBsYXRlKSB0byBjb21tdW5pY2F0ZSBpbW11dGFiaWxpdHkuCgogICAgc2NoZWR1bGVkX2F0CiAgICAtLS0tLS0tLS0tLS0KICAgIEFuIG9wdGlvbmFsIERhdGVUaW1lRmllbGQgcmVuZGVyZWQgYXMgYW4gSFRNTDUgYGBkYXRldGltZS1sb2NhbGBgCiAgICBpbnB1dC4gIFRoZSBsYWJlbCBzaG93cyB0aGUgc2VydmVyIHRpbWV6b25lIChlLmcuICJTY2hlZHVsZSBmb3IKICAgIChzZXJ2ZXIgdGltZTogVVRDKSIpIHNvIHRoZSBvcGVyYXRvciBrbm93cyB0aGUgcmVmZXJlbmNlIGZyYW1lLgogICAgQSBzbWFsbCBKUyBzbmlwcGV0ICh1cGdyYWRlLXNlbGVjdGVkLWNvbmZpcm1hdGlvbi5qcykgcmVhZHMgdGhlCiAgICBicm93c2VyJ3MgYGBJbnRsLkRhdGVUaW1lRm9ybWF0KCkucmVzb2x2ZWRPcHRpb25zKCkudGltZVpvbmVgYCwKICAgIGNvbnZlcnRzIHRoZSBjaG9zZW4gZGF0ZXRpbWUgdG8gVVRDLCBhbmQgc2V0cyBhIGhpZGRlbgogICAgYGBzY2hlZHVsZWRfYXRfdXRjYGAgZmllbGQgYmVmb3JlIGZvcm0gc3VibWl0LgoKICAgIFZhbGlkYXRpb24gcnVsZXMgKG1pcnJvcnMgQWJzdHJhY3RCYXRjaFVwZ3JhZGVPcGVyYXRpb24uY2xlYW4oKSk6CiAgICAgIC0gSWYgc2V0LCBtdXN0IGJlIGF0IGxlYXN0IDEwIG1pbnV0ZXMgaW4gdGhlIGZ1dHVyZS4KICAgICAgLSBJZiBzZXQsIG11c3Qgbm90IGV4Y2VlZCA2IG1vbnRocyBmcm9tIG5vdy4KICAgICIiIgoKICAgIHBlcnNpc3RlbnQgPSBmb3Jtcy5Cb29sZWFuRmllbGQoCiAgICAgICAgaW5pdGlhbD1UcnVlLAogICAgICAgIHJlcXVpcmVkPUZhbHNlLAogICAgICAgIGxhYmVsPV8oIlBlcnNpc3RlbnQgdXBncmFkZXMiKSwKICAgICAgICBoZWxwX3RleHQ9XygKICAgICAgICAgICAgIkF1dG9tYXRpY2FsbHkgcmV0cnkgZGV2aWNlcyB0aGF0IGFyZSBvZmZsaW5lIGF0IHVwZ3JhZGUgdGltZSAiCiAgICAgICAgICAgICJ1c2luZyBleHBvbmVudGlhbCBiYWNrLW9mZi4gIgogICAgICAgICAgICAi4pqgIFRoaXMgc2V0dGluZyBjYW5ub3QgYmUgY2hhbmdlZCBvbmNlIHRoZSBiYXRjaCBpcyBjcmVhdGVkLiIKICAgICAgICApLAogICAgICAgIHdpZGdldD1mb3Jtcy5DaGVja2JveElucHV0KGF0dHJzPXsiY2xhc3MiOiAicGVyc2lzdGVudC1jaGVja2JveCJ9KSwKICAgICkKCiAgICBzY2hlZHVsZWRfYXQgPSBmb3Jtcy5EYXRlVGltZUZpZWxkKAogICAgICAgIHJlcXVpcmVkPUZhbHNlLAogICAgICAgIGxhYmVsPV8oIlNjaGVkdWxlIGZvciIpLAogICAgICAgIGhlbHBfdGV4dD1fKAogICAgICAgICAgICAiTGVhdmUgYmxhbmsgdG8gc3RhcnQgdGhlIHVwZ3JhZGUgaW1tZWRpYXRlbHkuICIKICAgICAgICAgICAgIlRpbWUgaXMgaW50ZXJwcmV0ZWQgaW4gPHN0cm9uZz55b3VyIGJyb3dzZXIncyBsb2NhbCB0aW1lem9uZTwvc3Ryb25nPjsgIgogICAgICAgICAgICAidGhlIGhpZGRlbiBmaWVsZCA8Y29kZT5zY2hlZHVsZWRfYXRfdXRjPC9jb2RlPiBzdG9yZXMgaXQgaW4gVVRDLiIKICAgICAgICApLAogICAgICAgIHdpZGdldD1mb3Jtcy5EYXRlVGltZUlucHV0KAogICAgICAgICAgICBhdHRycz17CiAgICAgICAgICAgICAgICAidHlwZSI6ICJkYXRldGltZS1sb2NhbCIsCiAgICAgICAgICAgICAgICAiY2xhc3MiOiAic2NoZWR1bGVkLWF0LXBpY2tlciIsCiAgICAgICAgICAgICAgICAiZGF0YS1zZXJ2ZXItdHoiOiAiJSh0eilzIiwKICAgICAgICAgICAgfQogICAgICAgICksCiAgICApCgogICAgIyBIaWRkZW4gVVRDIGZpZWxkIOKAlCBwb3B1bGF0ZWQgYnkgSlMgYmVmb3JlIHN1Ym1pdAogICAgc2NoZWR1bGVkX2F0X3V0YyA9IGZvcm1zLkNoYXJGaWVsZCgKICAgICAgICByZXF1aXJlZD1GYWxzZSwKICAgICAgICB3aWRnZXQ9Zm9ybXMuSGlkZGVuSW5wdXQoYXR0cnM9eyJpZCI6ICJpZF9zY2hlZHVsZWRfYXRfdXRjIn0pLAogICAgKQoKICAgIGNsYXNzIE1ldGEoX09yaWdpbmFsQmF0Y2hVcGdyYWRlQ29uZmlybWF0aW9uRm9ybS5NZXRhKToKICAgICAgICBmaWVsZHMgPSBfT3JpZ2luYWxCYXRjaFVwZ3JhZGVDb25maXJtYXRpb25Gb3JtLk1ldGEuZmllbGRzICsgKAogICAgICAgICAgICAicGVyc2lzdGVudCIsCiAgICAgICAgICAgICJzY2hlZHVsZWRfYXQiLAogICAgICAgICkKCiAgICBkZWYgX19pbml0X18oc2VsZiwgKmFyZ3MsICoqa3dhcmdzKToKICAgICAgICBzdXBlcigpLl9faW5pdF9fKCphcmdzLCAqKmt3YXJncykKICAgICAgICAjIEluamVjdCBzZXJ2ZXIgdGltZXpvbmUgaW50byB0aGUgd2lkZ2V0J3MgZGF0YSBhdHRyaWJ1dGVzCiAgICAgICAgaW1wb3J0IHB5dHoKICAgICAgICBmcm9tIGRqYW5nby5jb25mIGltcG9ydCBzZXR0aW5ncyBhcyBkal9zZXR0aW5ncwogICAgICAgIHNlcnZlcl90eiA9IGdldGF0dHIoZGpfc2V0dGluZ3MsICJUSU1FX1pPTkUiLCAiVVRDIikKICAgICAgICBzZWxmLmZpZWxkc1sic2NoZWR1bGVkX2F0Il0ud2lkZ2V0LmF0dHJzWyJkYXRhLXNlcnZlci10eiJdID0gc2VydmVyX3R6CiAgICAgICAgIyBEZWZhdWx0IHBlcnNpc3RlbnQgdG8gVHJ1ZSBmb3IgbmV3IGZvcm1zCiAgICAgICAgaWYgbm90IHNlbGYuaXNfYm91bmQ6CiAgICAgICAgICAgIHNlbGYuaW5pdGlhbC5zZXRkZWZhdWx0KCJwZXJzaXN0ZW50IiwgVHJ1ZSkKCiAgICBkZWYgY2xlYW5fc2NoZWR1bGVkX2F0KHNlbGYpOgogICAgICAgICIiIgogICAgICAgIFZhbGlkYXRlIHRoZSBzY2hlZHVsZWRfYXQgZmllbGQ6CiAgICAgICAgICAtIE11c3QgYmUgYXQgbGVhc3QgMTAgbWludXRlcyBpbiB0aGUgZnV0dXJlCiAgICAgICAgICAtIE11c3Qgbm90IGV4Y2VlZCA2IG1vbnRocyBvdXQKICAgICAgICBSZXR1cm5zIHRoZSB2YWx1ZSBpbiB0aGUgb3JpZ2luYWwgYnJvd3NlciB0aW1lem9uZTsKICAgICAgICB0aGUgdmlldyBsYXllciBjb252ZXJ0cyBpdCB0byBVVEMgdmlhIHRoZSBoaWRkZW4gZmllbGQuCiAgICAgICAgIiIiCiAgICAgICAgdmFsdWUgPSBzZWxmLmNsZWFuZWRfZGF0YS5nZXQoInNjaGVkdWxlZF9hdCIpCiAgICAgICAgaWYgbm90IHZhbHVlOgogICAgICAgICAgICByZXR1cm4gdmFsdWUKICAgICAgICBub3cgPSB0aW1lem9uZS5ub3coKQogICAgICAgICMgTWFrZSBuYWl2ZSBkYXRldGltZSB0aW1lem9uZS1hd2FyZSBpZiBuZWVkZWQKICAgICAgICBpZiB0aW1lem9uZS5pc19uYWl2ZSh2YWx1ZSk6CiAgICAgICAgICAgIHZhbHVlID0gdGltZXpvbmUubWFrZV9hd2FyZSh2YWx1ZSkKICAgICAgICBpZiB2YWx1ZSA8PSBub3cgKyB0aW1lZGVsdGEobWludXRlcz0xMCk6CiAgICAgICAgICAgIHJhaXNlIGZvcm1zLlZhbGlkYXRpb25FcnJvcigKICAgICAgICAgICAgICAgIF8oCiAgICAgICAgICAgICAgICAgICAgIlRoZSBzY2hlZHVsZWQgdGltZSBtdXN0IGJlIGF0IGxlYXN0IDEwIG1pbnV0ZXMgaW4gdGhlIGZ1dHVyZS4iCiAgICAgICAgICAgICAgICApCiAgICAgICAgICAgICkKICAgICAgICBpZiB2YWx1ZSA+IG5vdyArIHRpbWVkZWx0YShkYXlzPTE4MCk6CiAgICAgICAgICAgIHJhaXNlIGZvcm1zLlZhbGlkYXRpb25FcnJvcigKICAgICAgICAgICAgICAgIF8oIlRoZSBzY2hlZHVsZWQgdGltZSBjYW5ub3QgYmUgbW9yZSB0aGFuIDYgbW9udGhzIGluIHRoZSBmdXR1cmUuIikKICAgICAgICAgICAgKQogICAgICAgIHJldHVybiB2YWx1ZQoKICAgIGNsYXNzIE1lZGlhOgogICAgICAgIGpzID0gbGlzdChfT3JpZ2luYWxCYXRjaFVwZ3JhZGVDb25maXJtYXRpb25Gb3JtLk1lZGlhLmpzKSArIFsKICAgICAgICAgICAgImZpcm13YXJlLXVwZ3JhZGVyL2pzL3NjaGVkdWxlZC11cGdyYWRlLmpzIiwKICAgICAgICBdCiAgICAgICAgY3NzID0gewogICAgICAgICAgICAiYWxsIjogbGlzdCgKICAgICAgICAgICAgICAgIF9PcmlnaW5hbEJhdGNoVXBncmFkZUNvbmZpcm1hdGlvbkZvcm0uTWVkaWEuY3NzLmdldCgiYWxsIiwgW10pCiAgICAgICAgICAgICkKICAgICAgICAgICAgKyBbImZpcm13YXJlLXVwZ3JhZGVyL2Nzcy9zY2hlZHVsZWQtdXBncmFkZS5jc3MiXQogICAgICAgIH0KCgojIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgAojIDIuICBQYXRjaGVkIEJhdGNoVXBncmFkZU9wZXJhdGlvbkFkbWluCiMg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSACgoKY2xhc3MgQmF0Y2hVcGdyYWRlT3BlcmF0aW9uQWRtaW4oX09yaWdpbmFsQmF0Y2hBZG1pbik6CiAgICAiIiIKICAgIEV4dGVuZHMgdGhlIHN0b2NrIEJhdGNoVXBncmFkZU9wZXJhdGlvbkFkbWluIHdpdGg6CgogICAgTGlzdCB2aWV3CiAgICAtLS0tLS0tLS0KICAgIOKAoiBOZXcgInBlcnNpc3RlbnQiIGNvbHVtbiBzaG93aW5nIFllcyAvIE5vLgogICAg4oCiIE5ldyAic2NoZWR1bGVkX2F0IiBjb2x1bW46IHNob3dzIGEg8J+VkCBpY29uICsgZGF0ZXRpbWUgZm9yIHNjaGVkdWxlZAogICAgICBiYXRjaGVzLCBvciAi4oCUIiBmb3IgaW1tZWRpYXRlIG9uZXMuCiAgICDigKIgIkNhbmNlbCBzY2hlZHVsZWQgdXBncmFkZSIgbGlzdCBhY3Rpb24gKG9ubHkgYWZmZWN0cyBzY2hlZHVsZWQgYmF0Y2hlcykuCgogICAgRGV0YWlsIHZpZXcKICAgIC0tLS0tLS0tLS0tCiAgICDigKIgInBlcnNpc3RlbnQiIGZpZWxkIHJlbmRlcmVkIHJlYWQtb25seSAoY2hlY2tib3gtbGlrZSBpY29uKS4KICAgIOKAoiAic2NoZWR1bGVkX2F0IiBmaWVsZCByZW5kZXJlZCByZWFkLW9ubHkgaW4gdGhlIGRldGFpbCBmb3JtLgogICAg4oCiIFN0YXR1cyB0cmFuc2l0aW9uIGxvZyBzZWN0aW9uIChzY2hlZHVsZWQg4oaSIHJ1bm5pbmcg4oaSIHN1Y2Nlc3MvZmFpbGVkKS4KICAgICIiIgoKICAgICMg4pSA4pSAIExpc3QgZGlzcGxheSDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAKICAgIGxpc3RfZGlzcGxheSA9IF9PcmlnaW5hbEJhdGNoQWRtaW4ubGlzdF9kaXNwbGF5ICsgWwogICAgICAgICJkaXNwbGF5X3BlcnNpc3RlbnQiLAogICAgICAgICJkaXNwbGF5X3NjaGVkdWxlZF9hdCIsCiAgICBdCgogICAgYWN0aW9ucyA9IGxpc3QoZ2V0YXR0cihfT3JpZ2luYWxCYXRjaEFkbWluLCAiYWN0aW9ucyIsIFtdKSkgKyBbCiAgICAgICAgImNhbmNlbF9zY2hlZHVsZWRfdXBncmFkZSIsCiAgICBdCgogICAgIyDilIDilIAgRGV0YWlsIGZpZWxkcyDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAKICAgIGZpZWxkcyA9IGxpc3QoX09yaWdpbmFsQmF0Y2hBZG1pbi5maWVsZHMpICsgWwogICAgICAgICJkaXNwbGF5X3BlcnNpc3RlbnRfZGV0YWlsIiwKICAgICAgICAiZGlzcGxheV9zY2hlZHVsZWRfYXRfZGV0YWlsIiwKICAgICAgICAic3RhdHVzX3RyYW5zaXRpb25fbG9nIiwKICAgIF0KICAgIHJlYWRvbmx5X2ZpZWxkcyA9IGxpc3QoX09yaWdpbmFsQmF0Y2hBZG1pbi5yZWFkb25seV9maWVsZHMpICsgWwogICAgICAgICJkaXNwbGF5X3BlcnNpc3RlbnRfZGV0YWlsIiwKICAgICAgICAiZGlzcGxheV9zY2hlZHVsZWRfYXRfZGV0YWlsIiwKICAgICAgICAic3RhdHVzX3RyYW5zaXRpb25fbG9nIiwKICAgIF0KCiAgICAjIOKUgOKUgCBDb2x1bW46IHBlcnNpc3RlbnQg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSACgogICAgQGFkbWluLmRpc3BsYXkoZGVzY3JpcHRpb249XygiUGVyc2lzdGVudCIpLCBvcmRlcmluZz0icGVyc2lzdGVudCIpCiAgICBkZWYgZGlzcGxheV9wZXJzaXN0ZW50KHNlbGYsIG9iaik6CiAgICAgICAgaWYgb2JqLnBlcnNpc3RlbnQ6CiAgICAgICAgICAgIHJldHVybiBmb3JtYXRfaHRtbCgKICAgICAgICAgICAgICAgICc8aW1nIHNyYz0iL3N0YXRpYy9hZG1pbi9pbWcvaWNvbi15ZXMuc3ZnIiBhbHQ9IlllcyI+IFllcycKICAgICAgICAgICAgKQogICAgICAgIHJldHVybiBmb3JtYXRfaHRtbCgKICAgICAgICAgICAgJzxpbWcgc3JjPSIvc3RhdGljL2FkbWluL2ltZy9pY29uLW5vLnN2ZyIgYWx0PSJObyI+IE5vJwogICAgICAgICkKCiAgICAjIOKUgOKUgCBDb2x1bW46IHNjaGVkdWxlZF9hdCDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAKCiAgICBAYWRtaW4uZGlzcGxheShkZXNjcmlwdGlvbj1fKCJTY2hlZHVsZWQgYXQiKSwgb3JkZXJpbmc9InNjaGVkdWxlZF9hdCIpCiAgICBkZWYgZGlzcGxheV9zY2hlZHVsZWRfYXQoc2VsZiwgb2JqKToKICAgICAgICBpZiBub3Qgb2JqLnNjaGVkdWxlZF9hdDoKICAgICAgICAgICAgcmV0dXJuICLigJMiCiAgICAgICAgbG9jYWxfZHQgPSB0aW1lem9uZS5sb2NhbHRpbWUob2JqLnNjaGVkdWxlZF9hdCkKICAgICAgICByZXR1cm4gZm9ybWF0X2h0bWwoCiAgICAgICAgICAgICc8c3BhbiB0aXRsZT0iVVRDOiB7fSI+8J+VkCB7fTwvc3Bhbj4nLAogICAgICAgICAgICBvYmouc2NoZWR1bGVkX2F0LnN0cmZ0aW1lKCIlWS0lbS0lZCAlSDolTSBVVEMiKSwKICAgICAgICAgICAgbG9jYWxfZHQuc3RyZnRpbWUoIiVZLSVtLSVkICVIOiVNIiksCiAgICAgICAgKQoKICAgICMg4pSA4pSAIERldGFpbDogcGVyc2lzdGVudCDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAKCiAgICBAYWRtaW4uZGlzcGxheShkZXNjcmlwdGlvbj1fKCJQZXJzaXN0ZW50IHVwZ3JhZGVzIikpCiAgICBkZWYgZGlzcGxheV9wZXJzaXN0ZW50X2RldGFpbChzZWxmLCBvYmopOgogICAgICAgIGlmIG9iai5wZXJzaXN0ZW50OgogICAgICAgICAgICByZXR1cm4gZm9ybWF0X2h0bWwoCiAgICAgICAgICAgICAgICAnPGltZyBzcmM9Ii9zdGF0aWMvYWRtaW4vaW1nL2ljb24teWVzLnN2ZyIgYWx0PSJZZXMiPicKICAgICAgICAgICAgICAgICIgPHN0cm9uZz5ZZXM8L3N0cm9uZz4g4oCUIG9mZmxpbmUgZGV2aWNlcyB3aWxsIGJlIHJldHJpZWQgYXV0b21hdGljYWxseS4iCiAgICAgICAgICAgICkKICAgICAgICByZXR1cm4gZm9ybWF0X2h0bWwoCiAgICAgICAgICAgICc8aW1nIHNyYz0iL3N0YXRpYy9hZG1pbi9pbWcvaWNvbi1uby5zdmciIGFsdD0iTm8iPicKICAgICAgICAgICAgIiBObyDigJQgZmFpbGVkIGRldmljZXMgd2lsbCBub3QgYmUgcmV0cmllZC4iCiAgICAgICAgKQoKICAgICMg4pSA4pSAIERldGFpbDogc2NoZWR1bGVkX2F0IOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgAoKICAgIEBhZG1pbi5kaXNwbGF5KGRlc2NyaXB0aW9uPV8oIlNjaGVkdWxlZCBhdCAoVVRDKSIpKQogICAgZGVmIGRpc3BsYXlfc2NoZWR1bGVkX2F0X2RldGFpbChzZWxmLCBvYmopOgogICAgICAgIGlmIG5vdCBvYmouc2NoZWR1bGVkX2F0OgogICAgICAgICAgICByZXR1cm4gXygiSW1tZWRpYXRlIChub3Qgc2NoZWR1bGVkKSIpCiAgICAgICAgbG9jYWxfZHQgPSB0aW1lem9uZS5sb2NhbHRpbWUob2JqLnNjaGVkdWxlZF9hdCkKICAgICAgICByZXR1cm4gZm9ybWF0X2h0bWwoCiAgICAgICAgICAgICJ7fSA8c21hbGwgc3R5bGU9J2NvbG9yOiM2NjYnPihsb2NhbCkgLyB7fSBVVEM8L3NtYWxsPiIsCiAgICAgICAgICAgIGxvY2FsX2R0LnN0cmZ0aW1lKCIlWS0lbS0lZCAlSDolTSIpLAogICAgICAgICAgICBvYmouc2NoZWR1bGVkX2F0LnN0cmZ0aW1lKCIlWS0lbS0lZCAlSDolTSIpLAogICAgICAgICkKCiAgICAjIOKUgOKUgCBEZXRhaWw6IHN0YXR1cyB0cmFuc2l0aW9uIGxvZyDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAKCiAgICBAYWRtaW4uZGlzcGxheShkZXNjcmlwdGlvbj1fKCJTdGF0dXMgdHJhbnNpdGlvbiBsb2ciKSkKICAgIGRlZiBzdGF0dXNfdHJhbnNpdGlvbl9sb2coc2VsZiwgb2JqKToKICAgICAgICAiIiIKICAgICAgICBSZW5kZXJzIGEgc2ltcGxlIHRpbWVsaW5lIG9mIHN0YXR1cyBjaGFuZ2VzIGZvciB0aGlzIGJhdGNoLgoKICAgICAgICBJbiB0aGUgcHJvdG90eXBlIHRoaXMgcmVhZHMgZnJvbSBCYXRjaFN0YXR1c0xvZyAoYSBsaWdodHdlaWdodAogICAgICAgIG1vZGVsIGFkZGVkIGluIHRoZSBmdWxsIGltcGxlbWVudGF0aW9uKS4gIEZvciB0aGUgZGVtbyB3ZSByZW5kZXIKICAgICAgICBhIHN0YXRpYyBwbGFjZWhvbGRlciB0aGF0IGRlbW9uc3RyYXRlcyB0aGUgVUkgaW50ZW50LgogICAgICAgICIiIgogICAgICAgICMgUHJvdG90eXBlIHBsYWNlaG9sZGVyIOKAkyByZWFsIGltcGxlbWVudGF0aW9uIHJlYWRzIEJhdGNoU3RhdHVzTG9nIHJvd3MKICAgICAgICB0cmFuc2l0aW9ucyA9IFtdCiAgICAgICAgaWYgb2JqLnNjaGVkdWxlZF9hdDoKICAgICAgICAgICAgdHJhbnNpdGlvbnMuYXBwZW5kKAogICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICAgICJzdGF0dXMiOiAic2NoZWR1bGVkIiwKICAgICAgICAgICAgICAgICAgICAibGFiZWwiOiBfKCJTY2hlZHVsZWQiKSwKICAgICAgICAgICAgICAgICAgICAidHMiOiBvYmouY3JlYXRlZCwKICAgICAgICAgICAgICAgICAgICAiaWNvbiI6ICLwn5WQIiwKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgKQogICAgICAgIHRyYW5zaXRpb25zLmFwcGVuZCgKICAgICAgICAgICAgewogICAgICAgICAgICAgICAgInN0YXR1cyI6ICJpbi1wcm9ncmVzcyIsCiAgICAgICAgICAgICAgICAibGFiZWwiOiBfKCJTdGFydGVkIC8gaW4gcHJvZ3Jlc3MiKSwKICAgICAgICAgICAgICAgICJ0cyI6IG9iai5tb2RpZmllZCwKICAgICAgICAgICAgICAgICJpY29uIjogIuKWtiIsCiAgICAgICAgICAgIH0KICAgICAgICApCiAgICAgICAgaWYgb2JqLnN0YXR1cyBpbiAoInN1Y2Nlc3MiLCAiZmFpbGVkIiwgImNhbmNlbGxlZCIpOgogICAgICAgICAgICB0cmFuc2l0aW9ucy5hcHBlbmQoCiAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgInN0YXR1cyI6IG9iai5zdGF0dXMsCiAgICAgICAgICAgICAgICAgICAgImxhYmVsIjogb2JqLmdldF9zdGF0dXNfZGlzcGxheSgpLAogICAgICAgICAgICAgICAgICAgICJ0cyI6IG9iai5tb2RpZmllZCwKICAgICAgICAgICAgICAgICAgICAiaWNvbiI6ICLinJMiIGlmIG9iai5zdGF0dXMgPT0gInN1Y2Nlc3MiIGVsc2UgIuKclyIsCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICkKCiAgICAgICAgcm93cyA9IFtdCiAgICAgICAgZm9yIHQgaW4gdHJhbnNpdGlvbnM6CiAgICAgICAgICAgIGxvY2FsX3RzID0gdGltZXpvbmUubG9jYWx0aW1lKHRbInRzIl0pLnN0cmZ0aW1lKCIlWS0lbS0lZCAlSDolTTolUyIpCiAgICAgICAgICAgIHJvd3MuYXBwZW5kKAogICAgICAgICAgICAgICAgZm9ybWF0X2h0bWwoCiAgICAgICAgICAgICAgICAgICAgIjxsaT48c3BhbiBjbGFzcz0nc3RhdHVzLWxvZy1pY29uJz57fTwvc3Bhbj4iCiAgICAgICAgICAgICAgICAgICAgIiA8c3Ryb25nPnt9PC9zdHJvbmc+IOKAlCA8ZW0+e308L2VtPjwvbGk+IiwKICAgICAgICAgICAgICAgICAgICB0WyJpY29uIl0sCiAgICAgICAgICAgICAgICAgICAgdFsibGFiZWwiXSwKICAgICAgICAgICAgICAgICAgICBsb2NhbF90cywKICAgICAgICAgICAgICAgICkKICAgICAgICAgICAgKQogICAgICAgIHJldHVybiBmb3JtYXRfaHRtbCgKICAgICAgICAgICAgJzx1bCBjbGFzcz0ic3RhdHVzLXRyYW5zaXRpb24tbG9nIj57fTwvdWw+JywKICAgICAgICAgICAgbWFya19zYWZlKCIiLmpvaW4ocm93cykpLAogICAgICAgICkKCiAgICAjIOKUgOKUgCBMaXN0IGFjdGlvbjogY2FuY2VsIHNjaGVkdWxlZCB1cGdyYWRlIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgAoKICAgIEBhZG1pbi5hY3Rpb24oCiAgICAgICAgZGVzY3JpcHRpb249XygiQ2FuY2VsIHNlbGVjdGVkIHNjaGVkdWxlZCB1cGdyYWRlcyIpLAogICAgICAgIHBlcm1pc3Npb25zPVsiY2hhbmdlIl0sCiAgICApCiAgICBkZWYgY2FuY2VsX3NjaGVkdWxlZF91cGdyYWRlKHNlbGYsIHJlcXVlc3QsIHF1ZXJ5c2V0KToKICAgICAgICBzY2hlZHVsZWQgPSBxdWVyeXNldC5maWx0ZXIoc3RhdHVzPSJzY2hlZHVsZWQiKQogICAgICAgIGNvdW50ID0gc2NoZWR1bGVkLmNvdW50KCkKICAgICAgICBpZiBub3QgY291bnQ6CiAgICAgICAgICAgIHNlbGYubWVzc2FnZV91c2VyKAogICAgICAgICAgICAgICAgcmVxdWVzdCwKICAgICAgICAgICAgICAgIF8oIk5vIHNjaGVkdWxlZCB1cGdyYWRlcyB3ZXJlIGZvdW5kIGluIHRoZSBzZWxlY3Rpb24uIiksCiAgICAgICAgICAgICAgICBtZXNzYWdlcy5XQVJOSU5HLAogICAgICAgICAgICApCiAgICAgICAgICAgIHJldHVybgogICAgICAgIHNjaGVkdWxlZC51cGRhdGUoc3RhdHVzPSJjYW5jZWxsZWQiKQogICAgICAgIHNlbGYubWVzc2FnZV91c2VyKAogICAgICAgICAgICByZXF1ZXN0LAogICAgICAgICAgICBfKGYie2NvdW50fSBzY2hlZHVsZWQgdXBncmFkZShzKSBoYXZlIGJlZW4gY2FuY2VsbGVkLiIpLAogICAgICAgICAgICBtZXNzYWdlcy5TVUNDRVNTLAogICAgICAgICkKCiAgICBjbGFzcyBNZWRpYToKICAgICAgICBjc3MgPSB7CiAgICAgICAgICAgICJhbGwiOiBbCiAgICAgICAgICAgICAgICAiZmlybXdhcmUtdXBncmFkZXIvY3NzL3NjaGVkdWxlZC11cGdyYWRlLmNzcyIsCiAgICAgICAgICAgICAgICAiZmlybXdhcmUtdXBncmFkZXIvY3NzL3N0YXR1cy1sb2cuY3NzIiwKICAgICAgICAgICAgXQogICAgICAgIH0KCgojIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgAojIDMuICBQYXRjaGVkIFVwZ3JhZGVPcGVyYXRpb25BZG1pbgojIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgAoKCmNsYXNzIFVwZ3JhZGVPcGVyYXRpb25BZG1pbihfT3JpZ2luYWxVcGdyYWRlT3BlcmF0aW9uQWRtaW4pOgogICAgIiIiCiAgICBFeHRlbmRzIHRoZSBzdG9jayBVcGdyYWRlT3BlcmF0aW9uQWRtaW4gd2l0aDoKCiAgICDigKIgcmV0cnlfY291bnQgIOKAlCByZWFkLW9ubHkgaW50ZWdlciBmaWVsZC4KICAgIOKAoiBuZXh0X3JldHJ5X2F0X2Rpc3BsYXkg4oCUIGh1bWFuLWZyaWVuZGx5ICJQZW5kaW5nIHJldHJ5IGF0IEhIOk1NIiBzdHJpbmcuCiAgICDigKIgd2FpdGluZ19mb3JfZGV2aWNlICAg4oCUIHNob3duIGFzIGEgYmFkZ2UgaW4gdGhlIHN0YXR1cyBjb2x1bW4uCgogICAgVGhlICJ3YWl0aW5nIiBzdGF0dXMgYmFkZ2UgaXMgcmVnaXN0ZXJlZCBpbiB0aGUgdGVtcGxhdGUgdmlhIHRoZQogICAgYGBTVEFUVVNfQkFER0VfTUFQYGAgZGljdCBpbmplY3RlZCBpbnRvIHRlbXBsYXRlIGNvbnRleHQuCiAgICAiIiIKCiAgICBmaWVsZHMgPSBsaXN0KF9PcmlnaW5hbFVwZ3JhZGVPcGVyYXRpb25BZG1pbi5maWVsZHMpICsgWwogICAgICAgICJyZXRyeV9jb3VudCIsCiAgICAgICAgIm5leHRfcmV0cnlfZGlzcGxheSIsCiAgICBdCiAgICByZWFkb25seV9maWVsZHMgPSBsaXN0KF9PcmlnaW5hbFVwZ3JhZGVPcGVyYXRpb25BZG1pbi5yZWFkb25seV9maWVsZHMpICsgWwogICAgICAgICJyZXRyeV9jb3VudCIsCiAgICAgICAgIm5leHRfcmV0cnlfZGlzcGxheSIsCiAgICBdCgogICAgQGFkbWluLmRpc3BsYXkoZGVzY3JpcHRpb249XygiUmV0cnkgY291bnQiKSkKICAgIGRlZiByZXRyeV9jb3VudChzZWxmLCBvYmopOgogICAgICAgIHJldHVybiBvYmoucmV0cnlfY291bnQKCiAgICBAYWRtaW4uZGlzcGxheShkZXNjcmlwdGlvbj1fKCJOZXh0IHJldHJ5IikpCiAgICBkZWYgbmV4dF9yZXRyeV9kaXNwbGF5KHNlbGYsIG9iaik6CiAgICAgICAgIiIiCiAgICAgICAgU2hvd3MgJ1BlbmRpbmcgcmV0cnkgYXQgSEg6TU0gKGxvY2FsKScgZm9yIHdhaXRpbmcgb3BlcmF0aW9ucywKICAgICAgICBvciAn4oCTJyBmb3Igb3BlcmF0aW9ucyB0aGF0IGFyZSBub3QgaW4gYSByZXRyeSBzdGF0ZS4KICAgICAgICAiIiIKICAgICAgICBpZiBub3QgZ2V0YXR0cihvYmosICJuZXh0X3JldHJ5X2F0IiwgTm9uZSk6CiAgICAgICAgICAgIHJldHVybiAi4oCTIgogICAgICAgIGlmIG5vdCBvYmoud2FpdGluZ19mb3JfZGV2aWNlOgogICAgICAgICAgICByZXR1cm4gIuKAkyIKICAgICAgICBsb2NhbF9kdCA9IHRpbWV6b25lLmxvY2FsdGltZShvYmoubmV4dF9yZXRyeV9hdCkKICAgICAgICByZXR1cm4gZm9ybWF0X2h0bWwoCiAgICAgICAgICAgICc8c3BhbiBjbGFzcz0icmV0cnktcGVuZGluZyI+4o+zIFBlbmRpbmcgcmV0cnkgYXQge308L3NwYW4+JywKICAgICAgICAgICAgbG9jYWxfZHQuc3RyZnRpbWUoIiVIOiVNIiksCiAgICAgICAgKQoKICAgICMg4pSA4pSAIExpc3QgZGlzcGxheTogc3RhdHVzIGJhZGdlIGZvciAnd2FpdGluZycg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSACgogICAgQGFkbWluLmRpc3BsYXkoZGVzY3JpcHRpb249XygiU3RhdHVzIiksIG9yZGVyaW5nPSJzdGF0dXMiKQogICAgZGVmIGRpc3BsYXlfc3RhdHVzX3dpdGhfYmFkZ2Uoc2VsZiwgb2JqKToKICAgICAgICBiYWRnZV9tYXAgPSB7CiAgICAgICAgICAgICJpbi1wcm9ncmVzcyI6ICgiYmx1ZSIsIF8oIkluIHByb2dyZXNzIikpLAogICAgICAgICAgICAid2FpdGluZyI6ICgib3JhbmdlIiwgXygiV2FpdGluZyBmb3IgZGV2aWNlIikpLAogICAgICAgICAgICAic3VjY2VzcyI6ICgiZ3JlZW4iLCBfKCJTdWNjZXNzIikpLAogICAgICAgICAgICAiZmFpbGVkIjogKCJyZWQiLCBfKCJGYWlsZWQiKSksCiAgICAgICAgICAgICJjYW5jZWxsZWQiOiAoImdyZXkiLCBfKCJDYW5jZWxsZWQiKSksCiAgICAgICAgICAgICJhYm9ydGVkIjogKCJkYXJrLWdyZXkiLCBfKCJBYm9ydGVkIikpLAogICAgICAgIH0KICAgICAgICBjb2xvdXIsIGxhYmVsID0gYmFkZ2VfbWFwLmdldChvYmouc3RhdHVzLCAoImdyZXkiLCBvYmouZ2V0X3N0YXR1c19kaXNwbGF5KCkpKQogICAgICAgIHJldHVybiBmb3JtYXRfaHRtbCgKICAgICAgICAgICAgJzxzcGFuIGNsYXNzPSJzdGF0dXMtYmFkZ2Ugc3RhdHVzLWJhZGdlLS17fSI+e308L3NwYW4+JywKICAgICAgICAgICAgY29sb3VyLAogICAgICAgICAgICBsYWJlbCwKICAgICAgICApCgogICAgbGlzdF9kaXNwbGF5ID0gWwogICAgICAgIGNvbCBpZiBjb2wgIT0gInN0YXR1cyIgZWxzZSAiZGlzcGxheV9zdGF0dXNfd2l0aF9iYWRnZSIKICAgICAgICBmb3IgY29sIGluIF9PcmlnaW5hbFVwZ3JhZGVPcGVyYXRpb25BZG1pbi5saXN0X2Rpc3BsYXkKICAgIF0K
+"""
+GSoC 2026 Prototype – Admin layer additions.
+
+Patch file containing:
+  1. Extended BatchUpgradeConfirmationForm  (persistent checkbox + datetime picker)
+  2. Patched BatchUpgradeOperationAdmin     (new list column, cancel scheduled action)
+  3. Patched UpgradeOperationAdmin          (retry_count, next_retry_at readonly fields)
+
+In the full implementation these changes would be merged directly into
+openwisp_firmware_upgrader/admin.py.  They are kept here for clarity.
+"""
+
+import logging
+from datetime import timedelta
+
+from django import forms
+from django.conf import settings as dj_settings
+from django.contrib import admin, messages
+from django.utils import timezone
+from django.utils.html import format_html
+from django.utils.safestring import mark_safe
+from django.utils.translation import gettext_lazy as _
+
+from .admin import BatchUpgradeConfirmationForm as _OriginalBatchUpgradeConfirmationForm
+from .admin import BatchUpgradeOperationAdmin as _OriginalBatchAdmin
+from .admin import UpgradeOperationAdmin as _OriginalUpgradeOperationAdmin
+
+logger = logging.getLogger(__name__)
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 1.  Extended confirmation form
+# ─────────────────────────────────────────────────────────────────────────────
+
+
+class BatchUpgradeConfirmationForm(_OriginalBatchUpgradeConfirmationForm):
+    """
+    Extends the stock confirmation form with two new fields:
+
+    persistent
+    ----------
+    A BooleanField rendered as a checkbox.  Checked by default.
+    After the batch is created the widget is replaced with a read-only
+    indicator (done in the template) to communicate immutability.
+
+    scheduled_at
+    ------------
+    An optional DateTimeField rendered as an HTML5 ``datetime-local``
+    input.  The label shows the server timezone (e.g. "Schedule for
+    (server time: UTC)") so the operator knows the reference frame.
+    A small JS snippet (upgrade-selected-confirmation.js) reads the
+    browser's ``Intl.DateTimeFormat().resolvedOptions().timeZone``,
+    converts the chosen datetime to UTC, and sets a hidden
+    ``scheduled_at_utc`` field before form submit.
+
+    Validation rules (mirrors AbstractBatchUpgradeOperation.clean()):
+      - If set, must be at least 10 minutes in the future.
+      - If set, must not exceed 6 months from now.
+    """
+
+    persistent = forms.BooleanField(
+        initial=True,
+        required=False,
+        label=_("Persistent upgrades"),
+        help_text=_(
+            "Automatically retry devices that are offline at upgrade time "
+            "using exponential back-off. "
+            "⚠ This setting cannot be changed once the batch is created."
+        ),
+        widget=forms.CheckboxInput(attrs={"class": "persistent-checkbox"}),
+    )
+
+    scheduled_at = forms.DateTimeField(
+        required=False,
+        label=_("Schedule for"),
+        help_text=_(
+            "Leave blank to start the upgrade immediately. "
+            "Time is interpreted in <strong>your browser's local timezone</strong>; "
+            "the hidden field <code>scheduled_at_utc</code> stores it in UTC."
+        ),
+        widget=forms.DateTimeInput(
+            attrs={
+                "type": "datetime-local",
+                "class": "scheduled-at-picker",
+                "data-server-tz": "%(tz)s",
+            }
+        ),
+    )
+
+    # Hidden UTC field — populated by JS before submit
+    scheduled_at_utc = forms.CharField(
+        required=False,
+        widget=forms.HiddenInput(attrs={"id": "id_scheduled_at_utc"}),
+    )
+
+    class Meta(_OriginalBatchUpgradeConfirmationForm.Meta):
+        fields = _OriginalBatchUpgradeConfirmationForm.Meta.fields + (
+            "persistent",
+            "scheduled_at",
+        )
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        # Inject server timezone into the widget's data attributes
+        server_tz = getattr(dj_settings, "TIME_ZONE", "UTC")
+        self.fields["scheduled_at"].widget.attrs["data-server-tz"] = server_tz
+        # Default persistent to True for new forms
+        if not self.is_bound:
+            self.initial.setdefault("persistent", True)
+
+    def clean_scheduled_at(self):
+        """
+        Validate the scheduled_at field:
+          - Must be at least 10 minutes in the future
+          - Must not exceed 6 months out
+        Returns the value in the original browser timezone;
+        the view layer converts it to UTC via the hidden field.
+        """
+        value = self.cleaned_data.get("scheduled_at")
+        if not value:
+            return value
+        now = timezone.now()
+        # Make naive datetime timezone-aware if needed
+        if timezone.is_naive(value):
+            value = timezone.make_aware(value)
+        if value <= now + timedelta(minutes=10):
+            raise forms.ValidationError(
+                _("The scheduled time must be at least 10 minutes in the future.")
+            )
+        if value > now + timedelta(days=180):
+            raise forms.ValidationError(
+                _("The scheduled time cannot be more than 6 months in the future.")
+            )
+        return value
+
+    class Media:
+        js = list(_OriginalBatchUpgradeConfirmationForm.Media.js) + [
+            "firmware-upgrader/js/scheduled-upgrade.js",
+        ]
+        css = {
+            "all": list(_OriginalBatchUpgradeConfirmationForm.Media.css.get("all", []))
+            + ["firmware-upgrader/css/scheduled-upgrade.css"]
+        }
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 2.  Patched BatchUpgradeOperationAdmin
+# ─────────────────────────────────────────────────────────────────────────────
+
+
+class BatchUpgradeOperationAdmin(_OriginalBatchAdmin):
+    """
+    Extends the stock BatchUpgradeOperationAdmin with:
+
+    List view
+    ---------
+    • New "persistent" column showing Yes / No.
+    • New "scheduled_at" column: shows a 🕐 icon + datetime for scheduled
+      batches, or "—" for immediate ones.
+    • "Cancel scheduled upgrade" list action (only affects scheduled batches).
+
+    Detail view
+    -----------
+    • "persistent" field rendered read-only (checkbox-like icon).
+    • "scheduled_at" field rendered read-only in the detail form.
+    • Status transition log section (scheduled → running → success/failed).
+    """
+
+    # ── List display ────────────────────────────────────────────────────────────────────
+    list_display = _OriginalBatchAdmin.list_display + [
+        "display_persistent",
+        "display_scheduled_at",
+    ]
+
+    actions = list(getattr(_OriginalBatchAdmin, "actions", [])) + [
+        "cancel_scheduled_upgrade",
+    ]
+
+    # ── Detail fields ──────────────────────────────────────────────────────────────────
+    fields = list(_OriginalBatchAdmin.fields) + [
+        "display_persistent_detail",
+        "display_scheduled_at_detail",
+        "status_transition_log",
+    ]
+    readonly_fields = list(_OriginalBatchAdmin.readonly_fields) + [
+        "display_persistent_detail",
+        "display_scheduled_at_detail",
+        "status_transition_log",
+    ]
+
+    # ── Column: persistent ────────────────────────────────────────────────────────────────
+
+    @admin.display(description=_("Persistent"), ordering="persistent")
+    def display_persistent(self, obj):
+        if obj.persistent:
+            return format_html(
+                '<img src="/static/admin/img/icon-yes.svg" alt="Yes"> Yes'
+            )
+        return format_html('<img src="/static/admin/img/icon-no.svg" alt="No"> No')
+
+    # ── Column: scheduled_at ─────────────────────────────────────────────────────────────
+
+    @admin.display(description=_("Scheduled at"), ordering="scheduled_at")
+    def display_scheduled_at(self, obj):
+        if not obj.scheduled_at:
+            return "–"
+        local_dt = timezone.localtime(obj.scheduled_at)
+        return format_html(
+            '<span title="UTC: {}">🕐 {}</span>',
+            obj.scheduled_at.strftime("%Y-%m-%d %H:%M UTC"),
+            local_dt.strftime("%Y-%m-%d %H:%M"),
+        )
+
+    # ── Detail: persistent ───────────────────────────────────────────────────────────────
+
+    @admin.display(description=_("Persistent upgrades"))
+    def display_persistent_detail(self, obj):
+        if obj.persistent:
+            return format_html(
+                '<img src="/static/admin/img/icon-yes.svg" alt="Yes">'
+                " <strong>Yes</strong> — offline devices will be retried automatically."
+            )
+        return format_html(
+            '<img src="/static/admin/img/icon-no.svg" alt="No">'
+            " No — failed devices will not be retried."
+        )
+
+    # ── Detail: scheduled_at ────────────────────────────────────────────────────────────
+
+    @admin.display(description=_("Scheduled at (UTC)"))
+    def display_scheduled_at_detail(self, obj):
+        if not obj.scheduled_at:
+            return _("Immediate (not scheduled)")
+        local_dt = timezone.localtime(obj.scheduled_at)
+        return format_html(
+            "{} <small style='color:#666'>(local) / {} UTC</small>",
+            local_dt.strftime("%Y-%m-%d %H:%M"),
+            obj.scheduled_at.strftime("%Y-%m-%d %H:%M"),
+        )
+
+    # ── Detail: status transition log ───────────────────────────────────────────────
+
+    @admin.display(description=_("Status transition log"))
+    def status_transition_log(self, obj):
+        """
+        Renders a simple timeline of status changes for this batch.
+
+        In the prototype this reads from BatchStatusLog (a lightweight
+        model added in the full implementation).  For the demo we render
+        a static placeholder that demonstrates the UI intent.
+        """
+        # Prototype placeholder – real implementation reads BatchStatusLog rows
+        transitions = []
+        if obj.scheduled_at:
+            transitions.append(
+                {
+                    "status": "scheduled",
+                    "label": _("Scheduled"),
+                    "ts": obj.created,
+                    "icon": "🕐",
+                }
+            )
+        transitions.append(
+            {
+                "status": "in-progress",
+                "label": _("Started / in progress"),
+                "ts": obj.modified,
+                "icon": "▶",
+            }
+        )
+        if obj.status in ("success", "failed", "cancelled"):
+            transitions.append(
+                {
+                    "status": obj.status,
+                    "label": obj.get_status_display(),
+                    "ts": obj.modified,
+                    "icon": "✓" if obj.status == "success" else "✗",
+                }
+            )
+
+        rows = []
+        for t in transitions:
+            local_ts = timezone.localtime(t["ts"]).strftime("%Y-%m-%d %H:%M:%S")
+            rows.append(
+                format_html(
+                    "<li><span class='status-log-icon'>{}</span>"
+                    " <strong>{}</strong> — <em>{}</em></li>",
+                    t["icon"],
+                    t["label"],
+                    local_ts,
+                )
+            )
+        return format_html(
+            '<ul class="status-transition-log">{}</ul>',
+            mark_safe("".join(rows)),
+        )
+
+    # ── List action: cancel scheduled upgrade ─────────────────────────────────────────────
+
+    @admin.action(
+        description=_("Cancel selected scheduled upgrades"),
+        permissions=["change"],
+    )
+    def cancel_scheduled_upgrade(self, request, queryset):
+        scheduled = queryset.filter(status="scheduled")
+        count = scheduled.count()
+        if not count:
+            self.message_user(
+                request,
+                _("No scheduled upgrades were found in the selection."),
+                messages.WARNING,
+            )
+            return
+        scheduled.update(status="cancelled")
+        self.message_user(
+            request,
+            _(f"{count} scheduled upgrade(s) have been cancelled."),
+            messages.SUCCESS,
+        )
+
+    class Media:
+        css = {
+            "all": [
+                "firmware-upgrader/css/scheduled-upgrade.css",
+                "firmware-upgrader/css/status-log.css",
+            ]
+        }
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 3.  Patched UpgradeOperationAdmin
+# ─────────────────────────────────────────────────────────────────────────────
+
+
+class UpgradeOperationAdmin(_OriginalUpgradeOperationAdmin):
+    """
+    Extends the stock UpgradeOperationAdmin with:
+
+    • retry_count  — read-only integer field.
+    • next_retry_at_display — human-friendly "Pending retry at HH:MM" string.
+    • waiting_for_device   — shown as a badge in the status column.
+
+    The "waiting" status badge is registered in the template via the
+    ``STATUS_BADGE_MAP`` dict injected into template context.
+    """
+
+    fields = list(_OriginalUpgradeOperationAdmin.fields) + [
+        "retry_count",
+        "next_retry_display",
+    ]
+    readonly_fields = list(_OriginalUpgradeOperationAdmin.readonly_fields) + [
+        "retry_count",
+        "next_retry_display",
+    ]
+
+    @admin.display(description=_("Retry count"))
+    def retry_count(self, obj):
+        return obj.retry_count
+
+    @admin.display(description=_("Next retry"))
+    def next_retry_display(self, obj):
+        """
+        Shows 'Pending retry at HH:MM (local)' for waiting operations,
+        or '–' for operations that are not in a retry state.
+        """
+        if not getattr(obj, "next_retry_at", None):
+            return "–"
+        if not obj.waiting_for_device:
+            return "–"
+        local_dt = timezone.localtime(obj.next_retry_at)
+        return format_html(
+            '<span class="retry-pending">⏳ Pending retry at {}</span>',
+            local_dt.strftime("%H:%M"),
+        )
+
+    # ── List display: status badge for 'waiting' ────────────────────────────────────────
+
+    @admin.display(description=_("Status"), ordering="status")
+    def display_status_with_badge(self, obj):
+        badge_map = {
+            "in-progress": ("blue", _("In progress")),
+            "waiting": ("orange", _("Waiting for device")),
+            "success": ("green", _("Success")),
+            "failed": ("red", _("Failed")),
+            "cancelled": ("grey", _("Cancelled")),
+            "aborted": ("dark-grey", _("Aborted")),
+        }
+        colour, label = badge_map.get(obj.status, ("grey", obj.get_status_display()))
+        return format_html(
+            '<span class="status-badge status-badge--{}">{}</span>',
+            colour,
+            label,
+        )
+
+    list_display = [
+        col if col != "status" else "display_status_with_badge"
+        for col in _OriginalUpgradeOperationAdmin.list_display
+    ]

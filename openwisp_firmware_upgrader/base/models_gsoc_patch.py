@@ -1,1 +1,231 @@
-IiIiCkdTb0MgMjAyNiBQcm90b3R5cGUg4oCTIE1vZGVsIGZpZWxkIGFkZGl0aW9ucy4KClRoaXMgbW9kdWxlIGRvY3VtZW50cyAoYW5kIHByb3ZpZGVzIG1peGlucyBmb3IpIHRoZSBuZXcgZmllbGRzIGFkZGVkIHRvCkFic3RyYWN0QmF0Y2hVcGdyYWRlT3BlcmF0aW9uIGFuZCBBYnN0cmFjdFVwZ3JhZGVPcGVyYXRpb24uCgpJbiB0aGUgZnVsbCBpbXBsZW1lbnRhdGlvbiB0aGVzZSB3b3VsZCBsaXZlIGRpcmVjdGx5IGluc2lkZQpvcGVud2lzcF9maXJtd2FyZV91cGdyYWRlci9iYXNlL21vZGVscy5weSwgYnV0IGZvciB0aGUgcHJvdG90eXBlIHdlIGtlZXAKdGhlbSBpbiBhIHNlcGFyYXRlIGZpbGUgc28gdGhlIGRpZmYgaXMgZWFzeSB0byByZXZpZXcuCiIiIgoKZnJvbSBkamFuZ28uY29yZS5leGNlcHRpb25zIGltcG9ydCBWYWxpZGF0aW9uRXJyb3IKZnJvbSBkamFuZ28uZGIgaW1wb3J0IG1vZGVscwpmcm9tIGRqYW5nby51dGlscyBpbXBvcnQgdGltZXpvbmUKZnJvbSBkamFuZ28udXRpbHMudHJhbnNsYXRpb24gaW1wb3J0IGdldHRleHRfbGF6eSBhcyBfCgoKIyDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAKIyBNaXhpbjogYWRkcyB0aGUgYHBlcnNpc3RlbnRgIGFuZCBgc2NoZWR1bGVkX2F0YCBmaWVsZHMgdG8KIyAgICAgICAgQWJzdHJhY3RCYXRjaFVwZ3JhZGVPcGVyYXRpb24KIyDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAKCgpjbGFzcyBQZXJzaXN0ZW50U2NoZWR1bGVkQmF0Y2hNaXhpbihtb2RlbHMuTW9kZWwpOgogICAgIiIiCiAgICBNaXhpbiB0aGF0IG11c3QgYmUgcGxhY2VkICpiZWZvcmUqIEFic3RyYWN0QmF0Y2hVcGdyYWRlT3BlcmF0aW9uIGluIE1STy4KCiAgICBGaWVsZHMgYWRkZWQKICAgIH5+fn5+fn5+fn5+fgogICAgcGVyc2lzdGVudCA6IGJvb2wKICAgICAgICBXaGVuIFRydWUsIFVwZ3JhZGVPcGVyYXRpb25zIHRoYXQgZmFpbCBiZWNhdXNlIHRoZSBkZXZpY2UgaXMgb2ZmbGluZQogICAgICAgIHdpbGwgYmUgYXV0b21hdGljYWxseSByZXRyaWVkIGFjY29yZGluZyB0byB0aGUgZXhwb25lbnRpYWwgYmFjay1vZmYKICAgICAgICBzdHJhdGVneS4gIFRoZSBmaWVsZCBpcyBzZXQgYXQgY3JlYXRpb24gdGltZSBhbmQgY2Fubm90IGJlIGNoYW5nZWQKICAgICAgICBhZnRlcndhcmRzIChlbmZvcmNlZCBpbiBgYGNsZWFuKClgYCkuCgogICAgc2NoZWR1bGVkX2F0IDogZGF0ZXRpbWUgfCBOb25lCiAgICAgICAgSWYgc2V0LCB0aGUgYmF0Y2ggaXMgbm90IHN0YXJ0ZWQgaW1tZWRpYXRlbHk7IGluc3RlYWQgYSBDZWxlcnkgQmVhdAogICAgICAgIHBlcmlvZGljIHRhc2sgcG9sbHMgZXZlcnkgbWludXRlIGFuZCBzdGFydHMgYmF0Y2hlcyB3aG9zZQogICAgICAgIGBgc2NoZWR1bGVkX2F0YGAgaGFzIGVsYXBzZWQuICBTdG9yZWQgaW4gVVRDLgoKICAgIFNUQVRVU19DSE9JQ0VTIGV4dGVuc2lvbgogICAgfn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+CiAgICBUaGUgYGBzY2hlZHVsZWRgYCBzdGF0dXMgaXMgYWRkZWQgb24gdG9wIG9mIHRoZSBwYXJlbnQncyBjaG9pY2VzIHNvIHRoYXQKICAgIHRoZSBiYXRjaCBsaXN0IGNhbiBzaG93IGEgY2xvY2sgaWNvbiBmb3IgcGVuZGluZyBiYXRjaGVzLgogICAgIiIiCgogICAgIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgICMgTmV3IGZpZWxkcwogICAgIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgIHBlcnNpc3RlbnQgPSBtb2RlbHMuQm9vbGVhbkZpZWxkKAogICAgICAgIGRlZmF1bHQ9VHJ1ZSwKICAgICAgICB2ZXJib3NlX25hbWU9XygicGVyc2lzdGVudCIpLAogICAgICAgIGhlbHBfdGV4dD1fKAogICAgICAgICAgICAiV2hlbiBlbmFibGVkLCBvZmZsaW5lIGRldmljZXMgd2lsbCBiZSByZXRyaWVkIGF1dG9tYXRpY2FsbHkgIgogICAgICAgICAgICAidXNpbmcgZXhwb25lbnRpYWwgYmFjay1vZmYuIEltbXV0YWJsZSBhZnRlciBjcmVhdGlvbi4iCiAgICAgICAgKSwKICAgICkKICAgIHNjaGVkdWxlZF9hdCA9IG1vZGVscy5EYXRlVGltZUZpZWxkKAogICAgICAgIG51bGw9VHJ1ZSwKICAgICAgICBibGFuaz1UcnVlLAogICAgICAgIGRlZmF1bHQ9Tm9uZSwKICAgICAgICB2ZXJib3NlX25hbWU9Xygic2NoZWR1bGVkIGF0IiksCiAgICAgICAgaGVscF90ZXh0PV8oCiAgICAgICAgICAgICJVVEMgZGF0ZXRpbWUgYXQgd2hpY2ggdGhpcyBiYXRjaCBzaG91bGQgc3RhcnQuICIKICAgICAgICAgICAgIkxlYXZlIGJsYW5rIGZvciBpbW1lZGlhdGUgZXhlY3V0aW9uLiIKICAgICAgICApLAogICAgKQoKICAgICMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAjIFZhbGlkYXRpb24KICAgICMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICBfU0NIRURVTEVfTUlOX0RFTEFZX01JTlVURVMgPSAxMAogICAgX1NDSEVEVUxFX01BWF9IT1JJWk9OX01PTlRIUyA9IDYKCiAgICBkZWYgY2xlYW4oc2VsZik6CiAgICAgICAgc3VwZXIoKS5jbGVhbigpCiAgICAgICAgc2VsZi5fdmFsaWRhdGVfc2NoZWR1bGVkX2F0KCkKICAgICAgICBzZWxmLl92YWxpZGF0ZV9wZXJzaXN0ZW50X2ltbXV0YWJsZSgpCgogICAgZGVmIF92YWxpZGF0ZV9zY2hlZHVsZWRfYXQoc2VsZik6CiAgICAgICAgaWYgbm90IHNlbGYuc2NoZWR1bGVkX2F0OgogICAgICAgICAgICByZXR1cm4KICAgICAgICBub3cgPSB0aW1lem9uZS5ub3coKQogICAgICAgIG1pbl9hbGxvd2VkID0gbm93ICsgdGltZXpvbmUudGltZWRlbHRhKAogICAgICAgICAgICBtaW51dGVzPXNlbGYuX1NDSEVEVUxFX01JTl9ERUxBWV9NSU5VVEVTCiAgICAgICAgKQogICAgICAgIG1heF9hbGxvd2VkID0gbm93ICsgdGltZXpvbmUudGltZWRlbHRhKAogICAgICAgICAgICBkYXlzPXNlbGYuX1NDSEVEVUxFX01BWF9IT1JJWk9OX01PTlRIUyAqIDMwCiAgICAgICAgKQogICAgICAgIGlmIHNlbGYuc2NoZWR1bGVkX2F0IDw9IG5vdzoKICAgICAgICAgICAgcmFpc2UgVmFsaWRhdGlvbkVycm9yKAogICAgICAgICAgICAgICAgeyJzY2hlZHVsZWRfYXQiOiBfKCJTY2hlZHVsZWQgdGltZSBtdXN0IGJlIGluIHRoZSBmdXR1cmUuIil9CiAgICAgICAgICAgICkKICAgICAgICBpZiBzZWxmLnNjaGVkdWxlZF9hdCA8IG1pbl9hbGxvd2VkOgogICAgICAgICAgICByYWlzZSBWYWxpZGF0aW9uRXJyb3IoCiAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgInNjaGVkdWxlZF9hdCI6IF8oCiAgICAgICAgICAgICAgICAgICAgICAgIGYiU2NoZWR1bGVkIHRpbWUgbXVzdCBiZSBhdCBsZWFzdCAiCiAgICAgICAgICAgICAgICAgICAgICAgIGYie3NlbGYuX1NDSEVEVUxFX01JTl9ERUxBWV9NSU5VVEVTfSBtaW51dGVzIGZyb20gbm93LiIKICAgICAgICAgICAgICAgICAgICApCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICkKICAgICAgICBpZiBzZWxmLnNjaGVkdWxlZF9hdCA+IG1heF9hbGxvd2VkOgogICAgICAgICAgICByYWlzZSBWYWxpZGF0aW9uRXJyb3IoCiAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgInNjaGVkdWxlZF9hdCI6IF8oCiAgICAgICAgICAgICAgICAgICAgICAgIGYiU2NoZWR1bGVkIHRpbWUgY2Fubm90IGJlIG1vcmUgdGhhbiAiCiAgICAgICAgICAgICAgICAgICAgICAgIGYie3NlbGYuX1NDSEVEVUxFX01BWF9IT1JJWk9OX01PTlRIU30gbW9udGhzIGluIHRoZSBmdXR1cmUuIgogICAgICAgICAgICAgICAgICAgICkKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgKQoKICAgIGRlZiBfdmFsaWRhdGVfcGVyc2lzdGVudF9pbW11dGFibGUoc2VsZik6CiAgICAgICAgIiIiUHJldmVudCBjaGFuZ2luZyBgcGVyc2lzdGVudGAgYWZ0ZXIgdGhlIGJhdGNoIGhhcyBiZWVuIHNhdmVkLiIiIgogICAgICAgIGlmIG5vdCBzZWxmLnBrOgogICAgICAgICAgICByZXR1cm4gICMgbmV3IG9iamVjdCDigJMgYW55IHZhbHVlIGlzIGZpbmUKICAgICAgICB0cnk6CiAgICAgICAgICAgIG9yaWdpbmFsID0gc2VsZi5fX2NsYXNzX18ub2JqZWN0cy5nZXQocGs9c2VsZi5waykKICAgICAgICBleGNlcHQgc2VsZi5fX2NsYXNzX18uRG9lc05vdEV4aXN0OgogICAgICAgICAgICByZXR1cm4KICAgICAgICBpZiBvcmlnaW5hbC5wZXJzaXN0ZW50ICE9IHNlbGYucGVyc2lzdGVudDoKICAgICAgICAgICAgcmFpc2UgVmFsaWRhdGlvbkVycm9yKAogICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICAgICJwZXJzaXN0ZW50IjogXygKICAgICAgICAgICAgICAgICAgICAgICAgIlRoZSBwZXJzaXN0ZW50IGZsYWcgY2Fubm90IGJlIGNoYW5nZWQgYWZ0ZXIgdGhlIGJhdGNoICIKICAgICAgICAgICAgICAgICAgICAgICAgImhhcyBiZWVuIGNyZWF0ZWQuIgogICAgICAgICAgICAgICAgICAgICkKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgKQoKICAgICMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAjIEhlbHBlcnMKICAgICMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICBAcHJvcGVydHkKICAgIGRlZiBpc19zY2hlZHVsZWQoc2VsZik6CiAgICAgICAgcmV0dXJuIHNlbGYuc2NoZWR1bGVkX2F0IGlzIG5vdCBOb25lIGFuZCBzZWxmLnN0YXR1cyA9PSAic2NoZWR1bGVkIgoKICAgIEBwcm9wZXJ0eQogICAgZGVmIHNjaGVkdWxlZF9hdF9sb2NhbChzZWxmKToKICAgICAgICAiIiJSZXR1cm4gYGBzY2hlZHVsZWRfYXRgYCBjb252ZXJ0ZWQgdG8gdGhlIHNlcnZlcidzIGxvY2FsIHRpbWV6b25lLiIiIgogICAgICAgIGlmIG5vdCBzZWxmLnNjaGVkdWxlZF9hdDoKICAgICAgICAgICAgcmV0dXJuIE5vbmUKICAgICAgICByZXR1cm4gdGltZXpvbmUubG9jYWx0aW1lKHNlbGYuc2NoZWR1bGVkX2F0KQoKICAgIGNsYXNzIE1ldGE6CiAgICAgICAgYWJzdHJhY3QgPSBUcnVlCgoKIyDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAKIyBNaXhpbjogYWRkcyByZXRyeSB0cmFja2luZyBmaWVsZHMgdG8gQWJzdHJhY3RVcGdyYWRlT3BlcmF0aW9uCiMg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSACgoKY2xhc3MgUmV0cnlUcmFja2luZ01peGluKG1vZGVscy5Nb2RlbCk6CiAgICAiIiIKICAgIE1peGluIHRoYXQgbXVzdCBiZSBwbGFjZWQgKmJlZm9yZSogQWJzdHJhY3RVcGdyYWRlT3BlcmF0aW9uIGluIE1STy4KCiAgICBGaWVsZHMgYWRkZWQKICAgIH5+fn5+fn5+fn5+fgogICAgcmV0cnlfY291bnQgOiBpbnQKICAgICAgICBOdW1iZXIgb2YgdGltZXMgdGhlIHVwZ3JhZGUgaGFzIGJlZW4gcmV0cmllZCBkdWUgdG8gdGhlIGRldmljZQogICAgICAgIGJlaW5nIG9mZmxpbmUuCgogICAgbmV4dF9yZXRyeV9hdCA6IGRhdGV0aW1lIHwgTm9uZQogICAgICAgIFRoZSBVVEMgdGltZSBhdCB3aGljaCB0aGUgbmV4dCByZXRyeSBpcyBzY2hlZHVsZWQuICBTZXQgYnkgdGhlCiAgICAgICAgYGBzY2hlZHVsZV9yZXRyeSgpYGAgaGVscGVyIGFmdGVyIGVhY2ggZmFpbGVkIGF0dGVtcHQuCgogICAgd2FpdGluZ19mb3JfZGV2aWNlIDogYm9vbAogICAgICAgIFRydWUgd2hlbiB0aGUgb3BlcmF0aW9uIGlzIHBhdXNlZCB3YWl0aW5nIGZvciB0aGUgZGV2aWNlIHRvCiAgICAgICAgY29tZSBvbmxpbmUgKHN0YXR1cyA9PSAid2FpdGluZyIpLgoKICAgIFN0YXR1cyBleHRlbnNpb24KICAgIH5+fn5+fn5+fn5+fn5+fn4KICAgIFRoZSBgYHdhaXRpbmdgYCBzdGF0dXMgaXMgYWRkZWQgc28gdGhlIGJhdGNoIGRldGFpbCBwYWdlIGNhbiBzaG93IGEKICAgICJXYWl0aW5nIGZvciBkZXZpY2UiIGJhZGdlIHdpdGggYSBkaXN0aW5jdCBjb2xvdXIsIGNsZWFybHkgc2VwYXJhdGVkCiAgICBmcm9tIHBlcm1hbmVudCBmYWlsdXJlcy4KICAgICIiIgoKICAgIHJldHJ5X2NvdW50ID0gbW9kZWxzLlBvc2l0aXZlSW50ZWdlckZpZWxkKAogICAgICAgIGRlZmF1bHQ9MCwKICAgICAgICB2ZXJib3NlX25hbWU9XygicmV0cnkgY291bnQiKSwKICAgICkKICAgIG5leHRfcmV0cnlfYXQgPSBtb2RlbHMuRGF0ZVRpbWVGaWVsZCgKICAgICAgICBudWxsPVRydWUsCiAgICAgICAgYmxhbms9VHJ1ZSwKICAgICAgICBkZWZhdWx0PU5vbmUsCiAgICAgICAgdmVyYm9zZV9uYW1lPV8oIm5leHQgcmV0cnkgYXQiKSwKICAgICkKICAgIHdhaXRpbmdfZm9yX2RldmljZSA9IG1vZGVscy5Cb29sZWFuRmllbGQoCiAgICAgICAgZGVmYXVsdD1GYWxzZSwKICAgICAgICB2ZXJib3NlX25hbWU9Xygid2FpdGluZyBmb3IgZGV2aWNlIiksCiAgICApCgogICAgZGVmIHNjaGVkdWxlX3JldHJ5KHNlbGYsIGJhdGNoX3BlcnNpc3RlbnQsIGRlbGF5X3NlY29uZHMpOgogICAgICAgICIiIgogICAgICAgIE1hcmsgdGhpcyBvcGVyYXRpb24gYXMgJ3dhaXRpbmcnIGFuZCBzY2hlZHVsZSB0aGUgbmV4dCByZXRyeS4KCiAgICAgICAgUGFyYW1ldGVycwogICAgICAgIC0tLS0tLS0tLS0KICAgICAgICBiYXRjaF9wZXJzaXN0ZW50IDogYm9vbAogICAgICAgICAgICBUYWtlbiBmcm9tIHRoZSBwYXJlbnQgQmF0Y2hVcGdyYWRlT3BlcmF0aW9uLnBlcnNpc3RlbnQgZmllbGQuCiAgICAgICAgZGVsYXlfc2Vjb25kcyA6IGludAogICAgICAgICAgICBOdW1iZXIgb2Ygc2Vjb25kcyB0byB3YWl0IGJlZm9yZSB0aGUgbmV4dCByZXRyeSBhdHRlbXB0LgogICAgICAgICAgICBDb21wdXRlZCBieSB0aGUgY2FsbGVyIHVzaW5nIHRoZSBleHBvbmVudGlhbCBiYWNrLW9mZiBoZWxwZXIuCiAgICAgICAgIiIiCiAgICAgICAgaWYgbm90IGJhdGNoX3BlcnNpc3RlbnQ6CiAgICAgICAgICAgICMgTm9uLXBlcnNpc3RlbnQgYmF0Y2hlcyBkbyBub3QgcmV0cnkuCiAgICAgICAgICAgIHNlbGYuc3RhdHVzID0gImZhaWxlZCIKICAgICAgICAgICAgc2VsZi5zYXZlKHVwZGF0ZV9maWVsZHM9WyJzdGF0dXMiXSkKICAgICAgICAgICAgcmV0dXJuCgogICAgICAgIHNlbGYucmV0cnlfY291bnQgKz0gMQogICAgICAgIHNlbGYubmV4dF9yZXRyeV9hdCA9IHRpbWV6b25lLm5vdygpICsgdGltZXpvbmUudGltZWRlbHRhKAogICAgICAgICAgICBzZWNvbmRzPWRlbGF5X3NlY29uZHMKICAgICAgICApCiAgICAgICAgc2VsZi53YWl0aW5nX2Zvcl9kZXZpY2UgPSBUcnVlCiAgICAgICAgc2VsZi5zdGF0dXMgPSAid2FpdGluZyIKICAgICAgICBzZWxmLnNhdmUoCiAgICAgICAgICAgIHVwZGF0ZV9maWVsZHM9WyJyZXRyeV9jb3VudCIsICJuZXh0X3JldHJ5X2F0IiwgIndhaXRpbmdfZm9yX2RldmljZSIsICJzdGF0dXMiXQogICAgICAgICkKCiAgICBAcHJvcGVydHkKICAgIGRlZiBuZXh0X3JldHJ5X2F0X2Rpc3BsYXkoc2VsZik6CiAgICAgICAgIiIiUmV0dXJuIGEgaHVtYW4tZnJpZW5kbHkgc3RyaW5nIGxpa2UgJ1BlbmRpbmcgcmV0cnkgYXQgMTQ6MzUnLiIiIgogICAgICAgIGlmIG5vdCBzZWxmLm5leHRfcmV0cnlfYXQ6CiAgICAgICAgICAgIHJldHVybiBfKCLigJMiKQogICAgICAgIGxvY2FsX2R0ID0gdGltZXpvbmUubG9jYWx0aW1lKHNlbGYubmV4dF9yZXRyeV9hdCkKICAgICAgICByZXR1cm4gXygiUGVuZGluZyByZXRyeSBhdCAlKHRpbWUpcyIpICUgeyJ0aW1lIjogbG9jYWxfZHQuc3RyZnRpbWUoIiVIOiVNIil9CgogICAgY2xhc3MgTWV0YToKICAgICAgICBhYnN0cmFjdCA9IFRydWUK
+"""
+GSoC 2026 Prototype – Model field additions.
+
+This module documents (and provides mixins for) the new fields added to
+AbstractBatchUpgradeOperation and AbstractUpgradeOperation.
+
+In the full implementation these would live directly inside
+openwisp_firmware_upgrader/base/models.py, but for the prototype we keep
+them in a separate file so the diff is easy to review.
+"""
+
+from datetime import timedelta
+
+from django.core.exceptions import ValidationError
+from django.db import models
+from django.utils import timezone
+from django.utils.translation import gettext_lazy as _
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Mixin: adds the `persistent` and `scheduled_at` fields to
+#        AbstractBatchUpgradeOperation
+# ─────────────────────────────────────────────────────────────────────────────
+
+
+class PersistentScheduledBatchMixin(models.Model):
+    """
+    Mixin that must be placed *before* AbstractBatchUpgradeOperation in MRO.
+
+    Fields added
+    ~~~~~~~~~~~~
+    persistent : bool
+        When True, UpgradeOperations that fail because the device is offline
+        will be automatically retried according to the exponential back-off
+        strategy.  The field is set at creation time and cannot be changed
+        afterwards (enforced in ``clean()``).
+
+    scheduled_at : datetime | None
+        If set, the batch is not started immediately; instead a Celery Beat
+        periodic task polls every minute and starts batches whose
+        ``scheduled_at`` has elapsed.  Stored in UTC.
+
+    STATUS_CHOICES extension
+    ~~~~~~~~~~~~~~~~~~~~~~~~
+    The ``scheduled`` status is added on top of the parent's choices so that
+    the batch list can show a clock icon for pending batches.
+    """
+
+    # ------------------------------------------------------------------
+    # New fields
+    # ------------------------------------------------------------------
+    persistent = models.BooleanField(
+        default=True,
+        verbose_name=_("persistent"),
+        help_text=_(
+            "When enabled, offline devices will be retried automatically "
+            "using exponential back-off. Immutable after creation."
+        ),
+    )
+    scheduled_at = models.DateTimeField(
+        null=True,
+        blank=True,
+        default=None,
+        verbose_name=_("scheduled at"),
+        help_text=_(
+            "UTC datetime at which this batch should start. "
+            "Leave blank for immediate execution."
+        ),
+    )
+
+    # ------------------------------------------------------------------
+    # Validation
+    # ------------------------------------------------------------------
+    _SCHEDULE_MIN_DELAY_MINUTES = 10
+    _SCHEDULE_MAX_HORIZON_MONTHS = 6
+
+    def clean(self):
+        super().clean()
+        self._validate_scheduled_at()
+        self._validate_persistent_immutable()
+
+    def _validate_scheduled_at(self):
+        if not self.scheduled_at:
+            return
+        now = timezone.now()
+        min_allowed = now + timedelta(minutes=self._SCHEDULE_MIN_DELAY_MINUTES)
+        max_allowed = now + timedelta(days=self._SCHEDULE_MAX_HORIZON_MONTHS * 30)
+        if self.scheduled_at <= now:
+            raise ValidationError(
+                {"scheduled_at": _("Scheduled time must be in the future.")}
+            )
+        if self.scheduled_at < min_allowed:
+            raise ValidationError(
+                {
+                    "scheduled_at": _(
+                        f"Scheduled time must be at least "
+                        f"{self._SCHEDULE_MIN_DELAY_MINUTES} minutes from now."
+                    )
+                }
+            )
+        if self.scheduled_at > max_allowed:
+            raise ValidationError(
+                {
+                    "scheduled_at": _(
+                        f"Scheduled time cannot be more than "
+                        f"{self._SCHEDULE_MAX_HORIZON_MONTHS} months in the future."
+                    )
+                }
+            )
+
+    def _validate_persistent_immutable(self):
+        """Prevent changing `persistent` after the batch has been saved."""
+        if not self.pk:
+            return  # new object – any value is fine
+        try:
+            original = self.__class__.objects.get(pk=self.pk)
+        except self.__class__.DoesNotExist:
+            return
+        if original.persistent != self.persistent:
+            raise ValidationError(
+                {
+                    "persistent": _(
+                        "The persistent flag cannot be changed after the batch "
+                        "has been created."
+                    )
+                }
+            )
+
+    # ------------------------------------------------------------------
+    # Helpers
+    # ------------------------------------------------------------------
+    @property
+    def is_scheduled(self):
+        return self.scheduled_at is not None and self.status == "scheduled"
+
+    @property
+    def scheduled_at_local(self):
+        """Return ``scheduled_at`` converted to the server's local timezone."""
+        if not self.scheduled_at:
+            return None
+        return timezone.localtime(self.scheduled_at)
+
+    class Meta:
+        abstract = True
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Mixin: adds retry tracking fields to AbstractUpgradeOperation
+# ─────────────────────────────────────────────────────────────────────────────
+
+
+class RetryTrackingMixin(models.Model):
+    """
+    Mixin that must be placed *before* AbstractUpgradeOperation in MRO.
+
+    Fields added
+    ~~~~~~~~~~~~
+    retry_count : int
+        Number of times the upgrade has been retried due to the device
+        being offline.
+
+    next_retry_at : datetime | None
+        The UTC time at which the next retry is scheduled.  Set by the
+        ``schedule_retry()`` helper after each failed attempt.
+
+    waiting_for_device : bool
+        True when the operation is paused waiting for the device to
+        come online (status == "waiting").
+
+    Status extension
+    ~~~~~~~~~~~~~~~~
+    The ``waiting`` status is added so the batch detail page can show a
+    "Waiting for device" badge with a distinct colour, clearly separated
+    from permanent failures.
+    """
+
+    retry_count = models.PositiveIntegerField(
+        default=0,
+        verbose_name=_("retry count"),
+    )
+    next_retry_at = models.DateTimeField(
+        null=True,
+        blank=True,
+        default=None,
+        verbose_name=_("next retry at"),
+    )
+    waiting_for_device = models.BooleanField(
+        default=False,
+        verbose_name=_("waiting for device"),
+    )
+
+    def schedule_retry(self, batch_persistent, delay_seconds):
+        """
+        Mark this operation as 'waiting' and schedule the next retry.
+
+        Parameters
+        ----------
+        batch_persistent : bool
+            Taken from the parent BatchUpgradeOperation.persistent field.
+        delay_seconds : int
+            Number of seconds to wait before the next retry attempt.
+            Computed by the caller using the exponential back-off helper.
+        """
+        if not batch_persistent:
+            # Non-persistent batches do not retry.
+            self.status = "failed"
+            self.save(update_fields=["status"])
+            return
+
+        self.retry_count += 1
+        self.next_retry_at = timezone.now() + timedelta(seconds=delay_seconds)
+        self.waiting_for_device = True
+        self.status = "waiting"
+        self.save(
+            update_fields=[
+                "retry_count",
+                "next_retry_at",
+                "waiting_for_device",
+                "status",
+            ]
+        )
+
+    @property
+    def next_retry_at_display(self):
+        """Return a human-friendly string like 'Pending retry at 14:35'."""
+        if not self.next_retry_at:
+            return _("–")
+        local_dt = timezone.localtime(self.next_retry_at)
+        return _("Pending retry at %(time)s") % {"time": local_dt.strftime("%H:%M")}
+
+    class Meta:
+        abstract = True
