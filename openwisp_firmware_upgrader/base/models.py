@@ -541,6 +541,7 @@ class AbstractBatchUpgradeOperation(UpgradeOptionsMixin, TimeStampedEditableMode
     )
     STATUS_CHOICES = (
         ("idle", _("idle")),
+        ("scheduled", _("scheduled")),
         ("in-progress", _("in progress")),
         ("success", _("completed successfully")),
         ("failed", _("completed with some failures")),
@@ -548,6 +549,26 @@ class AbstractBatchUpgradeOperation(UpgradeOptionsMixin, TimeStampedEditableMode
     )
     status = models.CharField(
         max_length=12, choices=STATUS_CHOICES, default=STATUS_CHOICES[0][0]
+    )
+    persistent = models.BooleanField(
+        default=True,
+        verbose_name=_("persistent"),
+        help_text=_(
+            "When enabled, devices that are offline at upgrade time will "
+            "be retried automatically using exponential back-off until the "
+            "admin cancels the batch or every device succeeds. "
+            "This flag is immutable once the batch has been created."
+        ),
+    )
+    scheduled_at = models.DateTimeField(
+        null=True,
+        blank=True,
+        default=None,
+        verbose_name=_("scheduled at"),
+        help_text=_(
+            "UTC datetime at which this batch should start executing. "
+            "Leave blank for immediate execution."
+        ),
     )
 
     class Meta:
@@ -796,6 +817,7 @@ class AbstractUpgradeOperation(UpgradeOptionsMixin, TimeStampedEditableModel):
     _CANCELLABLE_STATUS = "in-progress"
     STATUS_CHOICES = (
         ("in-progress", _("in progress")),
+        ("waiting", _("waiting for device")),
         ("success", _("success")),
         ("failed", _("failed")),  # failed at late stage or can't reconnect
         ("cancelled", _("cancelled")),  # cancelled by the user
@@ -822,6 +844,28 @@ class AbstractUpgradeOperation(UpgradeOptionsMixin, TimeStampedEditableModel):
         on_delete=models.CASCADE,
         blank=True,
         null=True,
+    )
+    retry_count = models.PositiveIntegerField(
+        default=0,
+        verbose_name=_("retry count"),
+        help_text=_(
+            "Number of times this operation has been retried because the device was offline."
+        ),
+    )
+    next_retry_at = models.DateTimeField(
+        null=True,
+        blank=True,
+        default=None,
+        verbose_name=_("next retry at"),
+        help_text=_("Scheduled datetime for the next retry attempt (UTC)."),
+    )
+    waiting_for_device = models.BooleanField(
+        default=False,
+        verbose_name=_("waiting for device"),
+        help_text=_(
+            "True when this operation is paused waiting for the device "
+            "to come back online before the next retry attempt."
+        ),
     )
 
     def __str__(self):

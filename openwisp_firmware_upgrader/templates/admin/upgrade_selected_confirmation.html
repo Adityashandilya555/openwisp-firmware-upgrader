@@ -11,9 +11,7 @@
 
 {% block breadcrumbs %}
   <div class="breadcrumbs">
-    <a href="{% url 'admin:index' %}">
-      {% trans 'Home' %}
-    </a>
+    <a href="{% url 'admin:index' %}">{% trans 'Home' %}</a>
     &rsaquo; <a href="{% url 'admin:app_list' app_label=opts.app_label %}">{{ opts.app_config.verbose_name }}</a>
     &rsaquo; <a href="{% url opts|admin_urlname:'changelist' %}">{{ opts.verbose_name_plural|capfirst }}</a>
     &rsaquo; {% trans 'Upgrade devices of the selected build' %}
@@ -37,16 +35,58 @@
     </p>
   {% endif %}
 
-  <form method="post">
+  <form method="post" id="mass-upgrade-form">
     {% csrf_token %}
     <div>
       <input type="hidden" name="{{ action_checkbox_name }}" value="{{ build.pk|unlocalize }}">
       <input type="hidden" name="action" value="upgrade_selected">
+
       {% if firmwareless_count or related_count %}
         {% if form.errors %}
-          <div>{{ form.errors }}</div>
+          <div class="errornote">{{ form.errors }}</div>
         {% endif %}
         {{ form.build }}
+
+        {# Device summary #}
+        <fieldset class="module aligned">
+          <h2>{% trans "Devices to be upgraded" %}</h2>
+          {% if related_count %}
+            <p class="help">
+              {% blocktrans count counter=related_count %}
+                <strong>{{ counter }}</strong> device with existing firmware will be upgraded to {{ build }}.
+              {% plural %}
+                <strong>{{ counter }}</strong> devices with existing firmware will be upgraded to {{ build }}.
+              {% endblocktrans %}
+            </p>
+            <table style="width:100%;border-collapse:collapse;margin-bottom:0.5em">
+              <thead>
+                <tr>
+                  <th style="text-align:left;padding:4px 8px;border-bottom:1px solid #ddd">{% trans "Device" %}</th>
+                  <th style="text-align:left;padding:4px 8px;border-bottom:1px solid #ddd">{% trans "Current firmware" %}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for df in related_device_fw %}
+                  <tr>
+                    <td style="padding:4px 8px">{{ df.device.name }}</td>
+                    <td style="padding:4px 8px;color:#666">{{ df.image.build }}</td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          {% endif %}
+          {% if firmwareless_count %}
+            <p class="help" style="margin-top:0.5em">
+              {% blocktrans count counter=firmwareless_count %}
+                <strong>{{ counter }}</strong> additional device with no firmware record will also be upgraded.
+              {% plural %}
+                <strong>{{ counter }}</strong> additional devices with no firmware record will also be upgraded.
+              {% endblocktrans %}
+            </p>
+          {% endif %}
+        </fieldset>
+
+        {# Upgrade Filters #}
         <fieldset class="module aligned">
           <h2>{% trans "Upgrade Filters" %}</h2>
           <div class="form-row">
@@ -80,27 +120,76 @@
             </div>
           </div>
         </fieldset>
+
+        {# GSoC 2026: Persistent Upgrades #}
+        <fieldset class="module aligned gsoc-persistent-section">
+          <h2>{% trans "Persistent Upgrades" %}</h2>
+          <div class="form-row">
+            <div class="persistent-checkbox-row">
+              {{ form.persistent.errors }}
+              <label for="{{ form.persistent.id_for_label }}" class="persistent-label">
+                {{ form.persistent }}
+                <strong>{% trans "Enable persistent retries" %}</strong>
+              </label>
+              <p class="help persistent-help">{{ form.persistent.help_text }}</p>
+              <p class="persistent-immutable-notice" style="display: none;">
+                &#9888;&#65039;
+                {% trans "This setting was locked at batch creation time and cannot be changed." %}
+              </p>
+            </div>
+          </div>
+        </fieldset>
+
+        {# GSoC 2026: Scheduled Upgrade #}
+        <fieldset class="module aligned gsoc-scheduled-section">
+          <h2>{% trans "Schedule Upgrade" %}</h2>
+          <div class="form-row">
+            <div>
+              {{ form.scheduled_at.errors }}
+              <label for="{{ form.scheduled_at.id_for_label }}">
+                {{ form.scheduled_at.label }}
+                <span class="server-tz-hint">
+                  ({% trans "server timezone" %}: <strong>{{ server_timezone }}</strong>)
+                </span>
+              </label>
+              {{ form.scheduled_at }}
+              {{ form.scheduled_at_utc }}
+              <p class="help">{{ form.scheduled_at.help_text|safe }}</p>
+              <p class="scheduled-validation-msg" role="alert" aria-live="polite"></p>
+            </div>
+          </div>
+        </fieldset>
+
         <input
           type="submit"
           name="upgrade_all"
           title="{% trans "If a device has no related firmware image information available, the system will attempt at automatically figure out what image to use based on the hardware model." %}"
-          value="{% trans "Upgrade all devices" %}">
+          value="{% trans "Upgrade all devices" %}"
+        />
         {% if firmwareless_count and related_count %}
           <input
             type="submit"
             name="upgrade_related"
             title="{% trans "Devices which have no related firmware image information will be skipped." %}"
             value="{% trans "Upgrade only known devices" %}"
-            class="special">
+            class="special"
+          />
         {% endif %}
       {% endif %}
-      <a href="#" class="button cancel-link">{% if related_count or firmwareless_count %}{% trans "Cancel the upgrade" %}{% else %}{% trans "Go back" %}{% endif %}</a>
+      <a href="#" class="button cancel-link">
+        {% if related_count or firmwareless_count %}
+          {% trans "Cancel the upgrade" %}
+        {% else %}
+          {% trans "Go back" %}
+        {% endif %}
+      </a>
     </div>
   </form>
 {% endblock %}
+
 {% block footer %}
   {{ block.super }}
   <script>
     var firmwareUpgraderSchema = {{ firmware_upgrader_schema | safe }};
   </script>
-{% endblock footer %}
+{% endblock %}

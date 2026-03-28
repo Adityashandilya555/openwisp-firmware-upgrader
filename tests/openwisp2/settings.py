@@ -26,7 +26,12 @@ if TESTING and "--exclude-tag=selenium_tests" not in sys.argv:
         "NAME": os.path.join(BASE_DIR, "openwisp-firmware-upgrader-tests.db"),
     }
 
-SPATIALITE_LIBRARY_PATH = "mod_spatialite.so"
+import platform as _platform
+
+SPATIALITE_LIBRARY_PATH = os.environ.get(
+    "SPATIALITE_LIBRARY_PATH",
+    "mod_spatialite.dylib" if _platform.system() == "Darwin" else "mod_spatialite.so",
+)
 
 SECRET_KEY = "fn)t*+$)ugeyip6-#txyy$5wf2ervc0d2n#h)qb)y5@ly$t*@w"
 

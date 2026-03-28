@@ -1,0 +1,173 @@
+/*
+ * scheduled-upgrade.css
+ * GSoC 2026 Prototype — Scheduled & Persistent Upgrades Admin UI styles.
+ */
+
+/* ── Confirmation page: new sections ────────────────────────────────────── */
+.gsoc-persistent-section,
+.gsoc-scheduled-section {
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 12px 16px;
+}
+
+.gsoc-persistent-section h2,
+.gsoc-scheduled-section h2 {
+  font-size: 1em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 4px;
+}
+
+/* ── Persistent checkbox row ────────────────────────────────────────────── */
+.persistent-checkbox-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.persistent-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.persistent-label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+/* Greyed-out state once batch is created */
+.persistent-label input[type="checkbox"]:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.persistent-help {
+  color: #666;
+  font-size: 0.85em;
+  margin: 0;
+}
+
+.persistent-immutable-notice {
+  color: #c44;
+  font-size: 0.85em;
+  font-weight: 500;
+  background: #fff8f0;
+  border: 1px solid #f5c6a0;
+  border-radius: 3px;
+  padding: 4px 8px;
+  display: none; /* shown by JS when batch already exists */
+}
+
+/* ── Scheduled datetime picker ──────────────────────────────────────────── */
+.scheduled-at-picker {
+  font-size: 0.95em;
+  padding: 4px 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.server-tz-hint {
+  font-size: 0.8em;
+  color: #555;
+  margin-left: 6px;
+  font-style: italic;
+}
+
+.browser-tz-hint {
+  font-size: 0.8em;
+  color: #4472c4;
+  margin-left: 6px;
+}
+
+/* ── Inline validation feedback ────────────────────────────────────────── */
+.scheduled-validation-msg {
+  font-size: 0.85em;
+  margin-top: 4px;
+  min-height: 1.2em;
+}
+
+.scheduled-validation-msg.error {
+  color: #ba2121;
+  font-weight: 500;
+}
+
+.scheduled-validation-msg.success {
+  color: #20801c;
+}
+
+/* ── Batch list: scheduled_at column ────────────────────────────────────── */
+th.column-display_scheduled_at,
+td.field-display_scheduled_at {
+  white-space: nowrap;
+}
+
+/* ── Batch list: status badges ──────────────────────────────────────────── */
+.status-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.78em;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.status-badge--blue {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+.status-badge--orange {
+  background: #ffedd5;
+  color: #c2410c;
+}
+.status-badge--green {
+  background: #dcfce7;
+  color: #166534;
+}
+.status-badge--red {
+  background: #fee2e2;
+  color: #991b1b;
+}
+.status-badge--grey {
+  background: #f3f4f6;
+  color: #374151;
+}
+.status-badge--dark-grey {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+/* ── Retry pending indicator ────────────────────────────────────────────── */
+.retry-pending {
+  font-size: 0.85em;
+  color: #c2410c;
+  font-style: italic;
+}
+
+/* ── Status transition log ─────────────────────────────────────────────── */
+.status-transition-log {
+  list-style: none;
+  padding: `;
+  margin: 0;
+  border-left: 3px solid #ddd;
+  padding-left: 12px;
+}
+
+.status-transition-log li {
+  padding: 4px 0;
+  font-size: 0.9em;
+  color: #333;
+}
+
+.status-log-icon {
+  margin-right: 6px;
+  font-size: 1em;
+}
