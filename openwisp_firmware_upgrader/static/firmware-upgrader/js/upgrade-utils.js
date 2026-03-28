@@ -165,9 +165,7 @@ function getFirmwareUpgraderApiHost() {
     typeof owFirmwareUpgraderApiHost === "undefined" ||
     !owFirmwareUpgraderApiHost.host
   ) {
-    console.error(
-      "owFirmwareUpgraderApiHost is not defined or missing host property",
-    );
+    console.error("owFirmwareUpgraderApiHost is not defined or missing host property");
     return null;
   }
   return owFirmwareUpgraderApiHost.host;
@@ -203,9 +201,7 @@ if (typeof window !== "undefined") {
   window.FW_UPGRADE_DISPLAY_STATUS = FW_UPGRADE_DISPLAY_STATUS;
   window.FW_UPGRADE_CSS_CLASSES = FW_UPGRADE_CSS_CLASSES;
   window.VALID_FW_STATUSES = VALID_FW_STATUSES;
-  window.VALID_FW_DISPLAY_STATUSES = new Set(
-    Object.values(FW_UPGRADE_DISPLAY_STATUS),
-  );
+  window.VALID_FW_DISPLAY_STATUSES = new Set(Object.values(FW_UPGRADE_DISPLAY_STATUS));
   window.ALL_VALID_FW_STATUSES = ALL_VALID_FW_STATUSES;
   window.FW_STATUS_GROUPS = FW_STATUS_GROUPS;
   window.FW_STATUS_HELPERS = FW_STATUS_HELPERS;

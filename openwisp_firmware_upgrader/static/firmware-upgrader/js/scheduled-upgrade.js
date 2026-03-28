@@ -46,9 +46,7 @@
       var offset = -new Date().getTimezoneOffset();
       var sign = offset >= 0 ? "+" : "-";
       var abs = Math.abs(offset);
-      return (
-        "UTC" + sign + Math.floor(abs / 60) + ":" + ("0" + (abs % 60)).slice(-2)
-      );
+      return "UTC" + sign + Math.floor(abs / 60) + ":" + ("0" + (abs % 60)).slice(-2);
     }
   }
 
@@ -78,9 +76,7 @@
     if (selectedMs - nowMs < MIN_DELAY_MS) {
       return {
         valid: false,
-        message: gettext(
-          "The scheduled time must be at least 10 minutes from now.",
-        ),
+        message: gettext("The scheduled time must be at least 10 minutes from now."),
       };
     }
 
@@ -131,11 +127,7 @@
         .text(result.message)
         .removeClass("success error")
         .addClass(
-          result.valid && result.message
-            ? "success"
-            : result.message
-              ? "error"
-              : "",
+          result.valid && result.message ? "success" : result.message ? "error" : "",
         );
     });
 
@@ -163,9 +155,7 @@
         .prop("disabled", true)
         .attr(
           "title",
-          gettext(
-            "This setting cannot be changed after the batch has been created.",
-          ),
+          gettext("This setting cannot be changed after the batch has been created."),
         );
       $immutableNotice.show();
     }

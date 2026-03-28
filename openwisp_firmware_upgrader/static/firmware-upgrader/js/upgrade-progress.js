@@ -50,8 +50,7 @@ function formatLogForDisplay(logContent) {
 
 function getSanitizedStatusFromField(statusField) {
   let statusText =
-    statusField.find(".upgrade-progress-text").text() ||
-    statusField.text().trim();
+    statusField.find(".upgrade-progress-text").text() || statusField.text().trim();
   statusText = statusText.replace(/\d+%.*$/, "").trim();
   let statusKey = getKeyFromValue(FW_UPGRADE_DISPLAY_STATUS, statusText);
   return FW_UPGRADE_STATUS[statusKey];
@@ -94,9 +93,7 @@ function initializeExistingMultiUpgrades($, isRetry = false) {
       (FW_STATUS_HELPERS.includesProgress(statusValue) ||
         ALL_VALID_FW_STATUSES.has(statusValue))
     ) {
-      let operationFieldset = statusField.closest(
-        ".dynamic-upgradeoperation_set",
-      );
+      let operationFieldset = statusField.closest(".dynamic-upgradeoperation_set");
       let logElement = operationFieldset.find(".field-log .readonly");
       // Get operation ID for restoring accumulated content
       let operationIdInput = operationFieldset.find("input[name*='id'][value]");
@@ -208,9 +205,7 @@ function updateUpgradeOperationDisplay(operation) {
     operationFieldset;
 
   if (window.upgradePageType === "device") {
-    let operationIdInputField = $(
-      `input[value="${$.escapeSelector(operation.id)}"]`,
-    );
+    let operationIdInputField = $(`input[value="${$.escapeSelector(operation.id)}"]`);
     if (!operationIdInputField.length) {
       return;
     }
@@ -368,9 +363,7 @@ function getWebSocketUrl(pageType, pageId, wsHost) {
 
 function getOperationIdFromUrl() {
   try {
-    let matches = window.location.pathname.match(
-      /\/upgradeoperation\/([^\/]+)\//,
-    );
+    let matches = window.location.pathname.match(/\/upgradeoperation\/([^\/]+)\//);
     return matches && matches[1] ? matches[1] : null;
   } catch (error) {
     console.error("Error extracting operation ID from URL:", error);
@@ -431,16 +424,11 @@ function createCancelConfirmationModal($) {
     $("#ow-cancel-confirmation-modal").addClass("ow-hide");
   });
   // Confirm cancellation handler
-  $("#ow-cancel-confirmation-modal .ow-cancel-btn-confirm").on(
-    "click",
-    function () {
-      const operationId = $("#ow-cancel-confirmation-modal").data(
-        "operation-id",
-      );
-      $("#ow-cancel-confirmation-modal").addClass("ow-hide");
-      cancelUpgradeOperation(operationId);
-    },
-  );
+  $("#ow-cancel-confirmation-modal .ow-cancel-btn-confirm").on("click", function () {
+    const operationId = $("#ow-cancel-confirmation-modal").data("operation-id");
+    $("#ow-cancel-confirmation-modal").addClass("ow-hide");
+    cancelUpgradeOperation(operationId);
+  });
   // Close on escape key
   $(document).on("keyup", function (e) {
     if (e.keyCode === 27 && $("#ow-cancel-confirmation-modal").is(":visible")) {
