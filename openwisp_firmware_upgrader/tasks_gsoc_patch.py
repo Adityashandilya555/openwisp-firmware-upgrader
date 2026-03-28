@@ -1,1 +1,432 @@
-IiIiCkdTb0MgMjAyNiBQcm90b3R5cGUg4oCUIE5ldyAmIGV4dGVuZGVkIENlbGVyeSB0YXNrcy4KClRoaXMgbW9kdWxlIGFkZHMgdGhlIHRhc2tzIHRoYXQgYmFjayB0aGUgcGVyc2lzdGVudC1yZXRyeSBhbmQKc2NoZWR1bGVkLXVwZ3JhZGUgZmVhdHVyZXMuICBJbiB0aGUgZnVsbCBpbXBsZW1lbnRhdGlvbiB0aGVzZSBzdHVicwp3b3VsZCBiZSBtZXJnZWQgaW50byBvcGVud2lzcF9maXJtd2FyZV91cGdyYWRlci90YXNrcy5weSBhbmQgd2lyZWQgdXAKaW4gYXBwcy5weSAvIGNlbGVyeS5weS4KCkV2ZXJ5IGZ1bmN0aW9uIGJlbG93IGNvbnRhaW5zIGEgZGV0YWlsZWQgZG9jc3RyaW5nICoqYW5kKiogcHNldWRvY29kZQpjb21tZW50IGJsb2NrIHNvIHRoYXQgYSBtZW50b3IgY2FuIGZvbGxvdyB0aGUgaW50ZW5kZWQgaW1wbGVtZW50YXRpb24KbG9naWMgd2l0aG91dCBydW5uaW5nIHRoZSBjb2RlLgoiIiIKCmltcG9ydCBsb2dnaW5nCmltcG9ydCBtYXRoCmltcG9ydCByYW5kb20KCmZyb20gY2VsZXJ5IGltcG9ydCBzaGFyZWRfdGFzawpmcm9tIGRqYW5nby5jb3JlLmV4Y2VwdGlvbnMgaW1wb3J0IE9iamVjdERvZXNOb3RFeGlzdApmcm9tIGRqYW5nby51dGlscyBpbXBvcnQgdGltZXpvbmUKCmZyb20gb3Blbndpc3BfdXRpbHMudGFza3MgaW1wb3J0IE9wZW53aXNwQ2VsZXJ5VGFzawoKZnJvbSAuc3dhcHBlciBpbXBvcnQgbG9hZF9tb2RlbAoKbG9nZ2VyID0gbG9nZ2luZy5nZXRMb2dnZXIoX19uYW1lX18pCgoKIyDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAKIyBIZWxwZXI6IGV4cG9uZW50aWFsIGJhY2stb2ZmIHdpdGggaml0dGVyCiMg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSACgojIENvbmZpZ3VyYWJsZSB2aWEgRGphbmdvIHNldHRpbmdzIChmdWxsIGltcGxlbWVudGF0aW9uIHJlYWRzIGZyb20gYXBwX3NldHRpbmdzKQpSRVRSWV9CQVNFX1NFQ09ORFMgICAgICAgPSA2MCAgICAgICAgIyAxIG1pbnV0ZSBmbG9vcgpSRVRSWV9NVUxUSVBMSUVSICAgICAgICAgPSAyLjAgICAgICAgIyBkb3VibGUgZWFjaCBhdHRlbXB0ClJFVFJZX01BWF9TRUNPTkRTICAgICAgICA9IDEyICogMzYwMCAjIGhhcmQgY2FwIGF0IDEyIGhvdXJzClJFVFJZX0pJVFRFUl9GUkFDVElPTiAgICA9IDAuMjUgICAgICAjIMKxMjUgJSByYW5kb21pemF0aW9uCgoKZGVmIGNvbXB1dGVfcmV0cnlfZGVsYXkocmV0cnlfY291bnQ6IGludCkgLT4gaW50OgogICAgIiIiCiAgICBSZXR1cm4gdGhlIG51bWJlciBvZiBzZWNvbmRzIHRvIHdhaXQgYmVmb3JlIHRoZSBuZXh0IHJldHJ5IGF0dGVtcHQuCgogICAgU3RyYXRlZ3k6IHJhbmRvbWl6ZWQgZXhwb25lbnRpYWwgYmFjay1vZmYsIGNhcHBlZCBhdCBSRVRSWV9NQVhfU0VDT05EUy4KCiAgICAgICAgZGVsYXkgPSBjbGFtcChiYXNlICogbXVsdGlwbGllcl5yZXRyeV9jb3VudCwgYmFzZSwgbWF4KQogICAgICAgIGRlbGF5ID0gZGVsYXkgKiB1bmlmb3JtKDEgLSBqaXR0ZXIsIDEgKyBqaXR0ZXIpICAgIyBhZGQgaml0dGVyCgogICAgUGFyYW1ldGVycwogICAgLS0tLS0tLS0tLQogICAgcmV0cnlfY291bnQgOiBpbnQKICAgICAgICBIb3cgbWFueSB0aW1lcyB0aGlzIG9wZXJhdGlvbiBoYXMgYWxyZWFkeSBiZWVuIHJldHJpZWQuCgogICAgUmV0dXJucwogICAgLS0tLS0tLQogICAgaW50CiAgICAgICAgU2Vjb25kcyB0byB3YWl0IChhbHdheXMgYmV0d2VlbiBSRVRSWV9CQVNFX1NFQ09ORFMgYW5kCiAgICAgICAgUkVUUllfTUFYX1NFQ09ORFMgYWZ0ZXIgaml0dGVyIGlzIGFwcGxpZWQpLgogICAgIiIiCiAgICAjIFBzZXVkb2NvZGU6CiAgICAjICAgcmF3ICAgPSBSRVRSWV9CQVNFX1NFQ09ORFMgKiAoUkVUUllfTVVMVElQTElFUiAqKiByZXRyeV9jb3VudCkKICAgICMgICByYXcgICA9IG1pbihyYXcsIFJFVFJZX01BWF9TRUNPTkRTKQogICAgIyAgIGppdHRlcl9mYWN0b3IgPSByYW5kb20udW5pZm9ybSgxIC0gUkVUUllfSklUVEVSX0ZSQUNUSU9OLAogICAgIyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAxICsgUkVUUllfSklUVEVSX0ZSQUNUSU9OKQogICAgIyAgIHJldHVybiBpbnQocmF3ICogaml0dGVyX2ZhY3RvcikKCiAgICByYXcgPSBSRVRSWV9CQVNFX1NFQ09ORFMgKiBtYXRoLnBvdyhSRVRSWV9NVUxUSVBMSUVSLCByZXRyeV9jb3VudCkKICAgIHJhdyA9IG1pbihyYXcsIFJFVFJZX01BWF9TRUNPTkRTKQogICAgaml0dGVyID0gcmFuZG9tLnVuaWZvcm0oCiAgICAgICAgMSAtIFJFVFJZX0pJVFRFUl9GUkFDVElPTiwgMSArIFJFVFJZX0pJVFRFUl9GUkFDVElPTgogICAgKQogICAgcmV0dXJuIGludChyYXcgKiBqaXR0ZXIpCgoKIyDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAKIyBUYXNrIDE6IHJldHJ5X29mZmxpbmVfdXBncmFkZQojIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgAoKCkBzaGFyZWRfdGFzayhiYXNlPU9wZW53aXNwQ2VsZXJ5VGFzaywgYmluZD1UcnVlKQpkZWYgcmV0cnlfb2ZmbGluZV91cGdyYWRlKHNlbGYsIG9wZXJhdGlvbl9pZDogc3RyKToKICAgICIiIgogICAgUmUtYXR0ZW1wdCBhIHNpbmdsZSBVcGdyYWRlT3BlcmF0aW9uIHRoYXQgd2FzIHByZXZpb3VzbHkgcGF1c2VkCiAgICBiZWNhdXNlIHRoZSBkZXZpY2Ugd2FzIG9mZmxpbmUuCgogICAgVHJpZ2dlcmVkIGJ5CiAgICB+fn5+fn5+fn5+fn4KICAgICogVGhlIGBgaGFuZGxlX2RldmljZV9vbmxpbmVgYCBzaWduYWwgaGFuZGxlciB3aGVuIHRoZSB0YXJnZXQgZGV2aWNlJ3MKICAgICAgaGVhbHRoIHN0YXR1cyBjaGFuZ2VzIHRvICJvayIgKHByZWZlcnJlZCBwYXRoIHZpYSBvcGVud2lzcC1tb25pdG9yaW5nKS4KICAgICogVGhlIGBgc2Nhbl9wZW5kaW5nX3JldHJpZXNgYCBwZXJpb2RpYyB0YXNrIChmYWxsYmFjayBwb2xsaW5nIHBhdGgpLgoKICAgIEZ1bGwgaW1wbGVtZW50YXRpb24gcHNldWRvY29kZQogICAgfn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fgogICAgOjoKCiAgICAgICAgb3BlcmF0aW9uID0gVXBncmFkZU9wZXJhdGlvbi5vYmplY3RzLmdldChwaz1vcGVyYXRpb25faWQpCgogICAgICAgIElGIG9wZXJhdGlvbi5zdGF0dXMgIT0gIndhaXRpbmciOgogICAgICAgICAgICAjIEFub3RoZXIgcGF0aCBhbHJlYWR5IHBpY2tlZCB0aGlzIHVwIOKAlCBza2lwCiAgICAgICAgICAgIFJFVFVSTgoKICAgICAgICAjIEFjcXVpcmUgYSBwZXItZGV2aWNlIGxvY2sgdG8gcHJldmVudCBjb25jdXJyZW50IHVwZ3JhZGVzCiAgICAgICAgbG9ja19rZXkgPSBmImZpcm13YXJlLXVwZ3JhZGUtZGV2aWNlLXtvcGVyYXRpb24uZGV2aWNlX2lkfSIKICAgICAgICBXSVRIIGRpc3RyaWJ1dGVkX2xvY2sobG9ja19rZXksIHRpbWVvdXQ9MzApOgogICAgICAgICAgICBvcGVyYXRpb24ucmVmcmVzaF9mcm9tX2RiKCkKICAgICAgICAgICAgSUYgb3BlcmF0aW9uLnN0YXR1cyAhPSAid2FpdGluZyI6CiAgICAgICAgICAgICAgICBSRVRVUk4gICMgbG9zdCB0aGUgcmFjZQoKICAgICAgICAgICAgIyBDbGVhciB0aGUgd2FpdGluZyBzdGF0ZSwgc2V0IGJhY2sgdG8gaW4tcHJvZ3Jlc3MKICAgICAgICAgICAgb3BlcmF0aW9uLndhaXRpbmdfZm9yX2RldmljZSA9IEZhbHNlCiAgICAgICAgICAgIG9wZXJhdGlvbi5zdGF0dXMgPSAiaW4tcHJvZ3Jlc3MiCiAgICAgICAgICAgIG9wZXJhdGlvbi5zYXZlKHVwZGF0ZV9maWVsZHM9WyJ3YWl0aW5nX2Zvcl9kZXZpY2UiLCAic3RhdHVzIl0pCgogICAgICAgICMgRGVsZWdhdGUgdG8gdGhlIGV4aXN0aW5nIHVwZ3JhZGVfZmlybXdhcmUgdGFzawogICAgICAgIHVwZ3JhZGVfZmlybXdhcmUuZGVsYXkob3BlcmF0aW9uX2lkKQoKICAgIFBhcmFtZXRlcnMKICAgIC0tLS0tLS0tLS0KICAgIG9wZXJhdGlvbl9pZCA6IHN0ciAoVVVJRCkKICAgICAgICBQcmltYXJ5IGtleSBvZiB0aGUgVXBncmFkZU9wZXJhdGlvbiB0byByZXRyeS4KICAgICIiIgogICAgIyDilIDilIAgU1RVQiBpbXBsZW1lbnRhdGlvbiAocHJvdG90eXBlKSDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAKICAgIHRyeToKICAgICAgICBvcGVyYXRpb24gPSBsb2FkX21vZGVsKCJVcGdyYWRlT3BlcmF0aW9uIikub2JqZWN0cy5nZXQocGs9b3BlcmF0aW9uX2lkKQogICAgZXhjZXB0IE9iamVjdERvZXNOb3RFeGlzdDoKICAgICAgICBsb2dnZXIud2FybmluZygKICAgICAgICAgICAgInJldHJ5X29mZmxpbmVfdXBncmFkZTogVXBncmFkZU9wZXJhdGlvbiAlcyBub3QgZm91bmQiLCBvcGVyYXRpb25faWQKICAgICAgICApCiAgICAgICAgcmV0dXJuCgogICAgaWYgb3BlcmF0aW9uLnN0YXR1cyAhPSAid2FpdGluZyI6CiAgICAgICAgbG9nZ2VyLmRlYnVnKAogICAgICAgICAgICAicmV0cnlfb2ZmbGluZV91cGdyYWRlOiBvcGVyYXRpb24gJXMgaXMgbm8gbG9uZ2VyIHdhaXRpbmcgKHN0YXR1cz0lcyksIHNraXBwaW5nIiwKICAgICAgICAgICAgb3BlcmF0aW9uX2lkLAogICAgICAgICAgICBvcGVyYXRpb24uc3RhdHVzLAogICAgICAgICkKICAgICAgICByZXR1cm4KCiAgICBsb2dnZXIuaW5mbygKICAgICAgICAicmV0cnlfb2ZmbGluZV91cGdyYWRlOiByZXRyeWluZyBvcGVyYXRpb24gJXMgKHJldHJ5ICMlZCkiLAogICAgICAgIG9wZXJhdGlvbl9pZCwKICAgICAgICBvcGVyYXRpb24ucmV0cnlfY291bnQsCiAgICApCiAgICAjIEluIHRoZSBmdWxsIGltcGxlbWVudGF0aW9uIHRoaXMgd291bGQgZGVsZWdhdGUgdG8gdXBncmFkZV9maXJtd2FyZS5kZWxheShvcGVyYXRpb25faWQpCiAgICAjIEZvciB0aGUgcHJvdG90eXBlIHdlIGp1c3QgbG9nIHRoZSBpbnRlbnQuCiAgICBvcGVyYXRpb24ubG9nX2xpbmUoCiAgICAgICAgZiJbUFJPVE9UWVBFXSBSZXRyeSAje29wZXJhdGlvbi5yZXRyeV9jb3VudH0gdHJpZ2dlcmVkIGJ5IHJldHJ5X29mZmxpbmVfdXBncmFkZSB0YXNrLiIKICAgICkKCgojIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgAojIFRhc2sgMjogc2Nhbl9wZW5kaW5nX3JldHJpZXMKIyDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAKCgpAc2hhcmVkX3Rhc2soYmFzZT1PcGVud2lzcENlbGVyeVRhc2spCmRlZiBzY2FuX3BlbmRpbmdfcmV0cmllcygpOgogICAgIiIiCiAgICBDZWxlcnkgQmVhdCBwZXJpb2RpYyB0YXNrIChydW5zIGV2ZXJ5IG1pbnV0ZSkgdGhhdCBzY2FucyBmb3IKICAgIFVwZ3JhZGVPcGVyYXRpb25zIHdob3NlIGBgbmV4dF9yZXRyeV9hdGBgIGhhcyBlbGFwc2VkIGFuZAogICAgZGlzcGF0Y2hlcyBgYHJldHJ5X29mZmxpbmVfdXBncmFkZWBgIGZvciBlYWNoIG9uZS4KCiAgICBUaGlzIGlzIHRoZSAqZmFsbGJhY2sqIHBhdGggZm9yIGVudmlyb25tZW50cyB3aGVyZSBvcGVud2lzcC1tb25pdG9yaW5nCiAgICBpcyBub3QgaW5zdGFsbGVkIG9yIHRoZSBoZWFsdGhfc3RhdHVzX2NoYW5nZWQgc2lnbmFsIGlzIG5vdCBhdmFpbGFibGUuCgogICAgQ2VsZXJ5IEJlYXQgY29uZmlndXJhdGlvbiAoZnVsbCBpbXBsZW1lbnRhdGlvbiwgaW4gYXBwcy5weSBvciBjZWxlcnkucHkpCiAgICB+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+CiAgICA6OgoKICAgICAgICBDRUxFUllfQkVBVF9TQ0hFRFVMRSA9IHsKICAgICAgICAgICAgInNjYW4tcGVuZGluZy1yZXRyaWVzIjogewogICAgICAgICAgICAgICAgInRhc2siOiAib3Blbndpc3BfZmlybXdhcmVfdXBncmFkZXIudGFza3Muc2Nhbl9wZW5kaW5nX3JldHJpZXMiLAogICAgICAgICAgICAgICAgInNjaGVkdWxlIjogY3JvbnRhYihtaW51dGU9IioiKSwgICAjIGV2ZXJ5IG1pbnV0ZQogICAgICAgICAgICB9LAogICAgICAgIH0KCiAgICBGdWxsIGltcGxlbWVudGF0aW9uIHBzZXVkb2NvZGUKICAgIH5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn4KICAgIDo6CgogICAgICAgIG5vdyA9IHRpbWV6b25lLm5vdygpCiAgICAgICAgZHVlX29wZXJhdGlvbnMgPSBVcGdyYWRlT3BlcmF0aW9uLm9iamVjdHMuZmlsdGVyKAogICAgICAgICAgICBzdGF0dXM9IndhaXRpbmciLAogICAgICAgICAgICBuZXh0X3JldHJ5X2F0X19sdGU9bm93LAogICAgICAgICAgICBiYXRjaF9fcGVyc2lzdGVudD1UcnVlLAogICAgICAgICkuc2VsZWN0X3JlbGF0ZWQoImJhdGNoIikKCiAgICAgICAgRk9SIG9wZXJhdGlvbiBJTiBkdWVfb3BlcmF0aW9uczoKICAgICAgICAgICAgIyBBZGQgcmFuZG9taXplZCBkZWxheSAoMS0zMCBzKSB0byBwcmV2ZW50IHRodW5kZXJpbmctaGVyZAogICAgICAgICAgICBqaXR0ZXJfc2Vjb25kcyA9IHJhbmRvbS5yYW5kaW50KDEsIDMwKQogICAgICAgICAgICByZXRyeV9vZmZsaW5lX3VwZ3JhZGUuYXBwbHlfYXN5bmMoCiAgICAgICAgICAgICAgICBhcmdzPVtzdHIob3BlcmF0aW9uLnBrKV0sCiAgICAgICAgICAgICAgICBjb3VudGRvd249aml0dGVyX3NlY29uZHMsCiAgICAgICAgICAgICkKICAgICAgICAgICAgbG9nZ2VyLmluZm8oIlNjaGVkdWxlZCByZXRyeSBmb3Igb3BlcmF0aW9uICVzIGluICVkcyIsIG9wZXJhdGlvbi5waywgaml0dGVyX3NlY29uZHMpCiAgICAiIiIKICAgICMg4pSA4pSAIFNUVUIgaW1wbGVtZW50YXRpb24gKHByb3RvdHlwZSkg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSACiAgICBub3cgPSB0aW1lem9uZS5ub3coKQogICAgVXBncmFkZU9wZXJhdGlvbiA9IGxvYWRfbW9kZWwoIlVwZ3JhZGVPcGVyYXRpb24iKQogICAgZHVlX3FzID0gVXBncmFkZU9wZXJhdGlvbi5vYmplY3RzLmZpbHRlcigKICAgICAgICBzdGF0dXM9IndhaXRpbmciLAogICAgICAgIG5leHRfcmV0cnlfYXRfX2x0ZT1ub3csCiAgICApCiAgICBjb3VudCA9IGR1ZV9xcy5jb3VudCgpCiAgICBsb2dnZXIuaW5mbygic2Nhbl9wZW5kaW5nX3JldHJpZXM6IGZvdW5kICVkIG9wZXJhdGlvbihzKSBkdWUgZm9yIHJldHJ5IiwgY291bnQpCgogICAgZm9yIG9wZXJhdGlvbiBpbiBkdWVfcXMuaXRlcmF0b3IoKToKICAgICAgICBqaXR0ZXIgPSByYW5kb20ucmFuZGludCgxLCAzMCkKICAgICAgICBsb2dnZXIuaW5mbygKICAgICAgICAgICAgInNjYW5fcGVuZGluZ19yZXRyaWVzOiBzY2hlZHVsaW5nIHJldHJ5IGZvciAlcyBpbiAlZHMiLCBvcGVyYXRpb24ucGssIGppdHRlcgogICAgICAgICkKICAgICAgICAjIEZ1bGwgaW1wbGVtZW50YXRpb246IHJldHJ5X29mZmxpbmVfdXBncmFkZS5hcHBseV9hc3luYyhhcmdzPVtzdHIob3BlcmF0aW9uLnBrKV0sIGNvdW50ZG93bj1qaXR0ZXIpCiAgICAgICAgIyBQcm90b3R5cGU6IGxvZyBvbmx5CiAgICAgICAgb3BlcmF0aW9uLmxvZ19saW5lKAogICAgICAgICAgICBmIltQUk9UT1RZUEVdIHNjYW5fcGVuZGluZ19yZXRyaWVzIHdvdWxkIGRpc3BhdGNoIHJldHJ5IGluIHtqaXR0ZXJ9cy4iCiAgICAgICAgKQoKCiMg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSACiMgVGFzayAzOiBleGVjdXRlX3NjaGVkdWxlZF9iYXRjaF91cGdyYWRlcwojIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgAoKCkBzaGFyZWRfdGFzayhiYXNlPU9wZW53aXNwQ2VsZXJ5VGFzaykKZGVmIGV4ZWN1dGVfc2NoZWR1bGVkX2JhdGNoX3VwZ3JhZGVzKCk6CiAgICAiIiIKICAgIENlbGVyeSBCZWF0IHBlcmlvZGljIHRhc2sgKHJ1bnMgZXZlcnkgbWludXRlKSB0aGF0IGxvb2tzIGZvcgogICAgQmF0Y2hVcGdyYWRlT3BlcmF0aW9ucyB3aG9zZSBgYHNjaGVkdWxlZF9hdGBgIGhhcyBlbGFwc2VkIGFuZAogICAgdHJpZ2dlcnMgdGhlaXIgZXhlY3V0aW9uLgoKICAgIERlc2lnbiBub3RlOiBXZSBkZWxpYmVyYXRlbHkgYXZvaWQgdXNpbmcgQ2VsZXJ5IGBgZXRhYGAvYGBjb3VudGRvd25gYAogICAgZm9yIHNjaGVkdWxpbmcgZmFyLWZ1dHVyZSB0YXNrcyBiZWNhdXNlIHRoZXNlIGFyZSB1bnJlbGlhYmxlIGFjcm9zcwogICAgYnJva2VyIHJlc3RhcnRzLiAgSW5zdGVhZCwgd2Ugc3RvcmUgdGhlIHRhcmdldCBkYXRldGltZSBpbiB0aGUgREIgYW5kCiAgICBwb2xsIGV2ZXJ5IG1pbnV0ZS4KCiAgICBDZWxlcnkgQmVhdCBjb25maWd1cmF0aW9uCiAgICB+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+CiAgICA6OgoKICAgICAgICAiZXhlY3V0ZS1zY2hlZHVsZWQtdXBncmFkZXMiOiB7CiAgICAgICAgICAgICJ0YXNrIjogIm9wZW53aXNwX2Zpcm13YXJlX3VwZ3JhZGVyLnRhc2tzLmV4ZWN1dGVfc2NoZWR1bGVkX2JhdGNoX3VwZ3JhZGVzIiwKICAgICAgICAgICAgInNjaGVkdWxlIjogY3JvbnRhYihtaW51dGU9IioiKSwKICAgICAgICB9CgogICAgRnVsbCBpbXBsZW1lbnRhdGlvbiBwc2V1ZG9jb2RlCiAgICB+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+CiAgICA6OgoKICAgICAgICBub3cgPSB0aW1lem9uZS5ub3coKQogICAgICAgIGR1ZV9iYXRjaGVzID0gQmF0Y2hVcGdyYWRlT3BlcmF0aW9uLm9iamVjdHMuZmlsdGVyKAogICAgICAgICAgICBzdGF0dXM9InNjaGVkdWxlZCIsCiAgICAgICAgICAgIHNjaGVkdWxlZF9hdF9fbHRlPW5vdywKICAgICAgICApCgogICAgICAgIEZPUiBiYXRjaCBJTiBkdWVfYmF0Y2hlczoKICAgICAgICAgICAgIyBSZS12YWxpZGF0ZTogY2hlY2sgZmlybXdhcmUgc3RpbGwgZXhpc3RzLCBwZXJtaXNzaW9ucyBhcmUgdmFsaWQsCiAgICAgICAgICAgICMgYW5kIHRoZXJlIGFyZSBzdGlsbCBkZXZpY2VzIHRvIHVwZ3JhZGUuCiAgICAgICAgICAgIElGIE5PVCBiYXRjaC5oYXNfdmFsaWRfdGFyZ2V0cygpOgogICAgICAgICAgICAgICAgYmF0Y2guc3RhdHVzID0gImZhaWxlZCIKICAgICAgICAgICAgICAgIGJhdGNoLnNhdmUoKQogICAgICAgICAgICAgICAgc2VuZF9ub3RpZmljYXRpb24oCiAgICAgICAgICAgICAgICAgICAgYmF0Y2gsCiAgICAgICAgICAgICAgICAgICAgbWVzc2FnZT0iU2NoZWR1bGVkIHVwZ3JhZGUgY2FuY2VsbGVkOiBubyB2YWxpZCB0YXJnZXRzIGF0IGV4ZWN1dGlvbiB0aW1lLiIKICAgICAgICAgICAgICAgICkKICAgICAgICAgICAgICAgIENPTlRJTlVFCgogICAgICAgICAgICAjIENoZWNrIGZvciBjb25mbGljdGluZyBpbi1wcm9ncmVzcyBvciBzY2hlZHVsZWQgYmF0Y2hlcwogICAgICAgICAgICAjIGZvciB0aGUgc2FtZSBidWlsZC9vcmdhbml6YXRpb24KICAgICAgICAgICAgSUYgYmF0Y2guaGFzX2NvbmZsaWN0KCk6CiAgICAgICAgICAgICAgICAjIERlZmVyIGJ5IDUgbWludXRlcyBhbmQgcmV0cnkKICAgICAgICAgICAgICAgIGJhdGNoLnNjaGVkdWxlZF9hdCA9IG5vdyArIHRpbWVkZWx0YShtaW51dGVzPTUpCiAgICAgICAgICAgICAgICBiYXRjaC5zYXZlKCkKICAgICAgICAgICAgICAgIENPTlRJTlVFCgogICAgICAgICAgICAjIFRyYW5zaXRpb24gdG8gaW4tcHJvZ3Jlc3MgYW5kIGtpY2sgb2ZmIHRoZSBiYXRjaAogICAgICAgICAgICBiYXRjaC5zdGF0dXMgPSAiaW4tcHJvZ3Jlc3MiCiAgICAgICAgICAgIGJhdGNoLnNhdmUoKQogICAgICAgICAgICBzZW5kX25vdGlmaWNhdGlvbihiYXRjaCwgbWVzc2FnZT0iU2NoZWR1bGVkIHVwZ3JhZGUgaXMgbm93IHN0YXJ0aW5nLiIpCiAgICAgICAgICAgIGJhdGNoX3VwZ3JhZGVfb3BlcmF0aW9uLmRlbGF5KGJhdGNoLnBrLCBmaXJtd2FyZWxlc3M9VHJ1ZSkKICAgICIiIgogICAgIyDilIDilIAgU1RVQiBpbXBsZW1lbnRhdGlvbiAocHJvdG90eXBlKSDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAKICAgIG5vdyA9IHRpbWV6b25lLm5vdygpCiAgICBCYXRjaFVwZ3JhZGVPcGVyYXRpb24gPSBsb2FkX21vZGVsKCJCYXRjaFVwZ3JhZGVPcGVyYXRpb24iKQogICAgZHVlX2JhdGNoZXMgPSBCYXRjaFVwZ3JhZGVPcGVyYXRpb24ub2JqZWN0cy5maWx0ZXIoCiAgICAgICAgc3RhdHVzPSJzY2hlZHVsZWQiLAogICAgICAgIHNjaGVkdWxlZF9hdF9fbHRlPW5vdywKICAgICkKICAgIGNvdW50ID0gZHVlX2JhdGNoZXMuY291bnQoKQogICAgbG9nZ2VyLmluZm8oCiAgICAgICAgImV4ZWN1dGVfc2NoZWR1bGVkX2JhdGNoX3VwZ3JhZGVzOiBmb3VuZCAlZCBiYXRjaChlcykgcmVhZHkgdG8gZXhlY3V0ZSIsIGNvdW50CiAgICApCgogICAgZm9yIGJhdGNoIGluIGR1ZV9iYXRjaGVzLml0ZXJhdG9yKCk6CiAgICAgICAgbG9nZ2VyLmluZm8oCiAgICAgICAgICAgICJleGVjdXRlX3NjaGVkdWxlZF9iYXRjaF91cGdyYWRlczogW1BST1RPVFlQRV0gd291bGQgc3RhcnQgYmF0Y2ggJXMiLCBiYXRjaC5wawogICAgICAgICkKICAgICAgICAjIEZ1bGwgaW1wbGVtZW50YXRpb246IGJhdGNoX3VwZ3JhZGVfb3BlcmF0aW9uLmRlbGF5KGJhdGNoLnBrLCBmaXJtd2FyZWxlc3M9VHJ1ZSkKCgojIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgAojIFRhc2sgNDogc2VuZF9wZW5kaW5nX3VwZ3JhZGVfcmVtaW5kZXJzCiMg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSACgoKQHNoYXJlZF90YXNrKGJhc2U9T3Blbndpc3BDZWxlcnlUYXNrKQpkZWYgc2VuZF9wZW5kaW5nX3VwZ3JhZGVfcmVtaW5kZXJzKCk6CiAgICAiIiIKICAgIENlbGVyeSBCZWF0IHBlcmlvZGljIHRhc2sgdGhhdCBzZW5kcyBhZG1pbiBub3RpZmljYXRpb25zIGFib3V0IGRldmljZXMKICAgIHN0aWxsIHdhaXRpbmcgZm9yIGEgZmlybXdhcmUgdXBncmFkZSBhZnRlciBhbiBleHRlbmRlZCBwZXJpb2QuCgogICAgRGVmYXVsdCBmcmVxdWVuY3k6IGV2ZXJ5IDIgbW9udGhzIChjb25maWd1cmFibGUgdmlhIHNldHRpbmdzKS4KCiAgICBGdWxsIGltcGxlbWVudGF0aW9uIHBzZXVkb2NvZGUKICAgIH5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn4KICAgIDo6CgogICAgICAgIHRocmVzaG9sZF9kYXlzID0gYXBwX3NldHRpbmdzLlBFTkRJTkdfVVBHUkFERV9SRU1JTkRFUl9EQVlTICAjIGRlZmF1bHQgNjAKICAgICAgICBjdXRvZmYgPSB0aW1lem9uZS5ub3coKSAtIHRpbWVkZWx0YShkYXlzPXRocmVzaG9sZF9kYXlzKQoKICAgICAgICAjIEdyb3VwIHdhaXRpbmcgb3BlcmF0aW9ucyBieSBiYXRjaAogICAgICAgIGJhdGNoZXNfd2l0aF9wZW5kaW5nID0gKAogICAgICAgICAgICBCYXRjaFVwZ3JhZGVPcGVyYXRpb24ub2JqZWN0cwogICAgICAgICAgICAuZmlsdGVyKAogICAgICAgICAgICAgICAgdXBncmFkZW9wZXJhdGlvbl9fc3RhdHVzPSJ3YWl0aW5nIiwKICAgICAgICAgICAgICAgIHVwZ3JhZGVvcGVyYXRpb25fX2NyZWF0ZWRfX2x0ZT1jdXRvZmYsCiAgICAgICAgICAgICAgICBwZXJzaXN0ZW50PVRydWUsCiAgICAgICAgICAgICkKICAgICAgICAgICAgLmRpc3RpbmN0KCkKICAgICAgICApCgogICAgICAgIEZPUiBiYXRjaCBJTiBiYXRjaGVzX3dpdGhfcGVuZGluZzoKICAgICAgICAgICAgcGVuZGluZ19jb3VudCA9IGJhdGNoLnVwZ3JhZGVvcGVyYXRpb25fc2V0LmZpbHRlcihzdGF0dXM9IndhaXRpbmciKS5jb3VudCgpCiAgICAgICAgICAgIGFkbWluX3VybCA9IGJ1aWxkX2FkbWluX3VybChiYXRjaCkKICAgICAgICAgICAgZ2VuZXJpY19ub3RpZmljYXRpb24uc2VuZCgKICAgICAgICAgICAgICAgIHR5cGU9ImZpcm13YXJlX3VwZ3JhZGVfcGVuZGluZ19yZW1pbmRlciIsCiAgICAgICAgICAgICAgICBhY3RvcnM9YmF0Y2gsCiAgICAgICAgICAgICAgICBtZXNzYWdlPSgKICAgICAgICAgICAgICAgICAgICBmIntwZW5kaW5nX2NvdW50fSBkZXZpY2UocykgaW4gYmF0Y2ggJ3tiYXRjaH0nIGhhdmUgYmVlbiAiCiAgICAgICAgICAgICAgICAgICAgZiJ3YWl0aW5nIGZvciBhIGZpcm13YXJlIHVwZ3JhZGUgZm9yIG92ZXIge3RocmVzaG9sZF9kYXlzfSBkYXlzLiAiCiAgICAgICAgICAgICAgICAgICAgZiJSZXZpZXc6IHthZG1pbl91cmx9IgogICAgICAgICAgICAgICAgKSwKICAgICAgICAgICAgICAgIHJlY2lwaWVudHM9Z2V0X29yZ19hZG1pbnMoYmF0Y2guYnVpbGQuY2F0ZWdvcnkub3JnYW5pemF0aW9uKSwKICAgICAgICAgICAgKQoKICAgIE5vdGlmaWNhdGlvbiB0eXBlIHJlZ2lzdHJhdGlvbiAoZnVsbCBpbXBsZW1lbnRhdGlvbiwgaW4gYXBwcy5weSkKICAgIH5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn4KICAgIDo6CgogICAgICAgIHJlZ2lzdGVyX25vdGlmaWNhdGlvbl90eXBlKAogICAgICAgICAgICB0eXBlX25hbWU9ImZpcm13YXJlX3VwZ3JhZGVfcGVuZGluZ19yZW1pbmRlciIsCiAgICAgICAgICAgIHZlcmJvc2VfbmFtZT0iRmlybXdhcmUgdXBncmFkZSBwZW5kaW5nIHJlbWluZGVyIiwKICAgICAgICAgICAgdmVyYj0iaGFzIHBlbmRpbmcgZmlybXdhcmUgdXBncmFkZSBkZXZpY2VzIiwKICAgICAgICApCiAgICAiIiIKICAgICMg4pSA4pSAIFNUVUIgaW1wbGVtZW50YXRpb24gKHByb3RvdHlwZSkg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSACiAgICBsb2dnZXIuaW5mbygKICAgICAgICAic2VuZF9wZW5kaW5nX3VwZ3JhZGVfcmVtaW5kZXJzOiBbUFJPVE9UWVBFXSB3b3VsZCBxdWVyeSBiYXRjaGVzIHdpdGggIgogICAgICAgICJsb25nLXBlbmRpbmcgb3BlcmF0aW9ucyBhbmQgc2VuZCBnZW5lcmljX25vdGlmaWNhdGlvbiByZW1pbmRlcnMuIgogICAgKQoKCiMg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSACiMgU2lnbmFsIGhhbmRsZXI6IGhhbmRsZV9kZXZpY2Vfb25saW5lCiMg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSACgoKZGVmIGhhbmRsZV9kZXZpY2Vfb25saW5lKHNlbmRlciwgaW5zdGFuY2UsICoqa3dhcmdzKToKICAgICIiIgogICAgU2lnbmFsIGhhbmRsZXIgY29ubmVjdGVkIHRvIG9wZW53aXNwX21vbml0b3JpbmcncwogICAgYGBoZWFsdGhfc3RhdHVzX2NoYW5nZWRgYCBzaWduYWwgKHByZWZlcnJlZCByZXRyeSB0cmlnZ2VyKS4KCiAgICBXaGVuIGEgZGV2aWNlJ3MgaGVhbHRoIHN0YXR1cyB0cmFuc2l0aW9ucyB0byAib2siLCB0aGlzIGhhbmRsZXIKICAgIGNoZWNrcyB3aGV0aGVyIHRoZSBkZXZpY2UgaGFzIGFueSBwZW5kaW5nIFVwZ3JhZGVPcGVyYXRpb25zIGFuZCwKICAgIGlmIHNvLCBkaXNwYXRjaGVzIGBgcmV0cnlfb2ZmbGluZV91cGdyYWRlYGAgZm9yIGVhY2ggb25lLgoKICAgIENvbm5lY3Rpb24gKGZ1bGwgaW1wbGVtZW50YXRpb24sIGluIGFwcHMucHkgcmVhZHkoKSkKICAgIH5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+CiAgICA6OgoKICAgICAgICBmcm9tIG9wZW53aXNwX21vbml0b3JpbmcubW9uaXRvcmluZy5zaWduYWxzIGltcG9ydCBoZWFsdGhfc3RhdHVzX2NoYW5nZWQKCiAgICAgICAgaGVhbHRoX3N0YXR1c19jaGFuZ2VkLmNvbm5lY3QoCiAgICAgICAgICAgIGhhbmRsZV9kZXZpY2Vfb25saW5lLAogICAgICAgICAgICBzZW5kZXI9RGV2aWNlLAogICAgICAgICAgICBkaXNwYXRjaF91aWQ9ImZpcm13YXJlX3VwZ3JhZGVyX2RldmljZV9vbmxpbmUiLAogICAgICAgICkKCiAgICBGdWxsIGltcGxlbWVudGF0aW9uIHBzZXVkb2NvZGUKICAgIH5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn5+fn4KICAgIDo6CgogICAgICAgIElGIGluc3RhbmNlLm1vbml0b3Jpbmcuc3RhdHVzICE9ICJvayI6CiAgICAgICAgICAgIFJFVFVSTiAgIyBkZXZpY2UgaXMgbm90IGZ1bGx5IGhlYWx0aHkgeWV0CgogICAgICAgIHdhaXRpbmdfb3BzID0gVXBncmFkZU9wZXJhdGlvbi5vYmplY3RzLmZpbHRlcigKICAgICAgICAgICAgZGV2aWNlPWluc3RhbmNlLAogICAgICAgICAgICBzdGF0dXM9IndhaXRpbmciLAogICAgICAgICAgICBiYXRjaF9fcGVyc2lzdGVudD1UcnVlLAogICAgICAgICkKCiAgICAgICAgRk9SIG9wZXJhdGlvbiBJTiB3YWl0aW5nX29wczoKICAgICAgICAgICAgIyBVc2UgYSBzaG9ydCByYW5kb20gZGVsYXkgdG8gc3ByZWFkIGxvYWQKICAgICAgICAgICAgaml0dGVyID0gcmFuZG9tLnJhbmRpbnQoNSwgNjApCiAgICAgICAgICAgIHJldHJ5X29mZmxpbmVfdXBncmFkZS5hcHBseV9hc3luYygKICAgICAgICAgICAgICAgIGFyZ3M9W3N0cihvcGVyYXRpb24ucGspXSwKICAgICAgICAgICAgICAgIGNvdW50ZG93bj1qaXR0ZXIsCiAgICAgICAgICAgICkKCiAgICBQYXJhbWV0ZXJzCiAgICAtLS0tLS0tLS0tCiAgICBzZW5kZXIgOiB0eXBlCiAgICAgICAgVGhlIERldmljZSBtb2RlbCBjbGFzcy4KICAgIGluc3RhbmNlIDogRGV2aWNlCiAgICAgICAgVGhlIGRldmljZSB3aG9zZSBoZWFsdGggc3RhdHVzIGNoYW5nZWQuCiAgICAiIiIKICAgICMg4pSA4pSAIFNUVUIgaW1wbGVtZW50YXRpb24gKHByb3RvdHlwZSkg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSACiAgICBuZXdfc3RhdHVzID0gZ2V0YXR0cihnZXRhdHRyKGluc3RhbmNlLCAibW9uaXRvcmluZyIsIE5vbmUpLCAic3RhdHVzIiwgTm9uZSkKICAgIGlmIG5ld19zdGF0dXMgIT0gIm9rIjoKICAgICAgICByZXR1cm4KCiAgICBVcGdyYWRlT3BlcmF0aW9uID0gbG9hZF9tb2RlbCgiVXBncmFkZU9wZXJhdGlvbiIpCiAgICB3YWl0aW5nX29wcyA9IFVwZ3JhZGVPcGVyYXRpb24ub2JqZWN0cy5maWx0ZXIoCiAgICAgICAgZGV2aWNlPWluc3RhbmNlLAogICAgICAgIHN0YXR1cz0id2FpdGluZyIsCiAgICApCiAgICBmb3Igb3AgaW4gd2FpdGluZ19vcHM6CiAgICAgICAgbG9nZ2VyLmluZm8oCiAgICAgICAgICAgICJoYW5kbGVfZGV2aWNlX29ubGluZTogW1BST1RPVFlQRV0gZGV2aWNlICVzIGNhbWUgb25saW5lOyAiCiAgICAgICAgICAgICJ3b3VsZCBkaXNwYXRjaCByZXRyeSBmb3Igb3BlcmF0aW9uICVzIiwKICAgICAgICAgICAgaW5zdGFuY2UucGssCiAgICAgICAgICAgIG9wLnBrLAogICAgICAgICkK
+"""
+GSoC 2026 Prototype — New & extended Celery tasks.
+
+This module adds the tasks that back the persistent-retry and
+scheduled-upgrade features.  In the full implementation these stubs
+would be merged into openwisp_firmware_upgrader/tasks.py and wired up
+in apps.py / celery.py.
+
+Every function below contains a detailed docstring **and** pseudocode
+comment block so that a mentor can follow the intended implementation
+logic without running the code.
+"""
+
+import logging
+import math
+import random
+
+from celery import shared_task
+from django.core.exceptions import ObjectDoesNotExist
+from django.utils import timezone
+
+from openwisp_utils.tasks import OpenwispCeleryTask
+
+from .swapper import load_model
+
+logger = logging.getLogger(__name__)
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Helper: exponential back-off with jitter
+# ─────────────────────────────────────────────────────────────────────────────
+
+# Configurable via Django settings (full implementation reads from app_settings)
+RETRY_BASE_SECONDS = 60  # 1 minute floor
+RETRY_MULTIPLIER = 2.0  # double each attempt
+RETRY_MAX_SECONDS = 12 * 3600  # hard cap at 12 hours
+RETRY_JITTER_FRACTION = 0.25  # ±25 % randomization
+
+
+def compute_retry_delay(retry_count: int) -> int:
+    """
+    Return the number of seconds to wait before the next retry attempt.
+
+    Strategy: randomized exponential back-off, capped at RETRY_MAX_SECONDS.
+
+        delay = clamp(base * multiplier^retry_count, base, max)
+        delay = delay * uniform(1 - jitter, 1 + jitter)   # add jitter
+
+    Parameters
+    ----------
+    retry_count : int
+        How many times this operation has already been retried.
+
+    Returns
+    -------
+    int
+        Seconds to wait (always between RETRY_BASE_SECONDS and
+        RETRY_MAX_SECONDS after jitter is applied).
+    """
+    # Pseudocode:
+    #   raw   = RETRY_BASE_SECONDS * (RETRY_MULTIPLIER ** retry_count)
+    #   raw   = min(raw, RETRY_MAX_SECONDS)
+    #   jitter_factor = random.uniform(1 - RETRY_JITTER_FRACTION,
+    #                                  1 + RETRY_JITTER_FRACTION)
+    #   return int(raw * jitter_factor)
+
+    raw = RETRY_BASE_SECONDS * math.pow(RETRY_MULTIPLIER, retry_count)
+    raw = min(raw, RETRY_MAX_SECONDS)
+    jitter = random.uniform(1 - RETRY_JITTER_FRACTION, 1 + RETRY_JITTER_FRACTION)
+    return int(raw * jitter)
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Task 1: retry_offline_upgrade
+# ─────────────────────────────────────────────────────────────────────────────
+
+
+@shared_task(base=OpenwispCeleryTask, bind=True)
+def retry_offline_upgrade(self, operation_id: str):
+    """
+    Re-attempt a single UpgradeOperation that was previously paused
+    because the device was offline.
+
+    Triggered by
+    ~~~~~~~~~~~~
+    * The ``handle_device_online`` signal handler when the target device's
+      health status changes to "ok" (preferred path via openwisp-monitoring).
+    * The ``scan_pending_retries`` periodic task (fallback polling path).
+
+    Full implementation pseudocode
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ::
+
+        operation = UpgradeOperation.objects.get(pk=operation_id)
+
+        IF operation.status != "waiting":
+            # Another path already picked this up — skip
+            RETURN
+
+        # Acquire a per-device lock to prevent concurrent upgrades
+        lock_key = f"firmware-upgrade-device-{operation.device_id}"
+        WITH distributed_lock(lock_key, timeout=30):
+            operation.refresh_from_db()
+            IF operation.status != "waiting":
+                RETURN  # lost the race
+
+            # Clear the waiting state, set back to in-progress
+            operation.waiting_for_device = False
+            operation.status = "in-progress"
+            operation.save(update_fields=["waiting_for_device", "status"])
+
+        # Delegate to the existing upgrade_firmware task
+        upgrade_firmware.delay(operation_id)
+
+    Parameters
+    ----------
+    operation_id : str (UUID)
+        Primary key of the UpgradeOperation to retry.
+    """
+    # ── STUB implementation (prototype) ─────────────────────────────────────────
+    try:
+        operation = load_model("UpgradeOperation").objects.get(pk=operation_id)
+    except ObjectDoesNotExist:
+        logger.warning(
+            "retry_offline_upgrade: UpgradeOperation %s not found", operation_id
+        )
+        return
+
+    if operation.status != "waiting":
+        logger.debug(
+            "retry_offline_upgrade: operation %s is no longer waiting (status=%s), skipping",
+            operation_id,
+            operation.status,
+        )
+        return
+
+    logger.info(
+        "retry_offline_upgrade: retrying operation %s (retry #%d)",
+        operation_id,
+        operation.retry_count,
+    )
+    # In the full implementation this would delegate to upgrade_firmware.delay(operation_id)
+    # For the prototype we just log the intent.
+    operation.log_line(
+        f"[PROTOTYPE] Retry #{operation.retry_count} triggered by retry_offline_upgrade task."
+    )
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Task 2: scan_pending_retries
+# ─────────────────────────────────────────────────────────────────────────────
+
+
+@shared_task(base=OpenwispCeleryTask)
+def scan_pending_retries():
+    """
+    Celery Beat periodic task (runs every minute) that scans for
+    UpgradeOperations whose ``next_retry_at`` has elapsed and
+    dispatches ``retry_offline_upgrade`` for each one.
+
+    This is the *fallback* path for environments where openwisp-monitoring
+    is not installed or the health_status_changed signal is not available.
+
+    Celery Beat configuration (full implementation, in apps.py or celery.py)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ::
+
+        CELERY_BEAT_SCHEDULE = {
+            "scan-pending-retries": {
+                "task": "openwisp_firmware_upgrader.tasks.scan_pending_retries",
+                "schedule": crontab(minute="*"),   # every minute
+            },
+        }
+
+    Full implementation pseudocode
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ::
+
+        now = timezone.now()
+        due_operations = UpgradeOperation.objects.filter(
+            status="waiting",
+            next_retry_at__lte=now,
+            batch__persistent=True,
+        ).select_related("batch")
+
+        FOR operation IN due_operations:
+            # Add randomized delay (1-30 s) to prevent thundering-herd
+            jitter_seconds = random.randint(1, 30)
+            retry_offline_upgrade.apply_async(
+                args=[str(operation.pk)],
+                countdown=jitter_seconds,
+            )
+            logger.info("Scheduled retry for operation %s in %ds", operation.pk, jitter_seconds)
+    """
+    # ── STUB implementation (prototype) ─────────────────────────────────────────
+    now = timezone.now()
+    UpgradeOperation = load_model("UpgradeOperation")
+    due_qs = UpgradeOperation.objects.filter(
+        status="waiting",
+        next_retry_at__lte=now,
+    )
+    count = due_qs.count()
+    logger.info("scan_pending_retries: found %d operation(s) due for retry", count)
+
+    for operation in due_qs.iterator():
+        jitter = random.randint(1, 30)
+        logger.info(
+            "scan_pending_retries: scheduling retry for %s in %ds", operation.pk, jitter
+        )
+        # Full implementation:
+        # retry_offline_upgrade.apply_async(args=[str(operation.pk)], countdown=jitter)
+        # Prototype: log only
+        operation.log_line(
+            f"[PROTOTYPE] scan_pending_retries would dispatch retry in {jitter}s."
+        )
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Task 3: execute_scheduled_batch_upgrades
+# ─────────────────────────────────────────────────────────────────────────────
+
+
+@shared_task(base=OpenwispCeleryTask)
+def execute_scheduled_batch_upgrades():
+    """
+    Celery Beat periodic task (runs every minute) that looks for
+    BatchUpgradeOperations whose ``scheduled_at`` has elapsed and
+    triggers their execution.
+
+    Design note: We deliberately avoid using Celery ``eta``/``countdown``
+    for scheduling far-future tasks because these are unreliable across
+    broker restarts.  Instead, we store the target datetime in the DB and
+    poll every minute.
+
+    Celery Beat configuration
+    ~~~~~~~~~~~~~~~~~~~~~~~~~
+    ::
+
+        "execute-scheduled-upgrades": {
+            "task": "openwisp_firmware_upgrader.tasks.execute_scheduled_batch_upgrades",
+            "schedule": crontab(minute="*"),
+        }
+
+    Full implementation pseudocode
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ::
+
+        now = timezone.now()
+        due_batches = BatchUpgradeOperation.objects.filter(
+            status="scheduled",
+            scheduled_at__lte=now,
+        )
+
+        FOR batch IN due_batches:
+            # Re-validate: check firmware still exists, permissions are valid,
+            # and there are still devices to upgrade.
+            IF NOT batch.has_valid_targets():
+                batch.status = "failed"
+                batch.save()
+                send_notification(
+                    batch,
+                    message="Scheduled upgrade cancelled: no valid targets at execution time."
+                )
+                CONTINUE
+
+            # Check for conflicting in-progress or scheduled batches
+            # for the same build/organization
+            IF batch.has_conflict():
+                # Defer by 5 minutes and retry
+                batch.scheduled_at = now + timedelta(minutes=5)
+                batch.save()
+                CONTINUE
+
+            # Transition to in-progress and kick off the batch
+            batch.status = "in-progress"
+            batch.save()
+            send_notification(batch, message="Scheduled upgrade is now starting.")
+            batch_upgrade_operation.delay(batch.pk, firmwareless=True)
+    """
+    # ── STUB implementation (prototype) ─────────────────────────────────────────
+    now = timezone.now()
+    BatchUpgradeOperation = load_model("BatchUpgradeOperation")
+    due_batches = BatchUpgradeOperation.objects.filter(
+        status="scheduled",
+        scheduled_at__lte=now,
+    )
+    count = due_batches.count()
+    logger.info(
+        "execute_scheduled_batch_upgrades: found %d batch(es) ready to execute", count
+    )
+
+    for batch in due_batches.iterator():
+        logger.info(
+            "execute_scheduled_batch_upgrades: [PROTOTYPE] would start batch %s",
+            batch.pk,
+        )
+        # Full implementation: batch_upgrade_operation.delay(batch.pk, firmwareless=True)
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Task 4: send_pending_upgrade_reminders
+# ─────────────────────────────────────────────────────────────────────────────
+
+
+@shared_task(base=OpenwispCeleryTask)
+def send_pending_upgrade_reminders():
+    """
+    Celery Beat periodic task that sends admin notifications about devices
+    still waiting for a firmware upgrade after an extended period.
+
+    Default frequency: every 2 months (configurable via settings).
+
+    Full implementation pseudocode
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ::
+
+        threshold_days = app_settings.PENDING_UPGRADE_REMINDER_DAYS  # default 60
+        cutoff = timezone.now() - timedelta(days=threshold_days)
+
+        # Group waiting operations by batch
+        batches_with_pending = (
+            BatchUpgradeOperation.objects
+            .filter(
+                upgradeoperation__status="waiting",
+                upgradeoperation__created__lte=cutoff,
+                persistent=True,
+            )
+            .distinct()
+        )
+
+        FOR batch IN batches_with_pending:
+            pending_count = batch.upgradeoperation_set.filter(status="waiting").count()
+            admin_url = build_admin_url(batch)
+            generic_notification.send(
+                type="firmware_upgrade_pending_reminder",
+                actors=batch,
+                message=(
+                    f"{pending_count} device(s) in batch '{batch}' have been "
+                    f"waiting for a firmware upgrade for over {threshold_days} days. "
+                    f"Review: {admin_url}"
+                ),
+                recipients=get_org_admins(batch.build.category.organization),
+            )
+
+    Notification type registration (full implementation, in apps.py)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ::
+
+        register_notification_type(
+            type_name="firmware_upgrade_pending_reminder",
+            verbose_name="Firmware upgrade pending reminder",
+            verb="has pending firmware upgrade devices",
+        )
+    """
+    # ── STUB implementation (prototype) ─────────────────────────────────────────
+    logger.info(
+        "send_pending_upgrade_reminders: [PROTOTYPE] would query batches with "
+        "long-pending operations and send generic_notification reminders."
+    )
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Signal handler: handle_device_online
+# ─────────────────────────────────────────────────────────────────────────────
+
+
+def handle_device_online(sender, instance, **kwargs):
+    """
+    Signal handler connected to openwisp_monitoring's
+    ``health_status_changed`` signal (preferred retry trigger).
+
+    When a device's health status transitions to "ok", this handler
+    checks whether the device has any pending UpgradeOperations and,
+    if so, dispatches ``retry_offline_upgrade`` for each one.
+
+    Connection (full implementation, in apps.py ready())
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ::
+
+        from openwisp_monitoring.monitoring.signals import health_status_changed
+
+        health_status_changed.connect(
+            handle_device_online,
+            sender=Device,
+            dispatch_uid="firmware_upgrader_device_online",
+        )
+
+    Full implementation pseudocode
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ::
+
+        IF instance.monitoring.status != "ok":
+            RETURN  # device is not fully healthy yet
+
+        waiting_ops = UpgradeOperation.objects.filter(
+            device=instance,
+            status="waiting",
+            batch__persistent=True,
+        )
+
+        FOR operation IN waiting_ops:
+            # Use a short random delay to spread load
+            jitter = random.randint(5, 60)
+            retry_offline_upgrade.apply_async(
+                args=[str(operation.pk)],
+                countdown=jitter,
+            )
+
+    Parameters
+    ----------
+    sender : type
+        The Device model class.
+    instance : Device
+        The device whose health status changed.
+    """
+    # ── STUB implementation (prototype) ─────────────────────────────────────────
+    new_status = getattr(getattr(instance, "monitoring", None), "status", None)
+    if new_status != "ok":
+        return
+
+    UpgradeOperation = load_model("UpgradeOperation")
+    waiting_ops = UpgradeOperation.objects.filter(
+        device=instance,
+        status="waiting",
+    )
+    for op in waiting_ops:
+        logger.info(
+            "handle_device_online: [PROTOTYPE] device %s came online; "
+            "would dispatch retry for operation %s",
+            instance.pk,
+            op.pk,
+        )

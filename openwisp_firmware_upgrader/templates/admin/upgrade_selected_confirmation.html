@@ -1,63 +1,156 @@
-eyUgZXh0ZW5kcyAiYWRtaW4vYmFzZV9zaXRlLmh0bWwiICV9CnslIGxvYWQgaTE4biBsMTBuIGFkbWluX3VybHMgc3RhdGljICV9Cgp7JSBibG9jayBleHRyYWhlYWQgJX0KICB7eyBibG9jay5zdXBlciB9fQogIHt7IG1lZGlhIH19CiAgPHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0ieyUgc3RhdGljICdhZG1pbi9qcy9jYW5jZWwuanMnICV9Ij48L3NjcmlwdD4KeyUgZW5kYmxvY2sgJX0KCnslIGJsb2NrIGJvZHljbGFzcyAlfXt7IGJsb2NrLnN1cGVyIH19IGFwcC17eyBvcHRzLmFwcF9sYWJlbCB9fSBtb2RlbC17eyBvcHRzLm1vZGVsX25hbWUgfX0gZGVsZXRlLWNvbmZpcm1hdGlvbiBkZWxldGUtc2VsZWN0ZWQtY29uZmlybWF0aW9ueyUgZW5kYmxvY2sgJX0KCnslIGJsb2NrIGJyZWFkY3J1bWJzICV9CiAgPGRpdiBjbGFzcz0iYnJlYWRjcnVtYnMiPgogICAgPGEgaHJlZj0ieyUgdXJsICdhZG1pbjppbmRleCcgJX0iPnslIHRyYW5zICdIb21lJyAlfTwvYT4KICAgICZyc2FxdW87IDxhIGhyZWY9InslIHVybCAnYWRtaW46YXBwX2xpc3QnIGFwcF9sYWJlbD1vcHRzLmFwcF9sYWJlbCAlfSI+e3sgb3B0cy5hcHBfY29uZmlnLnZlcmJvc2VfbmFtZSB9fTwvYT4KICAgICZyc2FxdW87IDxhIGhyZWY9InslIHVybCBvcHRzfGFkbWluX3VybG5hbWU6J2NoYW5nZWxpc3QnICV9Ij57eyBvcHRzLnZlcmJvc2VfbmFtZV9wbHVyYWx8Y2FwZmlyc3QgfX08L2E+CiAgICAmcnNhcXVvOyB7JSB0cmFucyAnVXBncmFkZSBkZXZpY2VzIG9mIHRoZSBzZWxlY3RlZCBidWlsZCcgJX0KICA8L2Rpdj4KeyUgZW5kYmxvY2sgJX0KCnslIGJsb2NrIGNvbnRlbnQgJX0KICB7JSBpZiByZWxhdGVkX2NvdW50IG9yIGZpcm13YXJlbGVzc19jb3VudCAlfQogICAgPHAgY2xhc3M9ImludHJvIj4KICAgICAgeyUgYmxvY2t0cmFucyAlfQogICAgICAgIEFyZSB5b3Ugc3VyZSB5b3Ugd2FudCB0byBwcm9jZWVkIHdpdGggdGhlCiAgICAgICAgbWFzcyB1cGdyYWRlIG9wZXJhdGlvbiBmb3IgPGI+e3sgYnVpbGQgfX08L2I+PwogICAgICB7JSBlbmRibG9ja3RyYW5zICV9CiAgICA8L3A+CiAgeyUgZWxpZiBub3QgcmVsYXRlZF9jb3VudCBhbmQgbm90IGZpcm13YXJlbGVzc19jb3VudCAlfQogICAgPHAgY2xhc3M9ImludHJvIj4KICAgICAgeyUgYmxvY2t0cmFucyAlfQogICAgICAgIE5vIGRldmljZXMgdG8gdXBncmFkZSB3ZXJlIGZvdW5kLgogICAgICAgIEhpbnQ6IE1heWJlIHRoZXkgaGF2ZSBiZWVuIGFsbCBhbHJlYWR5IHVwZGF0ZWQgcHJldmlvdXNseS4KICAgICAgeyUgZW5kYmxvY2t0cmFucyAlfQogICAgPC9wPgogIHslIGVuZGlmICV9CgogIDxmb3JtIG1ldGhvZD0icG9zdCIgaWQ9Im1hc3MtdXBncmFkZS1mb3JtIj4KICAgIHslIGNzcmZfdG9rZW4gJX0KICAgIDxkaXY+CiAgICAgIDxpbnB1dCB0eXBlPSJoaWRkZW4iIG5hbWU9Int7IGFjdGlvbl9jaGVja2JveF9uYW1lIH19IiB2YWx1ZT0ie3sgYnVpbGQucGt8dW5sb2NhbGl6ZSB9fSI+CiAgICAgIDxpbnB1dCB0eXBlPSJoaWRkZW4iIG5hbWU9ImFjdGlvbiIgdmFsdWU9InVwZ3JhZGVfc2VsZWN0ZWQiPgoKICAgICAgeyUgaWYgZmlybXdhcmVsZXNzX2NvdW50IG9yIHJlbGF0ZWRfY291bnQgJX0KICAgICAgICB7JSBpZiBmb3JtLmVycm9ycyAlfQogICAgICAgICAgPGRpdiBjbGFzcz0iZXJyb3Jub3RlIj57eyBmb3JtLmVycm9ycyB9fTwvZGl2PgogICAgICAgIHslIGVuZGlmICV9CiAgICAgICAge3sgZm9ybS5idWlsZCB9fQoKICAgICAgICB7IyDilIDilIAgVXBncmFkZSBGaWx0ZXJzIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgCAjfQogICAgICAgIDxmaWVsZHNldCBjbGFzcz0ibW9kdWxlIGFsaWduZWQiPgogICAgICAgICAgPGgyPnslIHRyYW5zICJVcGdyYWRlIEZpbHRlcnMiICV9PC9oMj4KICAgICAgICAgIDxkaXYgY2xhc3M9ImZvcm0tcm93Ij4KICAgICAgICAgICAgPGRpdj4KICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJmbGV4LWNvbnRhaW5lciI+CiAgICAgICAgICAgICAgICB7eyBmb3JtLmdyb3VwLmVycm9ycyB9fQogICAgICAgICAgICAgICAge3sgZm9ybS5ncm91cC5sYWJlbF90YWcgfX0KICAgICAgICAgICAgICAgIHt7IGZvcm0uZ3JvdXAgfX0KICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJoZWxwIiBpZD0ie3sgZm9ybS5ncm91cC5hdXRvX2lkIH19X2hlbHB0ZXh0Ij57eyBmb3JtLmdyb3VwLmhlbHBfdGV4dHxzYWZlIH19PC9kaXY+CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgPC9kaXY+CiAgICAgICAgICA8ZGl2IGNsYXNzPSJmb3JtLXJvdyI+CiAgICAgICAgICAgIDxkaXY+CiAgICAgICAgICAgICAgPGRpdiBjbGFzcz0iZmxleC1jb250YWluZXIiPgogICAgICAgICAgICAgICAge3sgZm9ybS5sb2NhdGlvbi5lcnJvcnMgfX0KICAgICAgICAgICAgICAgIHt7IGZvcm0ubG9jYXRpb24ubGFiZWxfdGFnIH19CiAgICAgICAgICAgICAgICB7eyBmb3JtLmxvY2F0aW9uIH19CiAgICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgICAgPGRpdiBjbGFzcz0iaGVscCIgaWQ9Int7IGZvcm0ubG9jYXRpb24uYXV0b19pZCB9fV9oZWxwdGV4dCI+e3sgZm9ybS5sb2NhdGlvbi5oZWxwX3RleHR8c2FmZSB9fTwvZGl2PgogICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgIDwvZGl2PgogICAgICAgICAgPGRpdiBjbGFzcz0iZm9ybS1yb3ciPgogICAgICAgICAgICA8ZGl2PgogICAgICAgICAgICAgIHt7IGZvcm0udXBncmFkZV9vcHRpb25zLmxhYmVsX3RhZyB9fQogICAgICAgICAgICAgIHt7IGZvcm0udXBncmFkZV9vcHRpb25zIH19CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgPC9kaXY+CiAgICAgICAgPC9maWVsZHNldD4KCiAgICAgICAgeyMg4pSA4pSAIEdTb0MgMjAyNjogUGVyc2lzdGVudCBVcGdyYWRlcyDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAgI30KICAgICAgICA8ZmllbGRzZXQgY2xhc3M9Im1vZHVsZSBhbGlnbmVkIGdzb2MtcGVyc2lzdGVudC1zZWN0aW9uIj4KICAgICAgICAgIDxoMj57JSB0cmFucyAiUGVyc2lzdGVudCBVcGdyYWRlcyIgJX08L2gyPgogICAgICAgICAgPGRpdiBjbGFzcz0iZm9ybS1yb3ciPgogICAgICAgICAgICA8ZGl2IGNsYXNzPSJwZXJzaXN0ZW50LWNoZWNrYm94LXJvdyI+CiAgICAgICAgICAgICAge3sgZm9ybS5wZXJzaXN0ZW50LmVycm9ycyB9fQogICAgICAgICAgICAgIHsjIFRoZSBjaGVja2JveCBpcyByZW5kZXJlZCBjaGVja2VkIGJ5IGRlZmF1bHQuCiAgICAgICAgICAgICAgICAgQWZ0ZXIgZm9ybSBjcmVhdGlvbiBpdCB3b3VsZCBiZSBncmV5ZWQtb3V0IChzZWUgSlMgYmVsb3cpLiAjfQogICAgICAgICAgICAgIDxsYWJlbCBmb3I9Int7IGZvcm0ucGVyc2lzdGVudC5pZF9mb3JfbGFiZWwgfX0iIGNsYXNzPSJwZXJzaXN0ZW50LWxhYmVsIj4KICAgICAgICAgICAgICAgIHt7IGZvcm0ucGVyc2lzdGVudCB9fQogICAgICAgICAgICAgICAgPHN0cm9uZz57JSB0cmFucyAiRW5hYmxlIHBlcnNpc3RlbnQgcmV0cmllcyIgJX08L3N0cm9uZz4KICAgICAgICAgICAgICA8L2xhYmVsPgogICAgICAgICAgICAgIDxwIGNsYXNzPSJoZWxwIHBlcnNpc3RlbnQtaGVscCI+CiAgICAgICAgICAgICAgICB7eyBmb3JtLnBlcnNpc3RlbnQuaGVscF90ZXh0IH19CiAgICAgICAgICAgICAgPC9wPgogICAgICAgICAgICAgIHsjIEltbXV0YWJpbGl0eSBub3RpY2Ug4oCUIHNob3duIGFmdGVyIGJhdGNoIGlzIGNyZWF0ZWQgKHByb3RvdHlwZTogYWx3YXlzIHNob3duKSAjfQogICAgICAgICAgICAgIDxwIGNsYXNzPSJwZXJzaXN0ZW50LWltbXV0YWJsZS1ub3RpY2UiIHN0eWxlPSJkaXNwbGF5Om5vbmU7Ij4KICAgICAgICAgICAgICAgIOKaoO+4jyB7JSB0cmFucyAiVGhpcyBzZXR0aW5nIHdhcyBsb2NrZWQgYXQgYmF0Y2ggY3JlYXRpb24gdGltZSBhbmQgY2Fubm90IGJlIGNoYW5nZWQuIiAlfQogICAgICAgICAgICAgIDwvcD4KICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICA8L2ZpZWxkc2V0PgoKICAgICAgICB7IyDilIDilIAgR1NvQyAyMDI2OiBTY2hlZHVsZWQgVXBncmFkZSDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAgI30KICAgICAgICA8ZmllbGRzZXQgY2xhc3M9Im1vZHVsZSBhbGlnbmVkIGdzb2Mtc2NoZWR1bGVkLXNlY3Rpb24iPgogICAgICAgICAgPGgyPnslIHRyYW5zICJTY2hlZHVsZSBVcGdyYWRlIiAlfTwvaDI+CiAgICAgICAgICA8ZGl2IGNsYXNzPSJmb3JtLXJvdyI+CiAgICAgICAgICAgIDxkaXY+CiAgICAgICAgICAgICAge3sgZm9ybS5zY2hlZHVsZWRfYXQuZXJyb3JzIH19CiAgICAgICAgICAgICAgPGxhYmVsIGZvcj0ie3sgZm9ybS5zY2hlZHVsZWRfYXQuaWRfZm9yX2xhYmVsIH19Ij4KICAgICAgICAgICAgICAgIHt7IGZvcm0uc2NoZWR1bGVkX2F0LmxhYmVsIH19CiAgICAgICAgICAgICAgICA8c3BhbiBjbGFzcz0ic2VydmVyLXR6LWhpbnQiPih7JSB0cmFucyAic2VydmVyIHRpbWV6b25lIiAlfTogPHN0cm9uZz57eyBzZXJ2ZXJfdGltZXpvbmUgfX08L3N0cm9uZz4pPC9zcGFuPgogICAgICAgICAgICAgIDwvbGFiZWw+CiAgICAgICAgICAgICAge3sgZm9ybS5zY2hlZHVsZWRfYXQgfX0KICAgICAgICAgICAgICB7eyBmb3JtLnNjaGVkdWxlZF9hdF91dGMgfX0KICAgICAgICAgICAgICA8cCBjbGFzcz0iaGVscCI+CiAgICAgICAgICAgICAgICB7eyBmb3JtLnNjaGVkdWxlZF9hdC5oZWxwX3RleHR8c2FmZSB9fQogICAgICAgICAgICAgIDwvcD4KICAgICAgICAgICAgICB7IyBJbmxpbmUgdmFsaWRhdGlvbiBmZWVkYmFjayDigJQgcG9wdWxhdGVkIGJ5IEpTICN9CiAgICAgICAgICAgICAgPHAgY2xhc3M9InNjaGVkdWxlZC12YWxpZGF0aW9uLW1zZyIgcm9sZT0iYWxlcnQiIGFyaWEtbGl2ZT0icG9saXRlIj48L3A+CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgPC9kaXY+CiAgICAgICAgPC9maWVsZHNldD4KCiAgICAgICAgPGlucHV0CiAgICAgICAgICB0eXBlPSJzdWJtaXQiCiAgICAgICAgICBuYW1lPSJ1cGdyYWRlX2FsbCIKICAgICAgICAgIHRpdGxlPSJ7JSB0cmFucyAiSWYgYSBkZXZpY2UgaGFzIG5vIHJlbGF0ZWQgZmlybXdhcmUgaW1hZ2UgaW5mb3JtYXRpb24gYXZhaWxhYmxlLCB0aGUgc3lzdGVtIHdpbGwgYXR0ZW1wdCBhdCBhdXRvbWF0aWNhbGx5IGZpZ3VyZSBvdXQgd2hhdCBpbWFnZSB0byB1c2UgYmFzZWQgb24gdGhlIGhhcmR3YXJlIG1vZGVsLiIgJX0iCiAgICAgICAgICB2YWx1ZT0ieyUgdHJhbnMgIlVwZ3JhZGUgYWxsIGRldmljZXMiICV9Ij4KICAgICAgICB7JSBpZiBmaXJtd2FyZWxlc3NfY291bnQgYW5kIHJlbGF0ZWRfY291bnQgJX0KICAgICAgICAgIDxpbnB1dAogICAgICAgICAgICB0eXBlPSJzdWJtaXQiCiAgICAgICAgICAgIG5hbWU9InVwZ3JhZGVfcmVsYXRlZCIKICAgICAgICAgICAgdGl0bGU9InslIHRyYW5zICJEZXZpY2VzIHdoaWNoIGhhdmUgbm8gcmVsYXRlZCBmaXJtd2FyZSBpbWFnZSBpbmZvcm1hdGlvbiB3aWxsIGJlIHNraXBwZWQuIiAlfSIKICAgICAgICAgICAgdmFsdWU9InslIHRyYW5zICJVcGdyYWRlIG9ubHkga25vd24gZGV2aWNlcyIgJX0iCiAgICAgICAgICAgIGNsYXNzPSJzcGVjaWFsIj4KICAgICAgICB7JSBlbmRpZiAlfQogICAgICA8L3slIGVuZGlmICV9CiAgICAgIDxhIGhyZWY9IiMiIGNsYXNzPSJidXR0b24gY2FuY2VsLWxpbmsiPgogICAgICAgIHslIGlmIHJlbGF0ZWRfY291bnQgb3IgZmlybXdhcmVsZXNzX2NvdW50ICV9CiAgICAgICAgICB7JSB0cmFucyAiQ2FuY2VsIHRoZSB1cGdyYWRlIiAlfQogICAgICAgIHslIGVsc2UgJX0KICAgICAgICAgIHslIHRyYW5zICJHbyBiYWNrIiAlfQogICAgICAgIHslIGVuZGlmICV9CiAgICAgIDwvYT4KICAgIDwvZGl2PgogIDwvZm9ybT4KeyUgZW5kYmxvY2sgJX0KCnslIGJsb2NrIGZvb3RlciAlfQogIHt7IGJsb2NrLnN1cGVyIH19CiAgPHNjcmlwdD4KICAgIC8vIFNjaGVtYSBmb3IgdGhlIEpTT04gdXBncmFkZSBvcHRpb25zIHdpZGdldAogICAgdmFyIGZpcm13YXJlVXBncmFkZXJTY2hlbWEgPSB7eyBmaXJtd2FyZV91cGdyYWRlcl9zY2hlbWEgfCBzYWZlIH19OwoKICAgIC8vIOKUgOKUgCBHU29DIDIwMjY6IGJyb3dzZXItdG8tVVRDIGRhdGV0aW1lIGNvbnZlcnNpb24g4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA
-    // The datetime-local input captures time in the *browser's* local timezone.
-    // Before submit we convert it to UTC and store in the hidden field.
-    (function () {
-      'use strict';
+{% extends "admin/base_site.html" %}
+{% load i18n l10n admin_urls static %}
 
-      var form = document.getElementById('mass-upgrade-form');
-      var pickerInput = document.getElementById('{{ form.scheduled_at.id_for_label }}');
-      var utcInput = document.getElementById('id_scheduled_at_utc');
-      var validationMsg = document.querySelector('.scheduled-validation-msg');
+{% block extrahead %}
+  {{ block.super }}
+  {{ media }}
+  <script type="text/javascript" src="{% static 'admin/js/cancel.js' %}"></script>
+{% endblock %}
 
-      if (!form || !pickerInput || !utcInput) return;
+{% block bodyclass %}{{ block.super }} app-{{ opts.app_label }} model-{{ opts.model_name }} delete-confirmation delete-selected-confirmation{% endblock %}
 
-      function validateScheduledAt() {
-        var raw = pickerInput.value;
-        if (!raw) {
-          validationMsg.textContent = '';
-          validationMsg.className = 'scheduled-validation-msg';
-          return true;
-        }
-        var selectedMs = new Date(raw).getTime();
-        var nowMs = Date.now();
-        var minMs = nowMs + 10 * 60 * 1000;
-        var maxMs = nowMs + 6 * 30 * 24 * 3600 * 1000;
+{% block breadcrumbs %}
+  <div class="breadcrumbs">
+    <a href="{% url 'admin:index' %}">{% trans 'Home' %}</a>
+    &rsaquo; <a href="{% url 'admin:app_list' app_label=opts.app_label %}">{{ opts.app_config.verbose_name }}</a>
+    &rsaquo; <a href="{% url opts|admin_urlname:'changelist' %}">{{ opts.verbose_name_plural|capfirst }}</a>
+    &rsaquo; {% trans 'Upgrade devices of the selected build' %}
+  </div>
+{% endblock %}
 
-        if (selectedMs <= nowMs) {
-          validationMsg.textContent = gettext('The scheduled time must be in the future.');
-          validationMsg.className = 'scheduled-validation-msg error';
-          return false;
-        }
-        if (selectedMs < minMs) {
-          validationMsg.textContent = gettext('The scheduled time must be at least 10 minutes from now.');
-          validationMsg.className = 'scheduled-validation-msg error';
-          return false;
-        }
-        if (selectedMs > maxMs) {
-          validationMsg.textContent = gettext('The scheduled time cannot be more than 6 months in the future.');
-          validationMsg.className = 'scheduled-validation-msg error';
-          return false;
-        }
-        validationMsg.textContent = gettext('Valid scheduled time.');
-        validationMsg.className = 'scheduled-validation-msg success';
-        return true;
-      }
+{% block content %}
+  {% if related_count or firmwareless_count %}
+    <p class="intro">
+      {% blocktrans %}
+        Are you sure you want to proceed with the
+        mass upgrade operation for <b>{{ build }}</b>?
+      {% endblocktrans %}
+    </p>
+  {% elif not related_count and not firmwareless_count %}
+    <p class="intro">
+      {% blocktrans %}
+        No devices to upgrade were found.
+        Hint: Maybe they have been all already updated previously.
+      {% endblocktrans %}
+    </p>
+  {% endif %}
 
-      pickerInput.addEventListener('change', validateScheduledAt);
-      pickerInput.addEventListener('input', validateScheduledAt);
+  <form method="post" id="mass-upgrade-form">
+    {% csrf_token %}
+    <div>
+      <input type="hidden" name="{{ action_checkbox_name }}" value="{{ build.pk|unlocalize }}">
+      <input type="hidden" name="action" value="upgrade_selected">
 
-      form.addEventListener('submit', function (e) {
-        if (!validateScheduledAt()) {
-          e.preventDefault();
-          pickerInput.focus();
-          return;
-        }
-        var raw = pickerInput.value;
-        if (raw) {
-          var localDate = new Date(raw);
-          utcInput.value = localDate.toISOString();
-        }
-      });
-    }());
+      {% if firmwareless_count or related_count %}
+        {% if form.errors %}
+          <div class="errornote">{{ form.errors }}</div>
+        {% endif %}
+        {{ form.build }}
+
+        {# Upgrade Filters #}
+        <fieldset class="module aligned">
+          <h2>{% trans "Upgrade Filters" %}</h2>
+          <div class="form-row">
+            <div>
+              <div class="flex-container">
+                {{ form.group.errors }}
+                {{ form.group.label_tag }}
+                {{ form.group }}
+              </div>
+              <div class="help" id="{{ form.group.auto_id }}_helptext">
+                {{ form.group.help_text|safe }}
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div>
+              <div class="flex-container">
+                {{ form.location.errors }}
+                {{ form.location.label_tag }}
+                {{ form.location }}
+              </div>
+              <div class="help" id="{{ form.location.auto_id }}_helptext">
+                {{ form.location.help_text|safe }}
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div>
+              {{ form.upgrade_options.label_tag }}
+              {{ form.upgrade_options }}
+            </div>
+          </div>
+        </fieldset>
+
+        {# GSoC 2026: Persistent Upgrades #}
+        <fieldset class="module aligned gsoc-persistent-section">
+          <h2>{% trans "Persistent Upgrades" %}</h2>
+          <div class="form-row">
+            <div class="persistent-checkbox-row">
+              {{ form.persistent.errors }}
+              <label for="{{ form.persistent.id_for_label }}" class="persistent-label">
+                {{ form.persistent }}
+                <strong>{% trans "Enable persistent retries" %}</strong>
+              </label>
+              <p class="help persistent-help">{{ form.persistent.help_text }}</p>
+              <p class="persistent-immutable-notice" style="display: none;">
+                &#9888;&#65039;
+                {% trans "This setting was locked at batch creation time and cannot be changed." %}
+              </p>
+            </div>
+          </div>
+        </fieldset>
+
+        {# GSoC 2026: Scheduled Upgrade #}
+        <fieldset class="module aligned gsoc-scheduled-section">
+          <h2>{% trans "Schedule Upgrade" %}</h2>
+          <div class="form-row">
+            <div>
+              {{ form.scheduled_at.errors }}
+              <label for="{{ form.scheduled_at.id_for_label }}">
+                {{ form.scheduled_at.label }}
+                <span class="server-tz-hint">
+                  ({% trans "server timezone" %}: <strong>{{ server_timezone }}</strong>)
+                </span>
+              </label>
+              {{ form.scheduled_at }}
+              {{ form.scheduled_at_utc }}
+              <p class="help">{{ form.scheduled_at.help_text|safe }}</p>
+              <p class="scheduled-validation-msg" role="alert" aria-live="polite"></p>
+            </div>
+          </div>
+        </fieldset>
+
+        <input
+          type="submit"
+          name="upgrade_all"
+          title="{% trans "If a device has no related firmware image information available, the system will attempt at automatically figure out what image to use based on the hardware model." %}"
+          value="{% trans "Upgrade all devices" %}"
+        />
+        {% if firmwareless_count and related_count %}
+          <input
+            type="submit"
+            name="upgrade_related"
+            title="{% trans "Devices which have no related firmware image information will be skipped." %}"
+            value="{% trans "Upgrade only known devices" %}"
+            class="special"
+          />
+        {% endif %}
+      {% endif %}
+      <a href="#" class="button cancel-link">
+        {% if related_count or firmwareless_count %}
+          {% trans "Cancel the upgrade" %}
+        {% else %}
+          {% trans "Go back" %}
+        {% endif %}
+      </a>
+    </div>
+  </form>
+{% endblock %}
+
+{% block footer %}
+  {{ block.super }}
+  <script>
+    var firmwareUpgraderSchema = {{ firmware_upgrader_schema | safe }};
   </script>
-{% endblock footer %}
+{% endblock %}

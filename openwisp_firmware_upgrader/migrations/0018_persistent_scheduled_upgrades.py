@@ -1,1 +1,121 @@
-IiIiCk1pZ3JhdGlvbiAwMDE4OiBBZGQgcGVyc2lzdGVudCAmIHNjaGVkdWxlZCB1cGdyYWRlIGZpZWxkcy4KCkFkZHMgdG8gQmF0Y2hVcGdyYWRlT3BlcmF0aW9uOgogIC0gcGVyc2lzdGVudCAoYm9vbCwgZGVmYXVsdCBUcnVlLCBpbW11dGFibGUgYWZ0ZXIgY3JlYXRpb24pCiAgLSBzY2hlZHVsZWRfYXQgKGRhdGV0aW1lLCBudWxsYWJsZSDigJQgTm9uZSBtZWFucyAiaW1tZWRpYXRlIikKCkFkZHMgdG8gVXBncmFkZU9wZXJhdGlvbjoKICAtIHJldHJ5X2NvdW50IChpbnQsIGRlZmF1bHQgMCkKICAtIG5leHRfcmV0cnlfYXQgKGRhdGV0aW1lLCBudWxsYWJsZSkKICAtIHdhaXRpbmdfZm9yX2RldmljZSAoYm9vbCwgZGVmYXVsdCBGYWxzZSkKIiIiCgppbXBvcnQgZGphbmdvLnV0aWxzLnRpbWV6b25lCmZyb20gZGphbmdvLmRiIGltcG9ydCBtaWdyYXRpb25zLCBtb2RlbHMKCgpjbGFzcyBNaWdyYXRpb24obWlncmF0aW9ucy5NaWdyYXRpb24pOgoKICAgIGRlcGVuZGVuY2llcyA9IFsKICAgICAgICAoImZpcm13YXJlX3VwZ3JhZGVyIiwgIjAwMTdfYWx0ZXJfYmF0Y2h1cGdyYWRlb3BlcmF0aW9uX3N0YXR1cyIpLAogICAgXQoKICAgIG9wZXJhdGlvbnMgPSBbCiAgICAgICAgIyDilIDilIAgQmF0Y2hVcGdyYWRlT3BlcmF0aW9uIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgAogICAgICAgIG1pZ3JhdGlvbnMuQWRkRmllbGQoCiAgICAgICAgICAgIG1vZGVsX25hbWU9ImJhdGNodXBncmFkZW9wZXJhdGlvbiIsCiAgICAgICAgICAgIG5hbWU9InBlcnNpc3RlbnQiLAogICAgICAgICAgICBmaWVsZD1tb2RlbHMuQm9vbGVhbkZpZWxkKAogICAgICAgICAgICAgICAgZGVmYXVsdD1UcnVlLAogICAgICAgICAgICAgICAgdmVyYm9zZV9uYW1lPSJwZXJzaXN0ZW50IiwKICAgICAgICAgICAgICAgIGhlbHBfdGV4dD0oCiAgICAgICAgICAgICAgICAgICAgIldoZW4gZW5hYmxlZCwgZGV2aWNlcyB0aGF0IGFyZSBvZmZsaW5lIGF0IHVwZ3JhZGUgdGltZSB3aWxsICIKICAgICAgICAgICAgICAgICAgICAiYmUgcmV0cmllZCBhdXRvbWF0aWNhbGx5IHVzaW5nIGV4cG9uZW50aWFsIGJhY2stb2ZmIHVudGlsIHRoZSAiCiAgICAgICAgICAgICAgICAgICAgImFkbWluIGNhbmNlbHMgdGhlIGJhdGNoIG9yIGV2ZXJ5IGRldmljZSBzdWNjZWVkcy4gIgogICAgICAgICAgICAgICAgICAgICJUaGlzIGZsYWcgaXMgaW1tdXRhYmxlIG9uY2UgdGhlIGJhdGNoIGhhcyBiZWVuIGNyZWF0ZWQuIgogICAgICAgICAgICAgICAgKSwKICAgICAgICAgICAgKSwKICAgICAgICApLAogICAgICAgIG1pZ3JhdGlvbnMuQWRkRmllbGQoCiAgICAgICAgICAgIG1vZGVsX25hbWU9ImJhdGNodXBncmFkZW9wZXJhdGlvbiIsCiAgICAgICAgICAgIG5hbWU9InNjaGVkdWxlZF9hdCIsCiAgICAgICAgICAgIGZpZWxkPW1vZGVscy5EYXRlVGltZUZpZWxkKAogICAgICAgICAgICAgICAgbnVsbD1UcnVlLAogICAgICAgICAgICAgICAgYmxhbms9VHJ1ZSwKICAgICAgICAgICAgICAgIGRlZmF1bHQ9Tm9uZSwKICAgICAgICAgICAgICAgIHZlcmJvc2VfbmFtZT0ic2NoZWR1bGVkIGF0IiwKICAgICAgICAgICAgICAgIGhlbHBfdGV4dD0oCiAgICAgICAgICAgICAgICAgICAgIlVUQyBkYXRldGltZSBhdCB3aGljaCB0aGlzIGJhdGNoIHNob3VsZCBzdGFydCBleGVjdXRpbmcuICIKICAgICAgICAgICAgICAgICAgICAiTGVhdmUgYmxhbmsgZm9yIGltbWVkaWF0ZSBleGVjdXRpb24uIgogICAgICAgICAgICAgICAgKSwKICAgICAgICAgICAgKSwKICAgICAgICApLAogICAgICAgICMgRXh0ZW5kIHRoZSBTVEFUVVNfQ0hPSUNFUyB0byBpbmNsdWRlICdzY2hlZHVsZWQnCiAgICAgICAgbWlncmF0aW9ucy5BbHRlckZpZWxkKAogICAgICAgICAgICBtb2RlbF9uYW1lPSJiYXRjaHVwZ3JhZGVvcGVyYXRpb24iLAogICAgICAgICAgICBuYW1lPSJzdGF0dXMiLAogICAgICAgICAgICBmaWVsZD1tb2RlbHMuQ2hhckZpZWxkKAogICAgICAgICAgICAgICAgbWF4X2xlbmd0aD0xMiwKICAgICAgICAgICAgICAgIGNob2ljZXM9WwogICAgICAgICAgICAgICAgICAgICgiaWRsZSIsICJpZGxlIiksCiAgICAgICAgICAgICAgICAgICAgKCJzY2hlZHVsZWQiLCAic2NoZWR1bGVkIiksCiAgICAgICAgICAgICAgICAgICAgKCJpbi1wcm9ncmVzcyIsICJpbiBwcm9ncmVzcyIpLAogICAgICAgICAgICAgICAgICAgICgic3VjY2VzcyIsICJjb21wbGV0ZWQgc3VjY2Vzc2Z1bGx5IiksCiAgICAgICAgICAgICAgICAgICAgKCJmYWlsZWQiLCAiY29tcGxldGVkIHdpdGggc29tZSBmYWlsdXJlcyIpLAogICAgICAgICAgICAgICAgICAgICgiY2FuY2VsbGVkIiwgImNvbXBsZXRlZCB3aXRoIHNvbWUgY2FuY2VsbGF0aW9ucyIpLAogICAgICAgICAgICAgICAgXSwKICAgICAgICAgICAgICAgIGRlZmF1bHQ9ImlkbGUiLAogICAgICAgICAgICApLAogICAgICAgICksCiAgICAgICAgIyDilIDilIAgVXBncmFkZU9wZXJhdGlvbiDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAKICAgICAgICBtaWdyYXRpb25zLkFkZEZpZWxkKAogICAgICAgICAgICBtb2RlbF9uYW1lPSJ1cGdyYWRlb3BlcmF0aW9uIiwKICAgICAgICAgICAgbmFtZT0icmV0cnlfY291bnQiLAogICAgICAgICAgICBmaWVsZD1tb2RlbHMuUG9zaXRpdmVJbnRlZ2VyRmllbGQoCiAgICAgICAgICAgICAgICBkZWZhdWx0PTAsCiAgICAgICAgICAgICAgICB2ZXJib3NlX25hbWU9InJldHJ5IGNvdW50IiwKICAgICAgICAgICAgICAgIGhlbHBfdGV4dD0iTnVtYmVyIG9mIHRpbWVzIHRoaXMgb3BlcmF0aW9uIGhhcyBiZWVuIHJldHJpZWQgYmVjYXVzZSB0aGUgZGV2aWNlIHdhcyBvZmZsaW5lLiIsCiAgICAgICAgICAgICksCiAgICAgICAgKSwKICAgICAgICBtaWdyYXRpb25zLkFkZEZpZWxkKAogICAgICAgICAgICBtb2RlbF9uYW1lPSJ1cGdyYWRlb3BlcmF0aW9uIiwKICAgICAgICAgICAgbmFtZT0ibmV4dF9yZXRyeV9hdCIsCiAgICAgICAgICAgIGZpZWxkPW1vZGVscy5EYXRlVGltZUZpZWxkKAogICAgICAgICAgICAgICAgbnVsbD1UcnVlLAogICAgICAgICAgICAgICAgYmxhbms9VHJ1ZSwKICAgICAgICAgICAgICAgIGRlZmF1bHQ9Tm9uZSwKICAgICAgICAgICAgICAgIHZlcmJvc2VfbmFtZT0ibmV4dCByZXRyeSBhdCIsCiAgICAgICAgICAgICAgICBoZWxwX3RleHQ9IlNjaGVkdWxlZCBkYXRldGltZSBmb3IgdGhlIG5leHQgcmV0cnkgYXR0ZW1wdCAoVVRDKS4iLAogICAgICAgICAgICApLAogICAgICAgICksCiAgICAgICAgbWlncmF0aW9ucy5BZGRGaWVsZCgKICAgICAgICAgICAgbW9kZWxfbmFtZT0idXBncmFkZW9wZXJhdGlvbiIsCiAgICAgICAgICAgIG5hbWU9IndhaXRpbmdfZm9yX2RldmljZSIsCiAgICAgICAgICAgIGZpZWxkPW1vZGVscy5Cb29sZWFuRmllbGQoCiAgICAgICAgICAgICAgICBkZWZhdWx0PUZhbHNlLAogICAgICAgICAgICAgICAgdmVyYm9zZV9uYW1lPSJ3YWl0aW5nIGZvciBkZXZpY2UiLAogICAgICAgICAgICAgICAgaGVscF90ZXh0PSgKICAgICAgICAgICAgICAgICAgICAiVHJ1ZSB3aGVuIHRoaXMgb3BlcmF0aW9uIGlzIHBhdXNlZCB3YWl0aW5nIGZvciB0aGUgZGV2aWNlICIKICAgICAgICAgICAgICAgICAgICAidG8gY29tZSBiYWNrIG9ubGluZSBiZWZvcmUgdGhlIG5leHQgcmV0cnkgYXR0ZW1wdC4iCiAgICAgICAgICAgICAgICApLAogICAgICAgICAgICApLAogICAgICAgICksCiAgICAgICAgIyBFeHRlbmQgU1RBVFVTX0NIT0lDRVMgZm9yIFVwZ3JhZGVPcGVyYXRpb24gdG8gaW5jbHVkZSAnd2FpdGluZycKICAgICAgICBtaWdyYXRpb25zLkFsdGVyRmllbGQoCiAgICAgICAgICAgIG1vZGVsX25hbWU9InVwZ3JhZGVvcGVyYXRpb24iLAogICAgICAgICAgICBuYW1lPSJzdGF0dXMiLAogICAgICAgICAgICBmaWVsZD1tb2RlbHMuQ2hhckZpZWxkKAogICAgICAgICAgICAgICAgbWF4X2xlbmd0aD0xMiwKICAgICAgICAgICAgICAgIGNob2ljZXM9WwogICAgICAgICAgICAgICAgICAgICgiaW4tcHJvZ3Jlc3MiLCAiaW4gcHJvZ3Jlc3MiKSwKICAgICAgICAgICAgICAgICAgICAoIndhaXRpbmciLCAid2FpdGluZyBmb3IgZGV2aWNlIiksCiAgICAgICAgICAgICAgICAgICAgKCJzdWNjZXNzIiwgInN1Y2Nlc3MiKSwKICAgICAgICAgICAgICAgICAgICAoImZhaWxlZCIsICJmYWlsZWQiKSwKICAgICAgICAgICAgICAgICAgICAoImNhbmNlbGxlZCIsICJjYW5jZWxsZWQiKSwKICAgICAgICAgICAgICAgICAgICAoImFib3J0ZWQiLCAiYWJvcnRlZCIpLAogICAgICAgICAgICAgICAgXSwKICAgICAgICAgICAgICAgIGRlZmF1bHQ9ImluLXByb2dyZXNzIiwKICAgICAgICAgICAgKSwKICAgICAgICApLAogICAgXQo=
+"""
+Migration 0018: Add persistent & scheduled upgrade fields.
+
+Adds to BatchUpgradeOperation:
+  - persistent (bool, default True, immutable after creation)
+  - scheduled_at (datetime, nullable — None means "immediate")
+
+Adds to UpgradeOperation:
+  - retry_count (int, default 0)
+  - next_retry_at (datetime, nullable)
+  - waiting_for_device (bool, default False)
+"""
+
+import django.utils.timezone
+from django.db import migrations, models
+
+
+class Migration(migrations.Migration):
+
+    dependencies = [
+        ("firmware_upgrader", "0017_alter_batchupgradeoperation_status"),
+    ]
+
+    operations = [
+        # ── BatchUpgradeOperation ─────────────────────────────────────────────────────
+        migrations.AddField(
+            model_name="batchupgradeoperation",
+            name="persistent",
+            field=models.BooleanField(
+                default=True,
+                verbose_name="persistent",
+                help_text=(
+                    "When enabled, devices that are offline at upgrade time will "
+                    "be retried automatically using exponential back-off until the "
+                    "admin cancels the batch or every device succeeds. "
+                    "This flag is immutable once the batch has been created."
+                ),
+            ),
+        ),
+        migrations.AddField(
+            model_name="batchupgradeoperation",
+            name="scheduled_at",
+            field=models.DateTimeField(
+                null=True,
+                blank=True,
+                default=None,
+                verbose_name="scheduled at",
+                help_text=(
+                    "UTC datetime at which this batch should start executing. "
+                    "Leave blank for immediate execution."
+                ),
+            ),
+        ),
+        # Extend the STATUS_CHOICES to include 'scheduled'
+        migrations.AlterField(
+            model_name="batchupgradeoperation",
+            name="status",
+            field=models.CharField(
+                max_length=12,
+                choices=[
+                    ("idle", "idle"),
+                    ("scheduled", "scheduled"),
+                    ("in-progress", "in progress"),
+                    ("success", "completed successfully"),
+                    ("failed", "completed with some failures"),
+                    ("cancelled", "completed with some cancellations"),
+                ],
+                default="idle",
+            ),
+        ),
+        # ── UpgradeOperation ──────────────────────────────────────────────────────
+        migrations.AddField(
+            model_name="upgradeoperation",
+            name="retry_count",
+            field=models.PositiveIntegerField(
+                default=0,
+                verbose_name="retry count",
+                help_text="Number of times this operation has been retried because the device was offline.",
+            ),
+        ),
+        migrations.AddField(
+            model_name="upgradeoperation",
+            name="next_retry_at",
+            field=models.DateTimeField(
+                null=True,
+                blank=True,
+                default=None,
+                verbose_name="next retry at",
+                help_text="Scheduled datetime for the next retry attempt (UTC).",
+            ),
+        ),
+        migrations.AddField(
+            model_name="upgradeoperation",
+            name="waiting_for_device",
+            field=models.BooleanField(
+                default=False,
+                verbose_name="waiting for device",
+                help_text=(
+                    "True when this operation is paused waiting for the device "
+                    "to come back online before the next retry attempt."
+                ),
+            ),
+        ),
+        # Extend STATUS_CHOICES for UpgradeOperation to include 'waiting'
+        migrations.AlterField(
+            model_name="upgradeoperation",
+            name="status",
+            field=models.CharField(
+                max_length=12,
+                choices=[
+                    ("in-progress", "in progress"),
+                    ("waiting", "waiting for device"),
+                    ("success", "success"),
+                    ("failed", "failed"),
+                    ("cancelled", "cancelled"),
+                    ("aborted", "aborted"),
+                ],
+                default="in-progress",
+            ),
+        ),
+    ]
