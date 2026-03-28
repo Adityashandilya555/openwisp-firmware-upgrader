@@ -38,9 +38,21 @@
   color: #fff;
 }
 
-.status-badge--blue { background: #0d6efd; }
-.status-badge--orange { background: #fd7e14; }
-.status-badge--green { background: #198754; }
-.status-badge--red { background: #dc3545; }
-.status-badge--grey { background: #6c757d; }
-.status-badge--dark-grey { background: #495057; }
+.status-badge--blue {
+  background: #0d6efd;
+}
+.status-badge--orange {
+  background: #fd7e14;
+}
+.status-badge--green {
+  background: #198754;
+}
+.status-badge--red {
+  background: #dc3545;
+}
+.status-badge--grey {
+  background: #6c757d;
+}
+.status-badge--dark-grey {
+  background: #495057;
+}

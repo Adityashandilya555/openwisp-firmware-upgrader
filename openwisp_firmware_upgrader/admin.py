@@ -15,6 +15,7 @@ from django.shortcuts import redirect
 from django.template.response import TemplateResponse
 from django.templatetags.static import static
 from django.urls import resolve, reverse
+from django.utils import timezone
 from django.utils.html import format_html
 from django.utils.safestring import mark_safe
 from django.utils.timezone import localtime
@@ -117,10 +118,47 @@ class BatchUpgradeConfirmationForm(forms.ModelForm):
         help_text=_("Limit the upgrade to devices at this location"),
         widget=MassUpgradeSelect2Widget(placeholder=_("Select a location")),
     )
+    # GSoC 2026: persistent retries checkbox (checked by default, immutable after creation)
+    persistent = forms.BooleanField(
+        initial=True,
+        required=False,
+        label=_("Persistent upgrades"),
+        help_text=_(
+            "Automatically retry devices that are offline at upgrade time "
+            "using exponential back-off. "
+            "⚠ This setting cannot be changed once the batch is created."
+        ),
+        widget=forms.CheckboxInput(attrs={"class": "persistent-checkbox"}),
+    )
+    # GSoC 2026: optional schedule datetime (browser local time; JS converts to UTC)
+    scheduled_at = forms.DateTimeField(
+        required=False,
+        label=_("Schedule for"),
+        help_text=_(
+            "Leave blank to start the upgrade immediately. "
+            "Time is interpreted in <strong>your browser's local timezone</strong>; "
+            "the hidden field <code>scheduled_at_utc</code> stores it in UTC."
+        ),
+        widget=forms.DateTimeInput(
+            attrs={"type": "datetime-local", "class": "scheduled-at-picker"}
+        ),
+    )
+    # Populated by JS before submit; stores the UTC equivalent of scheduled_at
+    scheduled_at_utc = forms.CharField(
+        required=False,
+        widget=forms.HiddenInput(attrs={"id": "id_scheduled_at_utc"}),
+    )
 
     class Meta:
         model = BatchUpgradeOperation
-        fields = ("build", "group", "location", "upgrade_options")
+        fields = (
+            "build",
+            "group",
+            "location",
+            "upgrade_options",
+            "persistent",
+            "scheduled_at",
+        )
 
     def __init__(self, *args, **kwargs):
         self.user = kwargs.pop("user")
@@ -143,6 +181,28 @@ class BatchUpgradeConfirmationForm(forms.ModelForm):
             )
         self.fields["group"].queryset = device_group_qs
         self.fields["location"].queryset = location_qs
+        # Inject server timezone into the datetime widget for the JS helper
+        server_tz = getattr(settings, "TIME_ZONE", "UTC")
+        self.fields["scheduled_at"].widget.attrs["data-server-tz"] = server_tz
+        if not self.is_bound:
+            self.initial.setdefault("persistent", True)
+
+    def clean_scheduled_at(self):
+        value = self.cleaned_data.get("scheduled_at")
+        if not value:
+            return value
+        now = timezone.now()
+        if timezone.is_naive(value):
+            value = timezone.make_aware(value)
+        if value <= now + timedelta(minutes=10):
+            raise forms.ValidationError(
+                _("The scheduled time must be at least 10 minutes in the future.")
+            )
+        if value > now + timedelta(days=180):
+            raise forms.ValidationError(
+                _("The scheduled time cannot be more than 6 months in the future.")
+            )
+        return value
 
     class Media:
         # We don't need to include any select2 JS/CSS files as they are
@@ -151,6 +211,7 @@ class BatchUpgradeConfirmationForm(forms.ModelForm):
             "admin/js/jquery.init.js",
             "firmware-upgrader/js/upgrade-selected-confirmation.js",
             "firmware-upgrader/js/mass-upgrade-select2.js",
+            "firmware-upgrader/js/scheduled-upgrade.js",
         ]
         css = {
             "all": [
@@ -158,6 +219,7 @@ class BatchUpgradeConfirmationForm(forms.ModelForm):
                 "admin/css/autocomplete.css",
                 "admin/css/ow-auto-filter.css",
                 "firmware-upgrader/css/upgrade-selected-confirmation.css",
+                "firmware-upgrader/css/scheduled-upgrade.css",
             ]
         }
 
@@ -366,7 +428,7 @@ class ReadonlyUpgradeOptionsMixin:
 @admin.register(UpgradeOperation)
 class UpgradeOperationAdmin(ReadonlyUpgradeOptionsMixin, ReadOnlyAdmin, BaseAdmin):
     form = UpgradeOperationForm
-    list_display = ["device", "status", "image", "modified"]
+    list_display = ["device", "display_status_with_badge", "image", "modified"]
     list_filter = ["status"]
     search_fields = ["device__name"]
     readonly_fields = ["device", "image", "status", "log", "modified"]
@@ -378,6 +440,8 @@ class UpgradeOperationAdmin(ReadonlyUpgradeOptionsMixin, ReadOnlyAdmin, BaseAdmi
         "log",
         "readonly_upgrade_options",
         "modified",
+        "retry_count",
+        "next_retry_display",
     ]
     change_form_template = "admin/firmware_upgrader/upgrade_operation_change_form.html"
 
@@ -390,11 +454,15 @@ class UpgradeOperationAdmin(ReadonlyUpgradeOptionsMixin, ReadOnlyAdmin, BaseAdmi
         )
 
     def get_readonly_fields(self, request, obj=None):
-        # Since "readonly_upgrade_options" is dynamically added, we need to
-        # override get_readonly_fields to include it.
+        # readonly_upgrade_options is dynamically added; retry fields are GSoC additions
         fields = super().get_readonly_fields(request, obj).copy()
-        if "readonly_upgrade_options" not in fields:
-            fields.append("readonly_upgrade_options")
+        for extra in (
+            "readonly_upgrade_options",
+            "retry_count",
+            "next_retry_display",
+        ):
+            if extra not in fields:
+                fields.append(extra)
         if self._should_display_batch(obj, fields):
             fields.append("batch")
         return fields
@@ -451,10 +519,49 @@ class UpgradeOperationAdmin(ReadonlyUpgradeOptionsMixin, ReadOnlyAdmin, BaseAdmi
     def has_delete_permission(self, request, obj=None):
         return False
 
+    @admin.display(description=_("Status"), ordering="status")
+    def display_status_with_badge(self, obj):
+        badge_map = {
+            "in-progress": ("blue", _("In progress")),
+            "waiting": ("orange", _("Waiting for device")),
+            "success": ("green", _("Success")),
+            "failed": ("red", _("Failed")),
+            "cancelled": ("grey", _("Cancelled")),
+            "aborted": ("dark-grey", _("Aborted")),
+        }
+        colour, label = badge_map.get(obj.status, ("grey", obj.get_status_display()))
+        return format_html(
+            '<span class="status-badge status-badge--{}">{}</span>',
+            colour,
+            label,
+        )
+
+    @admin.display(description=_("Retry count"))
+    def retry_count(self, obj):
+        return obj.retry_count
+
+    @admin.display(description=_("Next retry"))
+    def next_retry_display(self, obj):
+        if not getattr(obj, "next_retry_at", None) or not obj.waiting_for_device:
+            return "–"
+        local_dt = timezone.localtime(obj.next_retry_at)
+        return format_html(
+            '<span class="retry-pending">⏳ Pending retry at {}</span>',
+            local_dt.strftime("%H:%M"),
+        )
+
 
 @admin.register(BatchUpgradeOperation)
 class BatchUpgradeOperationAdmin(ReadonlyUpgradeOptionsMixin, ReadOnlyAdmin, BaseAdmin):
-    list_display = ["build", "organization", "status", "created", "modified"]
+    list_display = [
+        "build",
+        "organization",
+        "status",
+        "display_persistent",
+        "display_scheduled_at",
+        "created",
+        "modified",
+    ]
     list_filter = [
         BuildCategoryOrganizationFilter,
         "status",
@@ -478,6 +585,9 @@ class BatchUpgradeOperationAdmin(ReadonlyUpgradeOptionsMixin, ReadOnlyAdmin, Bas
         "aborted_rate",
         "cancelled_rate",
         "readonly_upgrade_options",
+        "display_persistent_detail",
+        "display_scheduled_at_detail",
+        "status_transition_log",
         "created",
         "modified",
     ]
@@ -489,11 +599,23 @@ class BatchUpgradeOperationAdmin(ReadonlyUpgradeOptionsMixin, ReadOnlyAdmin, Bas
         "aborted_rate",
         "cancelled_rate",
         "readonly_upgrade_options",
+        "display_persistent_detail",
+        "display_scheduled_at_detail",
+        "status_transition_log",
     ]
+    actions = ["cancel_scheduled_upgrade"]
     change_form_template = (
         "admin/firmware_upgrader/batch_upgrade_operation_change_form.html"
     )
     device_upgrades_per_page = 20
+
+    class Media:
+        css = {
+            "all": [
+                "firmware-upgrader/css/scheduled-upgrade.css",
+                "firmware-upgrader/css/status-log.css",
+            ]
+        }
 
     def get_upgrade_operations(self, request, obj):
         qs = obj.upgradeoperation_set.select_related("device", "image")
@@ -650,6 +772,105 @@ class BatchUpgradeOperationAdmin(ReadonlyUpgradeOptionsMixin, ReadOnlyAdmin, Bas
     failed_rate.short_description = _("failure rate")
     aborted_rate.short_description = _("abortion rate")
     cancelled_rate.short_description = _("cancellation rate")
+
+    # ── GSoC 2026: persistent & scheduled upgrade columns/fields ──────────────
+
+    @admin.display(description=_("Persistent"), ordering="persistent")
+    def display_persistent(self, obj):
+        if obj.persistent:
+            return format_html(
+                '<img src="/static/admin/img/icon-yes.svg" alt="Yes"> Yes'
+            )
+        return format_html('<img src="/static/admin/img/icon-no.svg" alt="No"> No')
+
+    @admin.display(description=_("Scheduled at"), ordering="scheduled_at")
+    def display_scheduled_at(self, obj):
+        if not obj.scheduled_at:
+            return "–"
+        local_dt = timezone.localtime(obj.scheduled_at)
+        return format_html(
+            '<span title="UTC: {}">🕐 {}</span>',
+            obj.scheduled_at.strftime("%Y-%m-%d %H:%M UTC"),
+            local_dt.strftime("%Y-%m-%d %H:%M"),
+        )
+
+    @admin.display(description=_("Persistent upgrades"))
+    def display_persistent_detail(self, obj):
+        if obj.persistent:
+            return format_html(
+                '<img src="/static/admin/img/icon-yes.svg" alt="Yes">'
+                " <strong>Yes</strong> — offline devices will be retried automatically."
+            )
+        return format_html(
+            '<img src="/static/admin/img/icon-no.svg" alt="No">'
+            " No — failed devices will not be retried."
+        )
+
+    @admin.display(description=_("Scheduled at (UTC)"))
+    def display_scheduled_at_detail(self, obj):
+        if not obj.scheduled_at:
+            return _("Immediate (not scheduled)")
+        local_dt = timezone.localtime(obj.scheduled_at)
+        return format_html(
+            "{} <small style='color:#666'>(local) / {} UTC</small>",
+            local_dt.strftime("%Y-%m-%d %H:%M"),
+            obj.scheduled_at.strftime("%Y-%m-%d %H:%M"),
+        )
+
+    @admin.display(description=_("Status transition log"))
+    def status_transition_log(self, obj):
+        transitions = []
+        if obj.scheduled_at:
+            transitions.append(
+                {"label": _("Scheduled"), "ts": obj.created, "icon": "🕐"}
+            )
+        transitions.append(
+            {"label": _("Started / in progress"), "ts": obj.modified, "icon": "▶"}
+        )
+        if obj.status in ("success", "failed", "cancelled"):
+            transitions.append(
+                {
+                    "label": obj.get_status_display(),
+                    "ts": obj.modified,
+                    "icon": "✓" if obj.status == "success" else "✗",
+                }
+            )
+        rows = []
+        for t in transitions:
+            local_ts = timezone.localtime(t["ts"]).strftime("%Y-%m-%d %H:%M:%S")
+            rows.append(
+                format_html(
+                    "<li><span class='status-log-icon'>{}</span>"
+                    " <strong>{}</strong> — <em>{}</em></li>",
+                    t["icon"],
+                    t["label"],
+                    local_ts,
+                )
+            )
+        return format_html(
+            '<ul class="status-transition-log">{}</ul>', mark_safe("".join(rows))
+        )
+
+    @admin.action(
+        description=_("Cancel selected scheduled upgrades"),
+        permissions=["change"],
+    )
+    def cancel_scheduled_upgrade(self, request, queryset):
+        scheduled = queryset.filter(status="scheduled")
+        count = scheduled.count()
+        if not count:
+            self.message_user(
+                request,
+                _("No scheduled upgrades were found in the selection."),
+                messages.WARNING,
+            )
+            return
+        scheduled.update(status="cancelled")
+        self.message_user(
+            request,
+            _(f"{count} scheduled upgrade(s) have been cancelled."),
+            messages.SUCCESS,
+        )
 
 
 class DeviceFirmwareForm(forms.ModelForm):
@@ -828,17 +1049,3 @@ DeviceAdmin.conditional_inlines += [DeviceFirmwareInline, DeviceUpgradeOperation
 reversion.register(model=DeviceFirmware, follow=["device"])
 reversion.register(model=UpgradeOperation)
 DeviceAdmin.add_reversion_following(follow=["devicefirmware", "upgradeoperation_set"])
-
-# ── GSoC 2026 prototype: wire in persistent & scheduled upgrade extensions ──
-# admin_gsoc_patch imports from this module (circular-safe: classes are already
-# defined by the time Python reaches this point at the bottom of the file).
-from .admin_gsoc_patch import (  # noqa: E402
-    BatchUpgradeConfirmationForm,  # shadows the plain version defined above
-    BatchUpgradeOperationAdmin as _GSoCBatchUpgradeOperationAdmin,
-    UpgradeOperationAdmin as _GSoCUpgradeOperationAdmin,
-)
-
-admin.site.unregister(BatchUpgradeOperation)
-admin.site.unregister(UpgradeOperation)
-admin.site.register(BatchUpgradeOperation, _GSoCBatchUpgradeOperationAdmin)
-admin.site.register(UpgradeOperation, _GSoCUpgradeOperationAdmin)
