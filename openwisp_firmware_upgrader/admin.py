@@ -286,6 +286,7 @@ class BuildAdmin(BaseAdmin):
                 "opts": opts,
                 "action_checkbox_name": ACTION_CHECKBOX_NAME,
                 "media": self.media + form.media,
+                "server_timezone": settings.TIME_ZONE,
             }
         )
         request.current_app = self.admin_site.name
@@ -827,3 +828,17 @@ DeviceAdmin.conditional_inlines += [DeviceFirmwareInline, DeviceUpgradeOperation
 reversion.register(model=DeviceFirmware, follow=["device"])
 reversion.register(model=UpgradeOperation)
 DeviceAdmin.add_reversion_following(follow=["devicefirmware", "upgradeoperation_set"])
+
+# ── GSoC 2026 prototype: wire in persistent & scheduled upgrade extensions ──
+# admin_gsoc_patch imports from this module (circular-safe: classes are already
+# defined by the time Python reaches this point at the bottom of the file).
+from .admin_gsoc_patch import (  # noqa: E402
+    BatchUpgradeConfirmationForm,  # shadows the plain version defined above
+    BatchUpgradeOperationAdmin as _GSoCBatchUpgradeOperationAdmin,
+    UpgradeOperationAdmin as _GSoCUpgradeOperationAdmin,
+)
+
+admin.site.unregister(BatchUpgradeOperation)
+admin.site.unregister(UpgradeOperation)
+admin.site.register(BatchUpgradeOperation, _GSoCBatchUpgradeOperationAdmin)
+admin.site.register(UpgradeOperation, _GSoCUpgradeOperationAdmin)

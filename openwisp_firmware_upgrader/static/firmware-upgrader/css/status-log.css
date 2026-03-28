@@ -1,0 +1,46 @@
+/* GSoC 2026 prototype – status transition log */
+
+.status-transition-log {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.status-transition-log li {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.35em 0;
+  border-bottom: 1px solid #eee;
+  font-size: 0.9em;
+}
+
+.status-log-icon {
+  font-size: 1.1em;
+  width: 1.4em;
+  text-align: center;
+}
+
+.retry-pending {
+  background: #fff3cd;
+  border: 1px solid #ffc107;
+  border-radius: 3px;
+  padding: 1px 6px;
+  font-size: 0.85em;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 0.82em;
+  font-weight: 600;
+  color: #fff;
+}
+
+.status-badge--blue { background: #0d6efd; }
+.status-badge--orange { background: #fd7e14; }
+.status-badge--green { background: #198754; }
+.status-badge--red { background: #dc3545; }
+.status-badge--grey { background: #6c757d; }
+.status-badge--dark-grey { background: #495057; }

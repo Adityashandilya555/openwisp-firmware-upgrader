@@ -47,6 +47,45 @@
         {% endif %}
         {{ form.build }}
 
+        {# Device summary #}
+        <fieldset class="module aligned">
+          <h2>{% trans "Devices to be upgraded" %}</h2>
+          {% if related_count %}
+            <p class="help">
+              {% blocktrans count counter=related_count %}
+                <strong>{{ counter }}</strong> device with existing firmware will be upgraded to {{ build }}.
+              {% plural %}
+                <strong>{{ counter }}</strong> devices with existing firmware will be upgraded to {{ build }}.
+              {% endblocktrans %}
+            </p>
+            <table style="width:100%;border-collapse:collapse;margin-bottom:0.5em">
+              <thead>
+                <tr>
+                  <th style="text-align:left;padding:4px 8px;border-bottom:1px solid #ddd">{% trans "Device" %}</th>
+                  <th style="text-align:left;padding:4px 8px;border-bottom:1px solid #ddd">{% trans "Current firmware" %}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for df in related_device_fw %}
+                  <tr>
+                    <td style="padding:4px 8px">{{ df.device.name }}</td>
+                    <td style="padding:4px 8px;color:#666">{{ df.image.build }}</td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          {% endif %}
+          {% if firmwareless_count %}
+            <p class="help" style="margin-top:0.5em">
+              {% blocktrans count counter=firmwareless_count %}
+                <strong>{{ counter }}</strong> additional device with no firmware record will also be upgraded.
+              {% plural %}
+                <strong>{{ counter }}</strong> additional devices with no firmware record will also be upgraded.
+              {% endblocktrans %}
+            </p>
+          {% endif %}
+        </fieldset>
+
         {# Upgrade Filters #}
         <fieldset class="module aligned">
           <h2>{% trans "Upgrade Filters" %}</h2>
