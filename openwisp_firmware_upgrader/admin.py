@@ -321,7 +321,11 @@ class BuildAdmin(BaseAdmin):
         result = BatchUpgradeOperation.dry_run(
             **dry_run_kwargs,
         )
-        related_device_fw = result["device_firmwares"]
+        # Prefetch build and category so the device table in the template
+        # does not issue per-row N+1 queries for {{ df.image.build }}
+        related_device_fw = result["device_firmwares"].select_related(
+            "image__build__category"
+        )
         firmwareless_devices = result["devices"]
         title = _("Confirm mass upgrade operation")
         context = self.admin_site.each_context(request)
