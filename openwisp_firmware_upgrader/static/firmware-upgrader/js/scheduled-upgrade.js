@@ -1,1 +1,173 @@
-LyoqCiAqIHNjaGVkdWxlZC11cGdyYWRlLmpzCiAqIEdTb0MgMjAyNiBQcm90b3R5cGUg4oCUIFNjaGVkdWxlZCAmIFBlcnNpc3RlbnQgVXBncmFkZXMgVUkgaGVscGVycy4KICoKICogUmVzcG9uc2liaWxpdGllcwogKiDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAKICogMS4gRGlzcGxheSB0aGUgc2VydmVyIHRpbWV6b25lIG5leHQgdG8gdGhlIGRhdGV0aW1lIHBpY2tlciBsYWJlbC4KICogMi4gUHJvdmlkZSBsaXZlIGlubGluZSB2YWxpZGF0aW9uIGZvciB0aGUgc2NoZWR1bGVkX2F0IGZpZWxkOgogKiAgICAgIC0gUGFzdCBkYXRldGltZSAgICAgICAgICAgIOKGkiBlcnJvcgogKiAgICAgIC0gTGVzcyB0aGFuIDEwIG1pbiBhaGVhZCAg4oaSIGVycm9yCiAqICAgICAgLSBNb3JlIHRoYW4gNiBtb250aHMgb3V0ICDihpIgZXJyb3IKICogICAgICAtIE90aGVyd2lzZSAgICAgICAgICAgICAgIOKGkiBzdWNjZXNzIGhpbnQKICogMy4gQ29udmVydCB0aGUgYnJvd3Nlci1sb2NhbCBkYXRldGltZS1sb2NhbCB2YWx1ZSB0byBVVEMgSVNPLTg2MDEKICogICAgYmVmb3JlIHRoZSBmb3JtIHN1Ym1pdHMgKHN0b3JlZCBpbiB0aGUgaGlkZGVuIGBzY2hlZHVsZWRfYXRfdXRjYCBmaWVsZCkuCiAqIDQuIEdyZXktb3V0IHRoZSBwZXJzaXN0ZW50IGNoZWNrYm94IGFmdGVyIHRoZSBmb3JtIGhhcyBiZWVuIHN1Ym1pdHRlZAogKiAgICAodG8gdmlzdWFsbHkgY29tbXVuaWNhdGUgaW1tdXRhYmlsaXR5IGluIHRoZSBjb25maXJtYXRpb24gcGFnZSkuCiAqCiAqIFRoaXMgZmlsZSBpcyBpbmNsdWRlZCBieSBCYXRjaFVwZ3JhZGVDb25maXJtYXRpb25Gb3JtLk1lZGlhLgogKi8KKGZ1bmN0aW9uICgkKSB7CiAgJ3VzZSBzdHJpY3QnOwoKICAvLyDilIDilIAgQ29uc3RhbnRzIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgAogIHZhciBNSU5fREVMQVlfTVMgICA9IDEwICogNjAgKiAxMDAwOyAgICAgICAgICAvLyAxMCBtaW51dGVzCiAgdmFyIE1BWF9IT1JJWk9OX01TID0gNiAqIDMwICogMjQgKiAzNjAwICogMTAwMDsgLy8gfjYgbW9udGhzCgogIC8vIOKUgOKUgCBTZWxlY3RvcnMg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSACiAgdmFyIEZPUk1fU0VMICAgICAgICAgICAgPSAnI21hc3MtdXBncmFkZS1mb3JtJzsKICB2YXIgUElDS0VSX1NFTCAgICAgICAgICA9ICcuc2NoZWR1bGVkLWF0LXBpY2tlcic7CiAgdmFyIFVUQ19ISURERU5fU0VMICAgICAgPSAnI2lkX3NjaGVkdWxlZF9hdF91dGMnOwogIHZhciBWQUxJREFUSU9OX01TR19TRUwgID0gJy5zY2hlZHVsZWQtdmFsaWRhdGlvbi1tc2cnOwogIHZhciBQRVJTSVNURU5UX0NCX1NFTCAgID0gJy5wZXJzaXN0ZW50LWNoZWNrYm94JzsKICB2YXIgSU1NVVRBQkxFX05PVElDRV9TRUwgPSAnLnBlcnNpc3RlbnQtaW1tdXRhYmxlLW5vdGljZSc7CiAgdmFyIFNFUlZFUl9UWl9TRUwgICAgICAgPSAnW2RhdGEtc2VydmVyLXR6XSc7CgogIC8vIOKUgOKUgCBIZWxwZXJzIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgAoKICAvKioKICAgKiBSZXR1cm4gdGhlIGJyb3dzZXIncyBJQU5BIHRpbWV6b25lIHN0cmluZyAoZS5nLiAiRXVyb3BlL1JvbWUiKS4KICAgKiBGYWxscyBiYWNrIHRvIG9mZnNldCBzdHJpbmcgbGlrZSAiVVRDKzU6MzAiIGlmIEludGwgaXMgdW5hdmFpbGFibGUuCiAgICovCiAgZnVuY3Rpb24gZ2V0QnJvd3NlclRpbWV6b25lKCkgewogICAgdHJ5IHsKICAgICAgcmV0dXJuIEludGwuRGF0ZVRpbWVGb3JtYXQoKS5yZXNvbHZlZE9wdGlvbnMoKS50aW1lWm9uZTsKICAgIH0gY2F0Y2ggKGUpIHsKICAgICAgdmFyIG9mZnNldCA9IC1uZXcgRGF0ZSgpLmdldFRpbWV6b25lT2Zmc2V0KCk7CiAgICAgIHZhciBzaWduICAgPSBvZmZzZXQgPj0gMCA/ICcrJyA6ICctJzsKICAgICAgdmFyIGFicyAgICA9IE1hdGguYWJzKG9mZnNldCk7CiAgICAgIHJldHVybiAnVVRDJyArIHNpZ24gKyBNYXRoLmZsb29yKGFicyAvIDYwKSArICc6JyArICgnMCcgKyAoYWJzICUgNjApKS5zbGljZSgtMik7CiAgICB9CiAgfQoKICAvKioKICAgKiBWYWxpZGF0ZSBhIGRhdGV0aW1lLWxvY2FsIHZhbHVlIHN0cmluZyBhZ2FpbnN0IHRoZSBidXNpbmVzcyBydWxlcy4KICAgKiBSZXR1cm5zIHsgdmFsaWQ6IGJvb2wsIG1lc3NhZ2U6IHN0cmluZyB9CiAgICovCiAgZnVuY3Rpb24gdmFsaWRhdGVTY2hlZHVsZWRBdChyYXdWYWx1ZSkgewogICAgaWYgKCFyYXdWYWx1ZSkgewogICAgICByZXR1cm4geyB2YWxpZDogdHJ1ZSwgbWVzc2FnZTogJycgfTsKICAgIH0KCiAgICB2YXIgc2VsZWN0ZWRNcyA9IG5ldyBEYXRlKHJhd1ZhbHVlKS5nZXRUaW1lKCk7CiAgICB2YXIgbm93TXMgICAgICA9IERhdGUubm93KCk7CgogICAgaWYgKGlzTmFOKHNlbGVjdGVkTXMpKSB7CiAgICAgIHJldHVybiB7IHZhbGlkOiBmYWxzZSwgbWVzc2FnZTogZ2V0dGV4dCgnSW52YWxpZCBkYXRlL3RpbWUgdmFsdWUuJykgfTsKICAgIH0KCiAgICBpZiAoc2VsZWN0ZWRNcyA8PSBub3dNcykgewogICAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIG1lc3NhZ2U6IGdldHRleHQoJ1RoZSBzY2hlZHVsZWQgdGltZSBtdXN0IGJlIGluIHRoZSBmdXR1cmUuJykgfTsKICAgIH0KCiAgICBpZiAoc2VsZWN0ZWRNcyAtIG5vd01zIDwgTUlOX0RFTEFZX01TKSB7CiAgICAgIHJldHVybiB7CiAgICAgICAgdmFsaWQ6IGZhbHNlLAogICAgICAgIG1lc3NhZ2U6IGdldHRleHQoJ1RoZSBzY2hlZHVsZWQgdGltZSBtdXN0IGJlIGF0IGxlYXN0IDEwIG1pbnV0ZXMgZnJvbSBub3cuJykKICAgICAgfTsKICAgIH0KCiAgICBpZiAoc2VsZWN0ZWRNcyAtIG5vd01zID4gTUFYX0hPUklaT05fTVMpIHsKICAgICAgcmV0dXJuIHsKICAgICAgICB2YWxpZDogZmFsc2UsCiAgICAgICAgbWVzc2FnZTogZ2V0dGV4dCgnVGhlIHNjaGVkdWxlZCB0aW1lIGNhbm5vdCBiZSBtb3JlIHRoYW4gNiBtb250aHMgaW4gdGhlIGZ1dHVyZS4nKQogICAgICB9OwogICAgfQoKICAgIC8vIEZvcm1hdCB0aGUgVVRDIGVxdWl2YWxlbnQgZm9yIHRoZSBzdWNjZXNzIGhpbnQKICAgIHZhciB1dGNTdHIgPSBuZXcgRGF0ZShyYXdWYWx1ZSkudG9VVENTdHJpbmcoKTsKICAgIHJldHVybiB7CiAgICAgIHZhbGlkOiB0cnVlLAogICAgICBtZXNzYWdlOiBnZXR0ZXh0KCdWYWxpZC4gV2lsbCBleGVjdXRlIGF0OiAnKSArIHV0Y1N0ciArICcgKFVUQyknCiAgICB9OwogIH0KCiAgLy8g4pSA4pSAIEluaXQg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSACgogICQoZG9jdW1lbnQpLnJlYWR5KGZ1bmN0aW9uICgpIHsKICAgIHZhciAkZm9ybSAgICAgICAgICAgPSAkKEZPUk1fU0VMKTsKICAgIHZhciAkcGlja2VyICAgICAgICAgPSAkKFBJQ0tFUl9TRUwpOwogICAgdmFyICR1dGNIaWRkZW4gICAgICA9ICQoVVRDX0hJRERFTl9TRUwpOwogICAgdmFyICR2YWxpZGF0aW9uTXNnICA9ICQoVkFMSURBVElPTl9NU0dfU0VMKTsKICAgIHZhciAkcGVyc2lzdGVudENiICAgPSAkKFBFUlNJU1RFTlRfQ0JfU0VMKTsKICAgIHZhciAkaW1tdXRhYmxlTm90aWNlID0gJChJTU1VVEFCTEVfTk9USUNFX1NFTCk7CgogICAgaWYgKCEkZm9ybS5sZW5ndGgpIHJldHVybjsKCiAgICAvLyDilIDilIAgMS4gQW5ub3RhdGUgdGhlIHBpY2tlciB3aXRoIHRoZSBicm93c2VyIHRpbWV6b25lIGhpbnQg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSACiAgICB2YXIgYnJvd3NlclR6ID0gZ2V0QnJvd3NlclRpbWV6b25lKCk7CiAgICAkcGlja2VyLmNsb3Nlc3QoJy5mb3JtLXJvdycpLmZpbmQoJ2xhYmVsJykuYXBwZW5kKAogICAgICAkKCc8c3BhbiBjbGFzcz0iYnJvd3Nlci10ei1oaW50Ij4nKS50ZXh0KAogICAgICAgICcgKCcgKyBnZXR0ZXh0KCd5b3VyIHRpbWV6b25lJykgKyAnOiAnICsgYnJvd3NlclR6ICsgJyknCiAgICAgICkKICAgICk7CgogICAgLy8g4pSA4pSAIDIuIExpdmUgdmFsaWRhdGlvbiDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAKICAgICRwaWNrZXIub24oJ2NoYW5nZSBpbnB1dCcsIGZ1bmN0aW9uICgpIHsKICAgICAgdmFyIHJlc3VsdCA9IHZhbGlkYXRlU2NoZWR1bGVkQXQoJCh0aGlzKS52YWwoKSk7CiAgICAgICR2YWxpZGF0aW9uTXNnCiAgICAgICAgLnRleHQocmVzdWx0Lm1lc3NhZ2UpCiAgICAgICAgLnJlbW92ZUNsYXNzKCdzdWNjZXNzIGVycm9yJykKICAgICAgICAuYWRkQ2xhc3MocmVzdWx0LnZhbGlkICYmIHJlc3VsdC5tZXNzYWdlID8gJ3N1Y2Nlc3MnIDogKHJlc3VsdC5tZXNzYWdlID8gJ2Vycm9yJyA6ICcnKSk7CiAgICB9KTsKCiAgICAvLyDilIDilIAgMy4gVVRDIGNvbnZlcnNpb24gb24gc3VibWl0IOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgAogICAgJGZvcm0ub24oJ3N1Ym1pdCcsIGZ1bmN0aW9uIChlKSB7CiAgICAgIHZhciByYXdWYWx1ZSA9ICRwaWNrZXIudmFsKCk7CiAgICAgIGlmIChyYXdWYWx1ZSkgewogICAgICAgIHZhciByZXN1bHQgPSB2YWxpZGF0ZVNjaGVkdWxlZEF0KHJhd1ZhbHVlKTsKICAgICAgICBpZiAoIXJlc3VsdC52YWxpZCkgewogICAgICAgICAgZS5wcmV2ZW50RGVmYXVsdCgpOwogICAgICAgICAgJHBpY2tlci5mb2N1cygpOwogICAgICAgICAgcmV0dXJuOwogICAgICAgIH0KICAgICAgICAvLyBDb252ZXJ0IHRvIFVUQyBJU08gc3RyaW5nCiAgICAgICAgJHV0Y0hpZGRlbi52YWwobmV3IERhdGUocmF3VmFsdWUpLnRvSVNPU3RyaW5nKCkpOwogICAgICB9CiAgICB9KTsKCiAgICAvLyDilIDilIAgNC4gUGVyc2lzdGVudCBjaGVja2JveDogZ3JleS1vdXQgb24gcGFnZSBsb2FkIGlmIGJhdGNoIGV4aXN0cyDilIDilIDilIDilIDilIAKICAgIC8vIEluIHRoZSBwcm90b3R5cGUsIHdlIGRldGVjdCBhIHByZS1leGlzdGluZyBiYXRjaCBieSBjaGVja2luZyBpZiB0aGUKICAgIC8vIGZvcm0gaGFzIGEgZGF0YS1iYXRjaC1wayBhdHRyaWJ1dGUgKHNldCBieSB0aGUgdGVtcGxhdGUgd2hlbiBlZGl0aW5nKS4KICAgIHZhciBiYXRjaFBrID0gJGZvcm0uZGF0YSgnYmF0Y2gtcGsnKTsKICAgIGlmIChiYXRjaFBrKSB7CiAgICAgICRwZXJzaXN0ZW50Q2IKICAgICAgICAucHJvcCgnZGlzYWJsZWQnLCB0cnVlKQogICAgICAgIC5hdHRyKCd0aXRsZScsIGdldHRleHQoJ1RoaXMgc2V0dGluZyBjYW5ub3QgYmUgY2hhbmdlZCBhZnRlciB0aGUgYmF0Y2ggaGFzIGJlZW4gY3JlYXRlZC4nKSk7CiAgICAgICRpbW11dGFibGVOb3RpY2Uuc2hvdygpOwogICAgfQogIH0pOwoKfShkamFuZ28ualF1ZXJ5KSk7Cg==
+/**
+ * scheduled-upgrade.js
+ * GSoC 2026 Prototype — Scheduled & Persistent Upgrades UI helpers.
+ *
+ * Responsibilities
+ * ────────────────
+ * 1. Display the server timezone next to the datetime picker label.
+ * 2. Provide live inline validation for the scheduled_at field:
+ *      - Past datetime            → error
+ *      - Less than 10 min ahead  → error
+ *      - More than 6 months out  → error
+ *      - Otherwise               → success hint
+ * 3. Convert the browser-local datetime-local value to UTC ISO-8601
+ *    before the form submits (stored in the hidden `scheduled_at_utc` field).
+ * 4. Grey-out the persistent checkbox after the form has been submitted
+ *    (to visually communicate immutability in the confirmation page).
+ *
+ * This file is included by BatchUpgradeConfirmationForm.Media.
+ */
+(function ($) {
+  "use strict";
+
+  // ── Constants ──────────────────────────────────────────────────────────────
+  var MIN_DELAY_MS = 10 * 60 * 1000; // 10 minutes
+  var MAX_HORIZON_MS = 6 * 30 * 24 * 3600 * 1000; // ~6 months
+
+  // ── Selectors ─────────────────────────────────────────────────────────────
+  var FORM_SEL = "#mass-upgrade-form";
+  var PICKER_SEL = ".scheduled-at-picker";
+  var UTC_HIDDEN_SEL = "#id_scheduled_at_utc";
+  var VALIDATION_MSG_SEL = ".scheduled-validation-msg";
+  var PERSISTENT_CB_SEL = ".persistent-checkbox";
+  var IMMUTABLE_NOTICE_SEL = ".persistent-immutable-notice";
+  var SERVER_TZ_SEL = "[data-server-tz]";
+
+  // ── Helpers ───────────────────────────────────────────────────────────────
+
+  /**
+   * Return the browser's IANA timezone string (e.g. "Europe/Rome").
+   * Falls back to offset string like "UTC+5:30" if Intl is unavailable.
+   */
+  function getBrowserTimezone() {
+    try {
+      return Intl.DateTimeFormat().resolvedOptions().timeZone;
+    } catch (e) {
+      var offset = -new Date().getTimezoneOffset();
+      var sign = offset >= 0 ? "+" : "-";
+      var abs = Math.abs(offset);
+      return (
+        "UTC" + sign + Math.floor(abs / 60) + ":" + ("0" + (abs % 60)).slice(-2)
+      );
+    }
+  }
+
+  /**
+   * Validate a datetime-local value string against the business rules.
+   * Returns { valid: bool, message: string }
+   */
+  function validateScheduledAt(rawValue) {
+    if (!rawValue) {
+      return { valid: true, message: "" };
+    }
+
+    var selectedMs = new Date(rawValue).getTime();
+    var nowMs = Date.now();
+
+    if (isNaN(selectedMs)) {
+      return { valid: false, message: gettext("Invalid date/time value.") };
+    }
+
+    if (selectedMs <= nowMs) {
+      return {
+        valid: false,
+        message: gettext("The scheduled time must be in the future."),
+      };
+    }
+
+    if (selectedMs - nowMs < MIN_DELAY_MS) {
+      return {
+        valid: false,
+        message: gettext(
+          "The scheduled time must be at least 10 minutes from now.",
+        ),
+      };
+    }
+
+    if (selectedMs - nowMs > MAX_HORIZON_MS) {
+      return {
+        valid: false,
+        message: gettext(
+          "The scheduled time cannot be more than 6 months in the future.",
+        ),
+      };
+    }
+
+    // Format the UTC equivalent for the success hint
+    var utcStr = new Date(rawValue).toUTCString();
+    return {
+      valid: true,
+      message: gettext("Valid. Will execute at: ") + utcStr + " (UTC)",
+    };
+  }
+
+  // ── Init ──────────────────────────────────────────────────────────────────
+
+  $(document).ready(function () {
+    var $form = $(FORM_SEL);
+    var $picker = $(PICKER_SEL);
+    var $utcHidden = $(UTC_HIDDEN_SEL);
+    var $validationMsg = $(VALIDATION_MSG_SEL);
+    var $persistentCb = $(PERSISTENT_CB_SEL);
+    var $immutableNotice = $(IMMUTABLE_NOTICE_SEL);
+
+    if (!$form.length) return;
+
+    // ── 1. Annotate the picker with the browser timezone hint ─────────────
+    var browserTz = getBrowserTimezone();
+    $picker
+      .closest(".form-row")
+      .find("label")
+      .append(
+        $('<span class="browser-tz-hint">').text(
+          " (" + gettext("your timezone") + ": " + browserTz + ")",
+        ),
+      );
+
+    // ── 2. Live validation ────────────────────────────────────────────────
+    $picker.on("change input", function () {
+      var result = validateScheduledAt($(this).val());
+      $validationMsg
+        .text(result.message)
+        .removeClass("success error")
+        .addClass(
+          result.valid && result.message
+            ? "success"
+            : result.message
+              ? "error"
+              : "",
+        );
+    });
+
+    // ── 3. UTC conversion on submit ───────────────────────────────────────
+    $form.on("submit", function (e) {
+      var rawValue = $picker.val();
+      if (rawValue) {
+        var result = validateScheduledAt(rawValue);
+        if (!result.valid) {
+          e.preventDefault();
+          $picker.focus();
+          return;
+        }
+        // Convert to UTC ISO string
+        $utcHidden.val(new Date(rawValue).toISOString());
+      }
+    });
+
+    // ── 4. Persistent checkbox: grey-out on page load if batch exists ─────
+    // In the prototype, we detect a pre-existing batch by checking if the
+    // form has a data-batch-pk attribute (set by the template when editing).
+    var batchPk = $form.data("batch-pk");
+    if (batchPk) {
+      $persistentCb
+        .prop("disabled", true)
+        .attr(
+          "title",
+          gettext(
+            "This setting cannot be changed after the batch has been created.",
+          ),
+        );
+      $immutableNotice.show();
+    }
+  });
+})(django.jQuery);

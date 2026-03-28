@@ -3,7 +3,8 @@
 django.jQuery(function ($) {
   $(".select2-input").each(function () {
     var $element = $(this);
-    var placeholder = $element.data("placeholder") || gettext("Select an option");
+    var placeholder =
+      $element.data("placeholder") || gettext("Select an option");
     $element.select2({
       theme: "default",
       dropdownCssClass: $element.data("dropdown-css-class"),

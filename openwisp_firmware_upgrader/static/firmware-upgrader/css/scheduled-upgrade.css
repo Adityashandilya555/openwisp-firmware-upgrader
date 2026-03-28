@@ -1,2 +1,173 @@
-LyoKICogc2NoZWR1bGVkLXVwZ3JhZGUuY3NzCiAqIEdTb0MgMjAyNiBQcm90b3R5cGUg4oCUIFNjaGVkdWxlZCAmIFBlcnNpc3RlbnQgVXBncmFkZXMgQWRtaW4gVUkgc3R5bGVzLgogKi8KCi8qIOKUgOKUgCBDb25maXJtYXRpb24gcGFnZTogbmV3IHNlY3Rpb25zIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgCAqLwouZ3NvYy1wZXJzaXN0ZW50LXNlY3Rpb24sCi5nc29jLXNjaGVkdWxlZC1zZWN0aW9uIHsKICBtYXJnaW4tdG9wOiAyMHB4OwogIGJvcmRlcjogMXB4IHNvbGlkICNkZGQ7CiAgYm9yZGVyLXJhZGl1czogNHB4OwogIHBhZGRpbmc6IDEycHggMTZweDsKfQoKLmdzb2MtcGVyc2lzdGVudC1zZWN0aW9uIGgyLAouZ3NvYy1zY2hlZHVsZWQtc2VjdGlvbiBoMiB7CiAgZm9udC1zaXplOiAxZW07CiAgZm9udC13ZWlnaHQ6IGJvbGQ7CiAgY29sb3I6ICMzMzM7CiAgbWFyZ2luLWJvdHRvbTogOHB4OwogIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCAjZWVlOwogIHBhZGRpbmctYm90dG9tOiA0cHg7Cn0KCi8qIOKUgOKUgCBQZXJzaXN0ZW50IGNoZWNrYm94IHJvdyDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAgKi8KLnBlcnNpc3RlbnQtY2hlY2tib3gtcm93IHsKICBkaXNwbGF5OiBmbGV4OwogIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47CiAgZ2FwOiA2cHg7Cn0KCi5wZXJzaXN0ZW50LWxhYmVsIHsKICBkaXNwbGF5OiBmbGV4OwogIGFsaWduLWl0ZW1zOiBjZW50ZXI7CiAgZ2FwOiA4cHg7CiAgZm9udC13ZWlnaHQ6IG5vcm1hbDsKICBjdXJzb3I6IHBvaW50ZXI7Cn0KCi5wZXJzaXN0ZW50LWxhYmVsIGlucHV0W3R5cGU9ImNoZWNrYm94Il0gewogIHdpZHRoOiAxNnB4OwogIGhlaWdodDogMTZweDsKICBjdXJzb3I6IHBvaW50ZXI7Cn0KCi8qIEdyZXllZC1vdXQgc3RhdGUgb25jZSBiYXRjaCBpcyBjcmVhdGVkICovCi5wZXJzaXN0ZW50LWxhYmVsIGlucHV0W3R5cGU9ImNoZWNrYm94Il06ZGlzYWJsZWQgewogIG9wYWNpdHk6IDAuNTsKICBjdXJzb3I6IG5vdC1hbGxvd2VkOwp9CgoucGVyc2lzdGVudC1oZWxwIHsKICBjb2xvcjogIzY2NjsKICBmb250LXNpemU6IDAuODVlbTsKICBtYXJnaW46IDA7Cn0KCi5wZXJzaXN0ZW50LWltbXV0YWJsZS1ub3RpY2UgewogIGNvbG9yOiAjYzQ0OwogIGZvbnQtc2l6ZTogMC44NWVtOwogIGZvbnQtd2VpZ2h0OiA1MDA7CiAgYmFja2dyb3VuZDogI2ZmZjhmMDsKICBib3JkZXI6IDFweCBzb2xpZCAjZjVjNmEwOwogIGJvcmRlci1yYWRpdXM6IDNweDsKICBwYWRkaW5nOiA0cHggOHB4OwogIGRpc3BsYXk6IG5vbmU7ICAgLyogc2hvd24gYnkgSlMgd2hlbiBiYXRjaCBhbHJlYWR5IGV4aXN0cyAqLwp9CgovKiDilIDilIAgU2NoZWR1bGVkIGRhdGV0aW1lIHBpY2tlciDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIAgKi8KLnNjaGVkdWxlZC1hdC1waWNrZXIgewogIGZvbnQtc2l6ZTogMC45NWVtOwogIHBhZGRpbmc6IDRweCA4cHg7CiAgYm9yZGVyOiAxcHggc29saWQgI2NjYzsKICBib3JkZXItcmFkaXVzOiAzcHg7Cn0KCi5zZXJ2ZXItdHotaGludCB7CiAgZm9udC1zaXplOiAwLjhlbTsKICBjb2xvcjogIzU1NTsKICBtYXJnaW4tbGVmdDogNnB4OwogIGZvbnQtc3R5bGU6IGl0YWxpYzsKfQoKLmJyb3dzZXItdHotaGludCB7CiAgZm9udC1zaXplOiAwLjhlbTsKICBjb2xvcjogIzQ0NzJjNDsKICBtYXJnaW4tbGVmdDogNnB4Owp9CgovKiDilIDilIAgSW5saW5lIHZhbGlkYXRpb24gZmVlZGJhY2sg4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSAICovCi5zY2hlZHVsZWQtdmFsaWRhdGlvbi1tc2cgewogIGZvbnQtc2l6ZTogMC44NWVtOwogIG1hcmdpbi10b3A6IDRweDsKICBtaW4taGVpZ2h0OiAxLjJlbTsKfQoKLnNjaGVkdWxlZC12YWxpZGF0aW9uLW1zZy5lcnJvciB7CiAgY29sb3I6ICNiYTIxMjE7CiAgZm9udC13ZWlnaHQ6IDUwMDsKfQoKLnNjaGVkdWxlZC12YWxpZGF0aW9uLW1zZy5zdWNjZXNzIHsKICBjb2xvcjogIzIwODAxYzsKfQoKLyog4pSA4pSAIEJhdGNoIGxpc3Q6IHNjaGVkdWxlZF9hdCBjb2x1bW4g4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSA4pSAICovCnRoLmNvbHVtbi1kaXNwbGF5X3NjaGVkdWxlZF9hdCwKdGQuZmllbGQtZGlzcGxheV9zY2hlZHVsZWRfYXQgewogIHdoaXRlLXNwYWNlOiBub3dyYXA7Cn0KCi8qIOKUgOKUgCBCYXRjaCBsaXN0OiBzdGF0dXMgYmFkZ2VzIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgCAqLwouc3RhdHVzLWJhZGdlIHsKICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7CiAgcGFkZGluZzogMnB4IDhweDsKICBib3JkZXItcmFkaXVzOiAxMnB4OwogIGZvbnQtc2l6ZTogMC43OGVtOwogIGZvbnQtd2VpZ2h0OiA2MDA7CiAgbGV0dGVyLXNwYWNpbmc6IDAuMDJlbTsKICB3aGl0ZS1zcGFjZTogbm93cmFwOwp9Cgouc3RhdHVzLWJhZGdlLS1ibHVlICAgICAgeyBiYWNrZ3JvdW5kOiAjZGJlYWZlOyBjb2xvcjogIzFkNGVkODsgfQouc3RhdHVzLWJhZGdlLS1vcmFuZ2UgICAgeyBiYWNrZ3JvdW5kOiAjZmZlZGQ1OyBjb2xvcjogI2MyNDEwYzsgfQouc3RhdHVzLWJhZGdlLS1ncmVlbiAgICAgeyBiYWNrZ3JvdW5kOiAjZGNmY2U3OyBjb2xvcjogIzE2NjUzNDsgfQouc3RhdHVzLWJhZGdlLS1yZWQgICAgICAgeyBiYWNrZ3JvdW5kOiAjZmVlMmUyOyBjb2xvcjogIzk5MWIxYjsgfQouc3RhdHVzLWJhZGdlLS1ncmV5ICAgICAgeyBiYWNrZ3JvdW5kOiAjZjNmNGY2OyBjb2xvcjogIzM3NDE1MTsgfQouc3RhdHVzLWJhZGdlLS1kYXJrLWdyZXkgeyBiYWNrZ3JvdW5kOiAjZTVlN2ViOyBjb2xvcjogIzExMTgyNzsgfQoKLyog4pSA4pSAIFJldHJ5IHBlbmRpbmcgaW5kaWNhdG9yIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgCAqLwoucmV0cnktcGVuZGluZyB7CiAgZm9udC1zaXplOiAwLjg1ZW07CiAgY29sb3I6ICNjMjQxMGM7CiAgZm9udC1zdHlsZTogaXRhbGljOwp9CgovKiDilIDilIAgU3RhdHVzIHRyYW5zaXRpb24gbG9nIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgCAqLwouc3RhdHVzLXRyYW5zaXRpb24tbG9nIHsKICBsaXN0LXN0eWxlOiBub25lOwogIHBhZGRpbmc6IG
-A7CiAgbWFyZ2luOiAwOwogIGJvcmRlci1sZWZ0OiAzcHggc29saWQgI2RkZDsKICBwYWRkaW5nLWxlZnQ6IDEycHg7Cn0KCi5zdGF0dXMtdHJhbnNpdGlvbi1sb2cgbGkgewogIHBhZGRpbmc6IDRweCAwOwogIGZvbnQtc2l6ZTogMC45ZW07CiAgY29sb3I6ICMzMzM7Cn0KCi5zdGF0dXMtbG9nLWljb24gewogIG1hcmdpbi1yaWdodDogNnB4OwogIGZvbnQtc2l6ZTogMWVtOwp9Cg==
+/*
+ * scheduled-upgrade.css
+ * GSoC 2026 Prototype — Scheduled & Persistent Upgrades Admin UI styles.
+ */
+
+/* ── Confirmation page: new sections ────────────────────────────────────── */
+.gsoc-persistent-section,
+.gsoc-scheduled-section {
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 12px 16px;
+}
+
+.gsoc-persistent-section h2,
+.gsoc-scheduled-section h2 {
+  font-size: 1em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 4px;
+}
+
+/* ── Persistent checkbox row ────────────────────────────────────────────── */
+.persistent-checkbox-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.persistent-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.persistent-label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+/* Greyed-out state once batch is created */
+.persistent-label input[type="checkbox"]:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.persistent-help {
+  color: #666;
+  font-size: 0.85em;
+  margin: 0;
+}
+
+.persistent-immutable-notice {
+  color: #c44;
+  font-size: 0.85em;
+  font-weight: 500;
+  background: #fff8f0;
+  border: 1px solid #f5c6a0;
+  border-radius: 3px;
+  padding: 4px 8px;
+  display: none; /* shown by JS when batch already exists */
+}
+
+/* ── Scheduled datetime picker ──────────────────────────────────────────── */
+.scheduled-at-picker {
+  font-size: 0.95em;
+  padding: 4px 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.server-tz-hint {
+  font-size: 0.8em;
+  color: #555;
+  margin-left: 6px;
+  font-style: italic;
+}
+
+.browser-tz-hint {
+  font-size: 0.8em;
+  color: #4472c4;
+  margin-left: 6px;
+}
+
+/* ── Inline validation feedback ────────────────────────────────────────── */
+.scheduled-validation-msg {
+  font-size: 0.85em;
+  margin-top: 4px;
+  min-height: 1.2em;
+}
+
+.scheduled-validation-msg.error {
+  color: #ba2121;
+  font-weight: 500;
+}
+
+.scheduled-validation-msg.success {
+  color: #20801c;
+}
+
+/* ── Batch list: scheduled_at column ────────────────────────────────────── */
+th.column-display_scheduled_at,
+td.field-display_scheduled_at {
+  white-space: nowrap;
+}
+
+/* ── Batch list: status badges ──────────────────────────────────────────── */
+.status-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.78em;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.status-badge--blue {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+.status-badge--orange {
+  background: #ffedd5;
+  color: #c2410c;
+}
+.status-badge--green {
+  background: #dcfce7;
+  color: #166534;
+}
+.status-badge--red {
+  background: #fee2e2;
+  color: #991b1b;
+}
+.status-badge--grey {
+  background: #f3f4f6;
+  color: #374151;
+}
+.status-badge--dark-grey {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+/* ── Retry pending indicator ────────────────────────────────────────────── */
+.retry-pending {
+  font-size: 0.85em;
+  color: #c2410c;
+  font-style: italic;
+}
+
+/* ── Status transition log ─────────────────────────────────────────────── */
+.status-transition-log {
+  list-style: none;
+  padding: `;
+  margin: 0;
+  border-left: 3px solid #ddd;
+  padding-left: 12px;
+}
+
+.status-transition-log li {
+  padding: 4px 0;
+  font-size: 0.9em;
+  color: #333;
+}
+
+.status-log-icon {
+  margin-right: 6px;
+  font-size: 1em;
+}

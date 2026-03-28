@@ -155,7 +155,10 @@ function updateBatchProgress(data) {
       showPercentageText = false;
     } else if (data.status === FW_UPGRADE_STATUS.FAILED) {
       let successfulOpsCount = $("#result_list tbody tr").filter(function () {
-        let statusText = $(this).find(".status-cell .status-content").text().trim();
+        let statusText = $(this)
+          .find(".status-cell .status-content")
+          .text()
+          .trim();
         return FW_STATUS_GROUPS.SUCCESS.has(statusText);
       }).length;
       // Also check individual operation containers for success
@@ -282,7 +285,10 @@ function addNewOperationRow(data) {
   let $link = $("<a>")
     .addClass("device-link")
     .attr("href", deviceUrl)
-    .attr("aria-label", gettext("View upgrade operation for") + " " + data.device_name)
+    .attr(
+      "aria-label",
+      gettext("View upgrade operation for") + " " + data.device_name,
+    )
     .text(data.device_name);
   $deviceTd.append($link);
   let $statusTd = $("<td>")
@@ -317,13 +323,19 @@ function renderOperationProgressBarInCell(statusCell, operation) {
     progressPercentage = 100;
   }
   // Per operation bars do not show percentage text to keep table rows compact
-  let progressHtml = renderProgressBarHtml(progressPercentage, statusClass, false);
+  let progressHtml = renderProgressBarHtml(
+    progressPercentage,
+    statusClass,
+    false,
+  );
   statusContainer.html(progressHtml);
 }
 
 function getBatchUpgradeIdFromUrl() {
   try {
-    let matches = window.location.pathname.match(/\/batchupgradeoperation\/([^\/]+)\//);
+    let matches = window.location.pathname.match(
+      /\/batchupgradeoperation\/([^\/]+)\//,
+    );
     return matches && matches[1] ? matches[1] : null;
   } catch (error) {
     console.error("Error extracting batch ID from URL:", error);
@@ -348,11 +360,14 @@ function initializeMainProgressBar($) {
       let statusClass = "";
       let showPercentageText;
 
-      if (currentStatusText === FW_UPGRADE_DISPLAY_STATUS.COMPLETED_SUCCESSFULLY) {
+      if (
+        currentStatusText === FW_UPGRADE_DISPLAY_STATUS.COMPLETED_SUCCESSFULLY
+      ) {
         statusClass = FW_UPGRADE_CSS_CLASSES.COMPLETED_SUCCESSFULLY;
         showPercentageText = true;
       } else if (
-        currentStatusText === FW_UPGRADE_DISPLAY_STATUS.COMPLETED_WITH_CANCELLATIONS
+        currentStatusText ===
+        FW_UPGRADE_DISPLAY_STATUS.COMPLETED_WITH_CANCELLATIONS
       ) {
         statusClass = FW_UPGRADE_CSS_CLASSES.CANCELLED;
         showPercentageText = false;
