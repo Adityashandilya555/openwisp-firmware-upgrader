@@ -75,7 +75,9 @@ class Command(BaseCommand):
         self.stdout.write(f"  Organization : {org.name}")
 
         admin = self._ensure_superuser()
-        self.stdout.write(f"  Superuser    : {admin.username} / admin (if newly created)")
+        self.stdout.write(
+            f"  Superuser    : {admin.username} / admin (if newly created)"
+        )
 
         category = self._get_or_create_category(org)
         self.stdout.write(f"  Category     : {category.name}")
